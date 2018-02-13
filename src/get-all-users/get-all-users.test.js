@@ -5,6 +5,7 @@ describe('getAllUsers', () => {
       fetch: jest.fn(),
       process: {
         env: {
+          DISCOURSE_BASE_URI: 'https://mydiscourse.com',
           DISCOURSE_API_KEY: 'secrit'
         }
       }
@@ -18,8 +19,8 @@ describe('getAllUsers', () => {
     return getAllUsers(deps)(1)
       .then(result => {
         expect(deps.fetch).toHaveBeenCalledWith(
-          'https://www.funfunforum.com/' +
-          'admin/users/list/active.json?api_username=system' +
+          'https://mydiscourse.com' +
+          '/admin/users/list/active.json?api_username=system' +
           '&api_key=secrit&page=1'
         )
         expect(result[0]).toBe('david')
