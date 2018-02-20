@@ -13,6 +13,8 @@
   "dependencies": {
     "express": "^4.16.2",
     "jest": "^22.2.2",
-    "node-fetch": "^2.0.0"
+    "node-fetch": "^2.0.0",
+    "ramda": "^0.25.0",
+    "supersniff": "^2.1.0"
   }
 }
