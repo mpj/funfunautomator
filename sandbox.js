@@ -2,11 +2,18 @@
 const fetch = require('node-fetch')
 const key = process.env.DISCOURSE_API_KEY
 
-let x = fetch(`https://www.funfunforum.com/admin/users/list/active.json?api_username=system&api_key=${key}&page=1`)
-  .then(x => x.json())
+
+const getAllUsers = require('./src/get-all-users')
+getAllUsers(0)
+  .then(console.log) // ?
+/*
+let x = fetch(
+  `https://www.funfunforum.com/admin/users/list/` +
+  `active.json?api_username=system&api_key=${key}&page=1`
+).then(x => x.json())
 
 x.then(users => users.map(user => user.username)) // ?
-
+*/
 /*
 ({ fetch, bus }) => {
   const

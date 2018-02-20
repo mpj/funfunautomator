@@ -26,9 +26,6 @@ describe('getAllUsers', () => {
         expect(result[0]).toBe('david')
         expect(result[1]).toBe('mpj')
       })
-
-
-
   })
 })
 
