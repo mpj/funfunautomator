@@ -4,6 +4,10 @@ const key = process.env.DISCOURSE_API_KEY
 const sniff = require('supersniff')
 const R = require('ramda')
 
+const getGroups = require('./src/get-groups')
+getGroups('mpj')
+  .then(sniff)
+/*
 let username = 'jwalden'
 let x = fetch(
   `https://www.funfunforum.com/users/${username}.json` +
@@ -12,7 +16,7 @@ let x = fetch(
 .then(x => x.json())
 .then(x => x.user.groups)
 .then(groups => groups.map(group => group.name))
-.then(sniff)
+.then(sniff)*/
 
 //x.then(users => users.map(user => user.username)) // ?
 /**/
