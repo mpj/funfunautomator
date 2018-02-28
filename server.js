@@ -26,7 +26,7 @@ app.get('/hackablejson', (req, res) => {
 })
 
 app.post('/webhook', (req, res) => {
-  if (!isRequestValid(req)) {
+  if (!isWebhookRequestValid(req)) {
     res.status(403).send('invalid signature')
     return
   }
