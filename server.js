@@ -53,8 +53,8 @@ app.post('/webhook', (req, res) => {
       const snapshot = {
         username: req.body.user.username,
         hackablejson:
-          userSnapshot.user_fields &&
-          userSnapshot.user_fields[''+HACKABLE_JSON_FIELD_ID]
+          req.body.user.user_fields &&
+          req.body.user.user_fields[''+HACKABLE_JSON_FIELD_ID]
       }
 
       if (!snapshot.hackablejson) {
