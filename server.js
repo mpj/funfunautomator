@@ -1,20 +1,19 @@
-const express = require('express')
-const cache = require('apicache').middleware
-const getHackableJSON = require('./src/get-hackable-json')
-const bodyParser = require('body-parser')
-const WebSocket = require('ws');
-const app = express()
 const url = require('url')
-
+const express = require('express')
+const bodyParser = require('body-parser')
+const WebSocket = require('ws')
 const cors = require('cors')
 
- // pretty hacky solution to get rawbody, too tired
-// to figure better solution out
+const getHackableJSON = require('./src/get-hackable-json')
+const isWebhookRequestValid = require('./src/is-webhook-request-valid')
+
+const app = express()
+
+// pretty hacky solution to get rawbody (so that we can do
+// the webhook verification, too tired  to figure better solution out ATM
 // From: https://coderwall.com/p/qrjfcw/capture-raw-post-body-in-express-js
-let rawBodySaver = function (req, res, buf, encoding) {
-  if (buf && buf.length) {
-    req.rawBody = buf.toString(encoding || 'utf8');
-  }
+function rawBodySaver(req, res, buf, encoding) {
+  if (buf && buf.length) req.rawBody = buf.toString(encoding || 'utf8')
 }
 app.use(bodyParser.json({ verify: rawBodySaver }))
 app.use(bodyParser.urlencoded({ extended: false, verify: rawBodySaver }))
@@ -22,8 +21,7 @@ app.use(bodyParser.raw({ verify: rawBodySaver, type: function () { return true }
 
 app.use(cors())
 
-const isWebhookRequestValid = require('./src/is-webhook-request-valid')
-
+// Hackable JSON cache
 let isWarmupTriggered = false
 let hackableJSONCache = {}
 function ensureWarmup() {
@@ -50,32 +48,25 @@ app.post('/webhook', (req, res) => {
     return
   }
 
-  if(req.headers['x-discourse-event'] === 'user_updated') {
-
-      const HACKABLE_JSON_FIELD_ID = 1
-
-      const snapshot = {
-        username: req.body.user.username,
-        hackablejson:
-          req.body.user.user_fields &&
-          req.body.user.user_fields[''+HACKABLE_JSON_FIELD_ID]
-      }
-
-      if (!snapshot.hackablejson) {
-        // don't add this user, they might not want to be public
-        res.status(200).send('carry on')
-        return
-      }
-
-      hackableJSONCache[snapshot.username] = snapshot.hackablejson
-      res.status(200).send('cache updated')
-      sendToAll(JSON.stringify(snapshot))
-      return
-
-  } else {
+  if(req.headers['x-discourse-event'] !== 'user_updated') {
     res.status(200).send('event ignored')
+    return
   }
 
+  const HACKABLE_JSON_FIELD_ID = 1
+
+  const username = req.body.user.username
+  const hackableJSON = req.body.user.user_fields && req.body.user.user_fields[''+HACKABLE_JSON_FIELD_ID]
+
+  if (!hackableJSON || hackableJSON === '') {
+    // don't add this user, they might not want to be public
+    res.status(200).send('carry on')
+    return
+  }
+
+  hackableJSONCache[username] = hackableJSON
+  res.status(200).send('cache updated')
+  sendToAll(JSON.stringify({ username, hackableJSON}))
 })
 
 const server = require('http').createServer(app)
@@ -83,15 +74,11 @@ const wss = new WebSocket.Server({ server })
 
 const sockets = []
 wss.on('connection', function connection(ws, req) {
-
-  const location = url.parse(req.url, true);
-  console.log('location',location)
+  const location = url.parse(req.url, true)
   if (location.path === '/hackablejson') {
-    console.log('ws connected', req.url)
     sockets.push(ws)
   }
   ws.on('error', () => {})
-
 })
 
 function sendToAll(msg) {
