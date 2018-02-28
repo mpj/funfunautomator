@@ -21,7 +21,7 @@
     "jest": "^22.2.2",
     "node-fetch": "^2.0.0",
     "ramda": "^0.25.0",
-    "socket.io": "^2.0.4",
-    "supersniff": "^2.1.0"
+    "supersniff": "^2.1.0",
+    "ws": "^4.1.0"
   }
 }

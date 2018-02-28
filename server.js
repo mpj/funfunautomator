@@ -2,13 +2,10 @@ const express = require('express')
 const cache = require('apicache').middleware
 const getHackableJSON = require('./src/get-hackable-json')
 const bodyParser = require('body-parser')
-
-
+const WebSocket = require('ws');
 const app = express()
-const http = require('http').Server(app)
-const io = require('socket.io')(http, {
-  origins: '*'
-})
+const url = require('url')
+
 const cors = require('cors')
 
  // pretty hacky solution to get rawbody, too tired
@@ -72,7 +69,7 @@ app.post('/webhook', (req, res) => {
 
       hackableJSONCache[snapshot.username] = snapshot.hackablejson
       res.status(200).send('cache updated')
-      io.emit('user-updated', snapshot)
+      sendToAll(JSON.stringify(snapshot))
       return
 
   } else {
@@ -81,7 +78,34 @@ app.post('/webhook', (req, res) => {
 
 })
 
-const port = process.env.PORT || 3000
-app.listen(port, () => {
+const server = require('http').createServer(app)
+const wss = new WebSocket.Server({ server })
+
+const sockets = []
+wss.on('connection', function connection(ws, req) {
+
+  const location = url.parse(req.url, true);
+  console.log('location',location)
+  if (location.path === '/hackablejson') {
+    console.log('ws connected', req.url)
+    sockets.push(ws)
+  }
+  ws.on('error', () => {})
+
+})
+
+function sendToAll(msg) {
+  sockets.slice().forEach(socket => {
+    try {
+      socket.send(JSON.stringify(msg))
+    } catch (err) {
+      sockets.splice(sockets.indexOf(socket), 1)
+      socket.terminate()
+    }
+  })
+}
+
+const port = process.env.PORT || 3001
+server.listen(port, () => {
   console.log('listening on port', port)
 })
