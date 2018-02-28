@@ -5,25 +5,23 @@ const app = express()
 
 const isWebhookRequestValid = require('./src/is-webhook-request-valid')
 
-let hackableJSONPromise
-function ensureHackableJSON() {
-  if (hackableJSONPromise) return
-  hackableJSONPromise = getHackableJSON()
-    .then(response =>
-      response.reduce((lookup, user) => ({
-        ...lookup,
-        ...{ [user.username] : user.hackablejson }
-      }), {}))
+let isWarmupTriggered = false
+let hackableJSONCache = {}
+function ensureWarmup() {
+  if (isWarmupTriggered) return
+  isWarmupTriggered = true
+  getHackableJSON()
+    .then(response => response.reduce((lookup, user) => ({
+      ...lookup,
+      ...{ [user.username] : user.hackablejson }
+    }), {}))
     .then(cache => {
       hackableJSONCache = cache
     })
-  return hackableJSONPromise
 }
 
-let hackableJSONCache = {}
-
 app.get('/hackablejson', (req, res) => {
-  ensureHackableJSON()
+  ensureWarmup()
   res.json(hackableJSONCache)
 })
 
