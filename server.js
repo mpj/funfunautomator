@@ -2,8 +2,10 @@ const express = require('express')
 const cache = require('apicache').middleware
 const getHackableJSON = require('./src/get-hackable-json')
 const bodyParser = require('body-parser')
-
+const http = require('http')
+const io = require('socket.io')(http)
 const app = express()
+const http = http.Server(app)
 
  // pretty hacky solution to get rawbody, too tired
 // to figure better solution out
@@ -16,7 +18,6 @@ let rawBodySaver = function (req, res, buf, encoding) {
 app.use(bodyParser.json({ verify: rawBodySaver }))
 app.use(bodyParser.urlencoded({ extended: false, verify: rawBodySaver }))
 app.use(bodyParser.raw({ verify: rawBodySaver, type: function () { return true } }))
-
 
 const isWebhookRequestValid = require('./src/is-webhook-request-valid')
 
@@ -65,6 +66,8 @@ app.post('/webhook', (req, res) => {
 
       hackableJSONCache[snapshot.username] = snapshot.hackablejson
       res.status(200).send('cache updated')
+      io.emit('user-updated', snapshot)
+      return
 
   } else {
     res.status(200).send('event ignored')
