@@ -3,7 +3,7 @@ const cache = require('apicache').middleware
 const getHackableJSON = require('./src/get-hackable-json')
 const app = express()
 
-const isWebhookRequestValid = require('./is-webhook-request-valid')
+const isWebhookRequestValid = require('./src/is-webhook-request-valid')
 
 let hackableJSONPromise
 function ensureHackableJSON() {
