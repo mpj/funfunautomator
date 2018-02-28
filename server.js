@@ -33,10 +33,6 @@ app.post('/webhook', (req, res) => {
 
   if(req.headers['x-discourse-event'] === 'user_updated') {
 
-    let hackableDataCache = state.cache.result.data
-    if (!hackableDataCache) {
-      res.status(200).send('carry on')
-    } else {
       const HACKABLE_JSON_FIELD_ID = 1
 
       const snapshot = {
@@ -54,7 +50,7 @@ app.post('/webhook', (req, res) => {
 
       hackableJSONCache[snapshot.username] = snapshot.hackablejson
       res.status(200).send('cache updated')
-    }
+
   } else {
     res.status(200).send('event ignored')
   }
