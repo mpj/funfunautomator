@@ -1,14 +1,12 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const cache = require('apicache').middleware
+const getHackableJSON = require('./src/get-hackable-json')
+const app = express()
 
-app.get('/sync', function(req, res) {
-  res.send('hello world')
-})
+app.get('/hackablejson', cache('5 minutes'), (req, res) =>
+  getHackableJSON().then(res.json.bind(res)))
 
-
-
-
-const port = 3000
+const port = process.env.PORT || 3000
 app.listen(port, () => {
   console.log('listening on port', port)
 })
