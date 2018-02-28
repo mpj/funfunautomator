@@ -3,9 +3,10 @@ const cache = require('apicache').middleware
 const getHackableJSON = require('./src/get-hackable-json')
 const bodyParser = require('body-parser')
 
-const io = require('socket.io')(http)
+
 const app = express()
 const http = require('http').Server(app)
+const io = require('socket.io')(http)
 const cors = require('cors')
 
  // pretty hacky solution to get rawbody, too tired

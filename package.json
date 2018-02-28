@@ -16,6 +16,7 @@
   "dependencies": {
     "apicache": "^1.2.0",
     "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "jest": "^22.2.2",
     "node-fetch": "^2.0.0",
