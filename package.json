@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "apicache": "^1.2.0",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "jest": "^22.2.2",
     "node-fetch": "^2.0.0",

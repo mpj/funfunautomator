@@ -1,6 +1,8 @@
 const express = require('express')
 const cache = require('apicache').middleware
 const getHackableJSON = require('./src/get-hackable-json')
+const bodyParser = require('body-parser')
+
 const app = express()
 
  // pretty hacky solution to get rawbody, too tired
