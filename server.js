@@ -3,6 +3,19 @@ const cache = require('apicache').middleware
 const getHackableJSON = require('./src/get-hackable-json')
 const app = express()
 
+ // pretty hacky solution to get rawbody, too tired
+// to figure better solution out
+// From: https://coderwall.com/p/qrjfcw/capture-raw-post-body-in-express-js
+let rawBodySaver = function (req, res, buf, encoding) {
+  if (buf && buf.length) {
+    req.rawBody = buf.toString(encoding || 'utf8');
+  }
+}
+app.use(bodyParser.json({ verify: rawBodySaver }))
+app.use(bodyParser.urlencoded({ extended: false, verify: rawBodySaver }))
+app.use(bodyParser.raw({ verify: rawBodySaver, type: function () { return true } }))
+
+
 const isWebhookRequestValid = require('./src/is-webhook-request-valid')
 
 let isWarmupTriggered = false
