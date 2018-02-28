@@ -6,7 +6,7 @@ describe('getQuery', () => {
       fetch: (url, opts) => {
         expect(url).toBe(
           `https://ourdiscourse.com/admin/plugins/explorer/queries/5/run` +
-          `?api_username=system&api_key=secritz`
+          `?api_username=system&api_key=secritz&limit=1000000`
         )
         expect(opts.method).toBe('post')
         return Promise.resolve({
