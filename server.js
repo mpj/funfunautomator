@@ -97,7 +97,7 @@ wss.on('connection', function connection(ws, req) {
 function sendToAll(msg) {
   sockets.slice().forEach(socket => {
     try {
-      socket.send(JSON.stringify(msg))
+      socket.send(msg)
     } catch (err) {
       sockets.splice(sockets.indexOf(socket), 1)
       socket.terminate()
