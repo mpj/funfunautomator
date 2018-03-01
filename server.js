@@ -92,6 +92,8 @@ function sendToAll(msg) {
   })
 }
 
+setInterval(() => sendToAll('ping'), 5000)
+
 const port = process.env.PORT || 3001
 server.listen(port, () => {
   console.log('listening on port', port)
