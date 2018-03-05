@@ -89,7 +89,7 @@ app.post('/webhook', (req, res) => {
 const moduleWhiteList = [ 'date-info' ]
 app.get('/bundle', (req, res) => {
 
-  browserify('./bundle.js' )
+  browserify('./bundle.js', {standalone: 'date-info'})
     .transform("babelify", {presets: [ "es2017" ]})
     .bundle()
     .pipe(res)
