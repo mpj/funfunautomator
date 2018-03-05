@@ -3,8 +3,10 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const WebSocket = require('ws')
 const cors = require('cors')
+const apicache = require('apicache').middleware
 
 const getHackableJSON = require('./src/get-hackable-json')
+const getQuery = require('./src/get-query')
 const isWebhookRequestValid = require('./src/is-webhook-request-valid')
 
 const app = express()
@@ -40,6 +42,18 @@ function ensureWarmup() {
 app.get('/hackablejson', (req, res) => {
   ensureWarmup()
   res.json(hackableJSONCache)
+})
+
+const isStringDate = str => str.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)
+app.get('/dau', apicache('1 hour'), (req, res)  => {
+  if (!isStringDate(req.query.start))
+    return res.status(400).send('start must be in YYYY-MM-DD format')
+  if (!isStringDate(req.query.end))
+    return res.status(400).send('end must be in YYYY-MM-DD format')
+  getQuery(3,{
+    startdate: req.query.start,
+    enddate: req.query.end
+  }).then(result => res.json(result.rows))
 })
 
 app.post('/webhook', (req, res) => {
