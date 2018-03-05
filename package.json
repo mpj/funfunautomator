@@ -15,8 +15,12 @@
   "license": "ISC",
   "dependencies": {
     "apicache": "^1.2.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babelify": "^8.0.0",
     "body-parser": "^1.18.2",
+    "browserify": "^16.1.0",
     "cors": "^2.8.4",
+    "date-info": "^1.1.1",
     "express": "^4.16.2",
     "jest": "^22.2.2",
     "node-fetch": "^2.0.0",

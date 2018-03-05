@@ -4,6 +4,9 @@ const bodyParser = require('body-parser')
 const WebSocket = require('ws')
 const cors = require('cors')
 const apicache = require('apicache').middleware
+const browserify = require('browserify')
+const babelify = require('babelify')
+
 
 const getHackableJSON = require('./src/get-hackable-json')
 const getQuery = require('./src/get-query')
@@ -81,6 +84,15 @@ app.post('/webhook', (req, res) => {
   hackableJSONCache[username] = hackableJSON
   res.status(200).send('cache updated')
   sendToAll(JSON.stringify({ username, hackableJSON}))
+})
+
+const moduleWhiteList = [ 'date-info' ]
+app.get('/bundle', (req, res) => {
+
+  browserify('./bundle.js' )
+    .transform("babelify", {presets: [ "es2017" ]})
+    .bundle()
+    .pipe(res)
 })
 
 const server = require('http').createServer(app)
