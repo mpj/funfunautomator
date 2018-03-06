@@ -70,6 +70,17 @@ app.get('/wau', apicache('1 hour'), (req, res)  => {
   }).then(result => res.json(result.rows))
 })
 
+app.get('/mau', apicache('1 hour'), (req, res)  => {
+  if (!isStringDate(req.query.start))
+    return res.status(400).send('start must be in YYYY-MM-DD format')
+  if (!isStringDate(req.query.end))
+    return res.status(400).send('end must be in YYYY-MM-DD format')
+  getQuery(5,{
+    startdate: req.query.start,
+    enddate: req.query.end
+  }).then(result => res.json(result.rows))
+})
+
 app.post('/webhook', (req, res) => {
   if (!isWebhookRequestValid(req)) {
     res.status(403).send('invalid signature')
