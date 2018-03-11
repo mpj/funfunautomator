@@ -1,0 +1,28 @@
+{
+  "extends": "standard",
+  "plugins": ["jest"],
+  "rules": {
+    "no-multi-spaces": 0,
+    "comma-spacing": 0,
+    "keyword-spacing": 0,
+    "no-trailing-spaces": 0,
+    "eol-last": 0,
+    "padded-blocks": 0,
+    "spaced-comment": 0,
+    "no-multiple-empty-lines": 0,
+    "space-before-function-paren": 0,
+    "comma-dangle": 0,
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "indent": 0,
+    "no-unused-expressions": 0,
+    "space-infix-ops": 0,
+    "no-labels": ["error", { "allowSwitch": true } ]
+  },
+  "env": {
+    "jest/globals": true
+  }
+}
