@@ -7,8 +7,7 @@ const apicache = require('apicache').middleware
 const browserify = require('browserify')
 const babelify = require('babelify')
 
-
-const getHackableJSON = require('./hackable-json')
+const hackableJSON = require('./hackable-json')
 const getQuery = require('./query')
 const isWebhookRequestValid = require('./is-webhook-request-valid')
 
@@ -32,7 +31,7 @@ let hackableJSONCache = {}
 function ensureWarmup() {
   if (isWarmupTriggered) return
   isWarmupTriggered = true
-  getHackableJSON()
+  hackableJSON()
     .then(response => response.reduce((lookup, user) => ({
       ...lookup,
       ...{ [user.username] : user.hackablejson }
