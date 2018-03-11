@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "engines": {
     "node": "^9.3"
@@ -13,6 +13,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.2.2"
+  },
   "dependencies": {
     "apicache": "^1.2.0",
     "babel-preset-es2017": "^6.24.1",
@@ -22,7 +25,6 @@
     "cors": "^2.8.4",
     "date-info": "^1.1.1",
     "express": "^4.16.2",
-    "jest": "^22.2.2",
     "node-fetch": "^2.0.0",
     "ramda": "^0.25.0",
     "supersniff": "^2.1.0",

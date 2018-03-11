@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-module.exports = require('./get-groups')({
+module.exports = require('./all-users.factory')({
   fetch,
   process
 })

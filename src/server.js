@@ -8,9 +8,9 @@ const browserify = require('browserify')
 const babelify = require('babelify')
 
 
-const getHackableJSON = require('./src/get-hackable-json')
-const getQuery = require('./src/get-query')
-const isWebhookRequestValid = require('./src/is-webhook-request-valid')
+const getHackableJSON = require('./hackable-json')
+const getQuery = require('./query')
+const isWebhookRequestValid = require('./is-webhook-request-valid')
 
 const app = express()
 
