@@ -17,8 +17,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run:
-        name: Jest Suite
-        command: npm run ci-test"
-        environment:
-          JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+          name: Jest Suite
+          command: npm run ci-test"
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - run: npm run ci-check
