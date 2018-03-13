@@ -47,6 +47,7 @@
     "jest-junit": "^3.6.0",
     "node-fetch": "^2.0.0",
     "ramda": "^0.25.0",
+    "raven": "^2.4.2",
     "supersniff": "^2.1.0",
     "ws": "^4.1.0"
   }
