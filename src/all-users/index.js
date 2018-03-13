@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-module.exports = require('./all-users.factory')({
+module.exports = require('./unbound').bind(null, {
   fetch,
   process
 })
