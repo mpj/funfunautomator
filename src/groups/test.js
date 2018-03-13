@@ -11,17 +11,15 @@ describe('groups', () => {
     const fetch = url => {
       expect(url).toBe(
         'https://mydiscourse.com/users/waffleman.json' +
-        `?api_username=system&api_key=secrit`
+          `?api_username=system&api_key=secrit`
       )
       return Promise.resolve({
-        json: () => Promise.resolve({
-          user: {
-            groups: [
-              { name: 'group-a' },
-              { name: 'group-b' }
-            ]
-          }
-        })
+        json: () =>
+          Promise.resolve({
+            user: {
+              groups: [{ name: 'group-a' }, { name: 'group-b' }]
+            }
+          })
       })
     }
     groups({ process, fetch }, 'waffleman').then(result => {

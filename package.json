@@ -5,10 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "precommit": "prettier --write src/**/*.js"
   },
   "engines": {
     "node": "^9.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   },
   "keywords": [],
   "author": "",
@@ -21,7 +26,8 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^22.2.2"
+    "jest": "^22.2.2",
+    "prettier": "1.11.1"
   },
   "dependencies": {
     "apicache": "^1.2.0",
