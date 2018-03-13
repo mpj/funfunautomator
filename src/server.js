@@ -76,8 +76,6 @@ app.get('/wau', apicache('1 hour'), (req, res)  => {
 })
 
 app.get('/mau', apicache('1 hour'), (req, res)  => {
-  console.log('req.cookies', req.cookies)
-  res.cookie('cookieName', parseInt(req.cookies.cookieName || 0) + 1)
   if (!isStringDate(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
   if (!isStringDate(req.query.end))
@@ -86,6 +84,11 @@ app.get('/mau', apicache('1 hour'), (req, res)  => {
     startdate: req.query.start,
     enddate: req.query.end
   }).then(result => res.json(result.rows))
+})
+
+app.get('/cookietest', (req, res) => {
+  console.log('req.cookies', req.cookies)
+  res.cookie('cookieName', parseInt(req.cookies.cookieName || 0) + 1)
 })
 
 app.post('/webhook', (req, res) => {
