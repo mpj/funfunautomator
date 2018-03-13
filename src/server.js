@@ -89,6 +89,7 @@ app.get('/mau', apicache('1 hour'), (req, res)  => {
 app.get('/cookietest', (req, res) => {
   console.log('req.cookies', req.cookies)
   res.cookie('cookieName', parseInt(req.cookies.cookieName || 0) + 1)
+  res.status(200).send('ok')
 })
 
 app.post('/webhook', (req, res) => {
