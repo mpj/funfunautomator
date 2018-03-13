@@ -25,7 +25,8 @@ app.use(bodyParser.raw({ verify: rawBodySaver, type: function () { return true }
 app.use(cors({
   origin: function (origin, callback) {
     callback(null, true)
-  }
+  },
+  credentials: true
 }))
 
 // Hackable JSON cache
