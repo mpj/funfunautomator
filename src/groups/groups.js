@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-module.exports = require('./groups.factory')({
+module.exports = require('./unbound').bind(null, {
   fetch,
   process
 })
