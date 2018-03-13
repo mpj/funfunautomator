@@ -7,8 +7,9 @@
     "test": "jest",
     "start": "node src/server.js",
     "prettier": "npm run prettier ---write src/**/*.js",
-    "prepush": "npm run build",
-    "build": "npm test && prettier-check src/**/*.js"
+    "prepush": "npm test && prettier-check src/**/*.js",
+    "ci-test": "jest --ci --testResultsProcessor=\"jest-junit\"",
+    "ci-check": "prettier-check src/**/*.js"
   },
   "engines": {
     "node": "^9.3"
@@ -42,6 +43,7 @@
     "cors": "^2.8.4",
     "date-info": "^1.1.1",
     "express": "^4.16.2",
+    "jest-junit": "^3.6.0",
     "node-fetch": "^2.0.0",
     "ramda": "^0.25.0",
     "supersniff": "^2.1.0",
