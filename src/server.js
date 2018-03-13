@@ -23,7 +23,9 @@ app.use(bodyParser.urlencoded({ extended: false, verify: rawBodySaver }))
 app.use(bodyParser.raw({ verify: rawBodySaver, type: function () { return true } }))
 
 app.use(cors({
-  origin: '*',
+  origin: function (origin, callback) {
+    callback(null, true)
+  },
   credentials: true
 }))
 
