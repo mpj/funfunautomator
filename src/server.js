@@ -6,6 +6,8 @@ const cors = require('cors')
 const apicache = require('apicache').middleware
 const browserify = require('browserify')
 
+const cookieParser = require('cookie-parser')
+
 const hackableJSON = require('./hackable-json')
 const getQuery = require('./query')
 const isWebhookRequestValid = require('./is-webhook-request-valid')
@@ -21,7 +23,7 @@ function rawBodySaver(req, res, buf, encoding) {
 app.use(bodyParser.json({ verify: rawBodySaver }))
 app.use(bodyParser.urlencoded({ extended: false, verify: rawBodySaver }))
 app.use(bodyParser.raw({ verify: rawBodySaver, type: function () { return true } }))
-
+app.use(cookieParser('secret123'))
 app.use(cors({
   origin: function (origin, callback) {
     callback(null, true)
