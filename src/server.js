@@ -59,11 +59,11 @@ app.get('/hackablejson', (req, res) => {
   res.json(hackableJSONCache)
 })
 
-const isStringDate = str => str.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)
+const isDateString = str => str && str.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)
 app.get('/dau', apicache('1 hour'), (req, res)  => {
-  if (!isStringDate(req.query.start))
+  if (!isDateString(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
-  if (!isStringDate(req.query.end))
+  if (!isDateString(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
   getQuery(3, {
     startdate: req.query.start,
@@ -72,9 +72,9 @@ app.get('/dau', apicache('1 hour'), (req, res)  => {
 })
 
 app.get('/wau', apicache('1 hour'), (req, res)  => {
-  if (!isStringDate(req.query.start))
+  if (!isDateString(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
-  if (!isStringDate(req.query.end))
+  if (!isDateString(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
   getQuery(4,{
     startdate: req.query.start,
@@ -83,9 +83,9 @@ app.get('/wau', apicache('1 hour'), (req, res)  => {
 })
 
 app.get('/mau', apicache('1 hour'), (req, res)  => {
-  if (!isStringDate(req.query.start))
+  if (!isDateString(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
-  if (!isStringDate(req.query.end))
+  if (!isDateString(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
   getQuery(5,{
     startdate: req.query.start,
