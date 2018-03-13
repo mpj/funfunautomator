@@ -6,10 +6,18 @@ const cors = require('cors')
 const apicache = require('apicache').middleware
 const browserify = require('browserify')
 const Raven = require('raven')
+const git = require('git-rev')
+
 
 if(!process.env.SENTRY_DSN)
   throw new Error('SENTRY_DSN environment variable missing')
-Raven.config(process.env.SENTRY_DSN).install()
+
+git.short(function (str) {
+  Raven.config(process.env.SENTRY_DSN, {
+    release: str
+  }).install()
+})
+
 
 const cookieParser = require('cookie-parser')
 
@@ -124,6 +132,10 @@ app.post('/webhook', (req, res) => {
   hackableJSONCache[username] = hackableJSON
   res.status(200).send('cache updated')
   sendToAll(JSON.stringify({ username, hackableJSON }))
+})
+
+app.get('/fail', (req, res) => {
+  throw new Error('blam')
 })
 
 app.get('/bundle', (req, res) => {
