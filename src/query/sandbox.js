@@ -1,4 +1,4 @@
-const query = require('./query')
+const query = require('./')
 const sniff = require('supersniff')
 
 query(3,{

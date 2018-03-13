@@ -3,12 +3,14 @@ module.exports = function () {
   return {
     files: [
       'src/**/*.js',
-      'package.json', // <--
-      '!src/**/*.test.js'
+      'package.json',
+      '!src/**/*.test.js',
+      '!src/**/test.js'
       ],
 
     tests: [
-      'src/**/*.test.js'
+      'src/**/*.test.js',
+      'src/**/test.js'
     ],
 
     env: {
@@ -19,7 +21,7 @@ module.exports = function () {
     testFramework: 'jest',
 
     setup: function (wallaby) {
-      var jestConfig = require('./package.json').jest;
+      const jestConfig = require('./package.json').jest
       // for example:
       // jestConfig.globals = { "__DEV__": true };
       wallaby.testFramework.configure(jestConfig);
