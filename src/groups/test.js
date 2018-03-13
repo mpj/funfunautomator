@@ -26,5 +26,6 @@ describe('groups', () => {
       expect(result[0]).toBe('group-a')
       expect(result[1]).toBe('group-b')
     })
+
   })
 })
