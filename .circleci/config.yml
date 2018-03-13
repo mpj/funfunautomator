@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  check:
     working_directory: ~/tmp
     docker:
       - image: circleci/node:9
@@ -9,8 +9,23 @@ jobs:
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package-lock.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run ci-check
+
+  test:
+    parallelism: 3
+    working_directory: ~/tmp
+    docker:
+      - image: circleci/node:9
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package-lock.json" }}
       - run: npm install
       - save_cache:
           paths:
@@ -22,6 +37,11 @@ jobs:
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:
-          path: "reports"
+          path: reports/junit
 
-      - run: npm run ci-check
+workflows:
+  version: 2
+  build:
+    jobs:
+      - test
+      - check
