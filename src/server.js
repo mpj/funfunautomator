@@ -6,10 +6,18 @@ const cors = require('cors')
 const apicache = require('apicache').middleware
 const browserify = require('browserify')
 const Raven = require('raven')
+const git = require('git-rev')
+
 
 if(!process.env.SENTRY_DSN)
   throw new Error('SENTRY_DSN environment variable missing')
-Raven.config(process.env.SENTRY_DSN).install()
+
+git.short(function (str) {
+  Raven.config(process.env.SENTRY_DSN, {
+    release: str
+  }).install()
+})
+
 
 const cookieParser = require('cookie-parser')
 
@@ -59,11 +67,11 @@ app.get('/hackablejson', (req, res) => {
   res.json(hackableJSONCache)
 })
 
-const isStringDate = str => str.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)
+const isDateString = str => str && str.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)
 app.get('/dau', apicache('1 hour'), (req, res)  => {
-  if (!isStringDate(req.query.start))
+  if (!isDateString(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
-  if (!isStringDate(req.query.end))
+  if (!isDateString(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
   getQuery(3, {
     startdate: req.query.start,
@@ -72,9 +80,9 @@ app.get('/dau', apicache('1 hour'), (req, res)  => {
 })
 
 app.get('/wau', apicache('1 hour'), (req, res)  => {
-  if (!isStringDate(req.query.start))
+  if (!isDateString(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
-  if (!isStringDate(req.query.end))
+  if (!isDateString(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
   getQuery(4,{
     startdate: req.query.start,
@@ -83,9 +91,9 @@ app.get('/wau', apicache('1 hour'), (req, res)  => {
 })
 
 app.get('/mau', apicache('1 hour'), (req, res)  => {
-  if (!isStringDate(req.query.start))
+  if (!isDateString(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
-  if (!isStringDate(req.query.end))
+  if (!isDateString(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
   getQuery(5,{
     startdate: req.query.start,
@@ -124,6 +132,10 @@ app.post('/webhook', (req, res) => {
   hackableJSONCache[username] = hackableJSON
   res.status(200).send('cache updated')
   sendToAll(JSON.stringify({ username, hackableJSON }))
+})
+
+app.get('/fail', (req, res) => {
+  throw new Error('blam')
 })
 
 app.get('/bundle', (req, res) => {

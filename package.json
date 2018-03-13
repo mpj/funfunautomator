@@ -44,6 +44,7 @@
     "cors": "^2.8.4",
     "date-info": "^1.1.1",
     "express": "^4.16.2",
+    "git-rev": "^0.2.1",
     "jest-junit": "^3.6.0",
     "node-fetch": "^2.0.0",
     "ramda": "^0.25.0",
