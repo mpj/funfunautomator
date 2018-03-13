@@ -76,7 +76,8 @@ app.get('/wau', apicache('1 hour'), (req, res)  => {
 })
 
 app.get('/mau', apicache('1 hour'), (req, res)  => {
-  res.cookie('cookieName', parseInt(req.cookies.cookieName) + 1)
+  console.log('req.cookies', req.cookies)
+  res.cookie('cookieName', parseInt(req.cookies.cookieName || 0) + 1)
   if (!isStringDate(req.query.start))
     return res.status(400).send('start must be in YYYY-MM-DD format')
   if (!isStringDate(req.query.end))
