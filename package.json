@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "node src/server.js",
-    "prettier": "npm run prettier ---write src/**/*.js",
+    "prettier": "prettier --write src/**/*.js",
     "prepush": "npm test && prettier-check src/**/*.js",
     "ci-test": "jest `circleci tests glob src/**/test.js | circleci tests split` --ci --runInBand --testResultsProcessor=\"jest-junit\"",
     "ci-check": "prettier-check src/**/*.js",
