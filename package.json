@@ -8,7 +8,7 @@
     "start": "node src/server.js",
     "prettier": "npm run prettier ---write src/**/*.js",
     "prepush": "npm test && prettier-check src/**/*.js",
-    "ci-test": "jest --ci --testResultsProcessor=\"jest-junit\"",
+    "ci-test": "jest --ci --runInBand --testResultsProcessor=\"jest-junit\"",
     "ci-check": "prettier-check src/**/*.js"
   },
   "engines": {
