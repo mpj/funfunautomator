@@ -49,13 +49,9 @@ jobs:
           fingerprints:
             - "SHA256:NMQuy1v0qJO6f6FVfPIr2H8kgDtvXgJ7WpyrQAgnMP0"
       - run:
-          name: Run Setup Script
-          command: bash .circleci/heroku-setup.sh
-      - run:
           name: Deploy Master to Heroku
           command: |
-            heroku git:remote -a $HEROKU_APP_NAME
-            git push --force git@heroku.com:$HEROKU_APP_NAME.git HEAD:refs/heads/master
+            git push --force https://git.heroku.com/funfunautomator.git HEAD:refs/heads/master
 
 workflows:
   version: 2
