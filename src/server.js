@@ -5,7 +5,6 @@ const WebSocket = require('ws')
 const cors = require('cors')
 const apicache = require('apicache').middleware
 const browserify = require('browserify')
-const babelify = require('babelify')
 
 const hackableJSON = require('./hackable-json')
 const getQuery = require('./query')
@@ -23,7 +22,11 @@ app.use(bodyParser.json({ verify: rawBodySaver }))
 app.use(bodyParser.urlencoded({ extended: false, verify: rawBodySaver }))
 app.use(bodyParser.raw({ verify: rawBodySaver, type: function () { return true } }))
 
-app.use(cors())
+app.use(cors({
+  origin: function (origin, callback) {
+    callback(null, true)
+  }
+}))
 
 // Hackable JSON cache
 let isWarmupTriggered = false
@@ -34,7 +37,7 @@ function ensureWarmup() {
   hackableJSON()
     .then(response => response.reduce((lookup, user) => ({
       ...lookup,
-      ...{ [user.username] : user.hackablejson }
+      ...{ [user.username]: user.hackablejson }
     }), {}))
     .then(cache => {
       hackableJSONCache = cache
@@ -52,7 +55,7 @@ app.get('/dau', apicache('1 hour'), (req, res)  => {
     return res.status(400).send('start must be in YYYY-MM-DD format')
   if (!isStringDate(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
-  getQuery(3,{
+  getQuery(3, {
     startdate: req.query.start,
     enddate: req.query.end
   }).then(result => res.json(result.rows))
@@ -104,14 +107,13 @@ app.post('/webhook', (req, res) => {
 
   hackableJSONCache[username] = hackableJSON
   res.status(200).send('cache updated')
-  sendToAll(JSON.stringify({ username, hackableJSON}))
+  sendToAll(JSON.stringify({ username, hackableJSON }))
 })
 
-const moduleWhiteList = [ 'date-info' ]
 app.get('/bundle', (req, res) => {
 
   browserify('./bundle.js', {standalone: 'date-info'})
-    .transform("babelify", {presets: [ "es2017" ]})
+    .transform('babelify', {presets: [ 'es2017' ]})
     .bundle()
     .pipe(res)
 })
