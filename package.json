@@ -4,9 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node src/server.js",
-    "precommit": "prettier --write src/**/*.js"
+    "prettier": "npm run prettier ---write src/**/*.js",
+    "prepush": "npm run build",
+    "build": "npm test && prettier-check src/**/*.js"
   },
   "engines": {
     "node": "^9.3"
@@ -27,7 +29,8 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.2.2",
-    "prettier": "1.11.1"
+    "prettier": "1.11.1",
+    "prettier-check": "^2.0.0"
   },
   "dependencies": {
     "apicache": "^1.2.0",
