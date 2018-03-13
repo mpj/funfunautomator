@@ -5,6 +5,11 @@ const WebSocket = require('ws')
 const cors = require('cors')
 const apicache = require('apicache').middleware
 const browserify = require('browserify')
+const Raven = require('raven')
+
+if(!process.env.SENTRY_DSN)
+  throw new Error('SENTRY_DSN environment variable missing')
+Raven.config(process.env.SENTRY_DSN).install()
 
 const cookieParser = require('cookie-parser')
 
@@ -13,6 +18,9 @@ const getQuery = require('./query')
 const isWebhookRequestValid = require('./is-webhook-request-valid')
 
 const app = express()
+
+// Raven request handler must be the first middleware on the app
+app.use(Raven.requestHandler())
 
 // pretty hacky solution to get rawbody (so that we can do
 // the webhook verification, too tired  to figure better solution out ATM
@@ -148,6 +156,11 @@ function sendToAll(msg) {
     }
   })
 }
+
+// The error handler must be before any other error middleware
+app.use(Raven.errorHandler())
+// put any optional fallthrough error handler here
+
 
 setInterval(() => sendToAll('ping'), 5000)
 
