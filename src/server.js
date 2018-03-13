@@ -13,6 +13,7 @@ if(!process.env.SENTRY_DSN)
   throw new Error('SENTRY_DSN environment variable missing')
 
 git.short(function (str) {
+  console.log('Git short is', str)
   Raven.config(process.env.SENTRY_DSN, {
     release: str
   }).install()
