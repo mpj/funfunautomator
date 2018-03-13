@@ -11,6 +11,6 @@ describe('discourseUrl', () => {
       )
     ).toBe(
       'https://www.funfunforum.com/somepath/hello?api_username=system' +
-      '&api_key=8cdkjhasdjhdasjkhasdjk02&someparam=123'
+        '&api_key=8cdkjhasdjhdasjkhasdjk02&someparam=123'
     ))
 })
