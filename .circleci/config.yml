@@ -58,7 +58,12 @@ jobs:
           command: |
             heroku git:remote -a $HEROKU_APP_NAME
             git push --force git@heroku.com:$HEROKU_APP_NAME.git HEAD:refs/heads/master
-            heroku config:set SOME_VAR=abc
+            heroku config:set RELEASED_REVISION=`git rev-parse --short HEAD`
+
+            # Tell Setry that we have released.
+            # SENTRY_RELEASE_WEBHOOK can be retrieved from
+            # https://sentry.io/app17644056herokucom/funfunautomator/settings/release-tracking/
+            curl $SENTRY_RELEASE_WEBHOOK -X POST -H 'Content-Type: application/json' -d "{\"version\": \"`git rev-parse --short HEAD`\"}"
 
 workflows:
   version: 2
