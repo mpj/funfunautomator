@@ -45,6 +45,8 @@ jobs:
     working_directory: /tmp/deploy
     steps:
       - checkout
+      # This is mostly inspired by instructions at
+      # https://circleci.com/docs/2.0/deployment-integrations/#heroku
       - add_ssh_keys:
           fingerprints:
             - "SHA256:NMQuy1v0qJO6f6FVfPIr2H8kgDtvXgJ7WpyrQAgnMP0"
@@ -54,10 +56,9 @@ jobs:
       - run:
           name: Deploy Master to Heroku
           command: |
-            #ssh-keyscan heroku.com >> ~/.ssh/known_hosts
             heroku git:remote -a $HEROKU_APP_NAME
-            git push --force heroku master #HEAD:refs/heads/master
-            # curl https://sentry.io/api/hooks/release/builtin/303243/b8c2d439b9097dd82bc347b32e3464461f07e3795c6ff426ed7d7e8ed6d40503/ -X POST -H 'Content-Type: application/json' -d '{"version": "`git rev-parse --short HEAD`"}'
+            git push --force git@heroku.com:$HEROKU_APP_NAME.git HEAD:refs/heads/master
+            heroku config:set SOME_VAR=abc
 
 workflows:
   version: 2
