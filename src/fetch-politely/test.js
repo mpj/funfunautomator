@@ -1,9 +1,14 @@
 const fetchPolitely = require('./unbound')
+const delay = require('delay')
 
 describe('fetchPolitely', () => {
   it('waits when ratelimited', () => {
     let fetchCalledTimes = 0
-    return fetchPolitely(
+    let resolveDelay = () => {
+      throw new Error('i should not be called')
+    }
+    let isResolved = false
+    const responsePromise = fetchPolitely(
       {
         fetch: (url, opts) => {
           fetchCalledTimes++
@@ -21,12 +26,28 @@ describe('fetchPolitely', () => {
         },
         delay: ms => {
           expect(ms).toBe((14 + 1) * 1000)
-          Promise.resolve()
+          return (new Promise(resolve => {
+            // @ts-ignore
+            resolveDelay = resolve
+          }))
         }
       },
       someUrl,
       someOpts
-    ).then(response => expect(response).toBe(someResponse))
+    ).then(response => {
+      isResolved = true
+      expect(response).toBe(someResponse)
+    })
+
+    expect(isResolved).toBe(false)
+    return delay(1).then(() => {
+      expect(isResolved).toBe(false)
+      resolveDelay()
+      return delay(1).then(() => {
+        expect(isResolved).toBe(true)
+        return responsePromise
+      })
+    })
   })
 })
 
