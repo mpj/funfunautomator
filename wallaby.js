@@ -4,12 +4,10 @@ module.exports = function () {
     files: [
       'src/**/*.js',
       'package.json',
-      '!src/**/*.test.js',
       '!src/**/test.js'
       ],
 
     tests: [
-      'src/**/*.test.js',
       'src/**/test.js'
     ],
 
@@ -24,7 +22,7 @@ module.exports = function () {
       const jestConfig = require('./package.json').jest
       // for example:
       // jestConfig.globals = { "__DEV__": true };
-      wallaby.testFramework.configure(jestConfig);
+      wallaby.testFramework.configure(jestConfig)
     }
   };
 };
