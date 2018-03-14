@@ -2,7 +2,7 @@ const fetchPolitely = require('./unbound')
 const delay = require('delay')
 
 describe('fetchPolitely', () => {
-  it('waits when ratelimited', () => {
+  it('waits when ratelimited', ()  => {
     let fetchCalledTimes = 0
     let resolveDelay = () => {
       throw new Error('i should not be called')
@@ -53,6 +53,6 @@ describe('fetchPolitely', () => {
 
 const someUrl = 'http://myurl.com'
 const someOpts = { method: 'post' }
-let someResponse = {
+const someResponse = {
   status: 200
 }
