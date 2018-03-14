@@ -7,10 +7,11 @@
     "test": "jest",
     "start": "node src/server.js",
     "prettier": "prettier --write src/**/*.js",
-    "prepush": "npm test && prettier-check src/**/*.js",
+    "prettier-check": "prettier-check src/**/*.js",
+    "lint": "eslint src/",
+    "prepush": "npm test && npm run prettier-check && npm run lint",
     "ci-test": "jest `circleci tests glob src/**/test.js | circleci tests split` --ci --runInBand --testResultsProcessor=\"jest-junit\"",
-    "ci-check": "prettier-check src/**/*.js",
-    "hai": "echo \"src/**/txest.js\" | jest --"
+    "ci-check": "npm run prettier-check && npm run lint"
   },
   "engines": {
     "node": "^9.3",
