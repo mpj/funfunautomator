@@ -49,6 +49,9 @@ jobs:
           fingerprints:
             - "SHA256:NMQuy1v0qJO6f6FVfPIr2H8kgDtvXgJ7WpyrQAgnMP0"
       - run:
+          name: Run Setup Script
+          command: bash .circleci/heroku-setup.sh
+      - run:
           name: Deploy Master to Heroku
           command: |
             #ssh-keyscan heroku.com >> ~/.ssh/known_hosts
