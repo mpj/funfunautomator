@@ -64,9 +64,10 @@ jobs:
             heroku config:set RELEASED_REVISION=`git rev-parse --short HEAD`
       - run:
           name: Notify Sentry of release
-          # SENTRY_RELEASE_WEBHOOK can be retrieved from
-          # https://sentry.io/app17644056herokucom/funfunautomator/settings/release-tracking/
-          command: curl $SENTRY_RELEASE_WEBHOOK -X POST -H 'Content-Type: application/json' -d "{\"version\": \"`git rev-parse --short HEAD`\"}"
+          command: |
+            # SENTRY_RELEASE_WEBHOOK can be retrieved from
+            # https://sentry.io/app17644056herokucom/funfunautomator/settings/release-tracking/
+            curl $SENTRY_RELEASE_WEBHOOK -X POST -H 'Content-Type: application/json' -d "{\"version\": \"`git rev-parse --short HEAD`\"}"
 
 workflows:
   version: 2
