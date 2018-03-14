@@ -26,10 +26,10 @@ describe('fetchPolitely', () => {
         },
         delay: ms => {
           expect(ms).toBe((14 + 1) * 1000)
-          return (new Promise(resolve => {
+          return new Promise(resolve => {
             // @ts-ignore
             resolveDelay = resolve
-          }))
+          })
         }
       },
       someUrl,
