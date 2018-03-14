@@ -25,7 +25,7 @@ Raven.config(process.env.SENTRY_DSN, {
 }).install()
 // Raven request (and error) handler must be the first middleware on the app
 app.use(Raven.requestHandler())
-app.use(Raven.errorHandler())
+
 
 // pretty hacky solution to get rawbody (so that we can do
 // the webhook verification, too tired  to figure better solution out ATM
@@ -165,6 +165,9 @@ function sendToAll(msg) {
     }
   })
 }
+// Raven error handler must be before all other error handlers
+// but after request handlers
+app.use(Raven.errorHandler())
 
 setInterval(() => sendToAll('ping'), 5000)
 
