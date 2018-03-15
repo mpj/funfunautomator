@@ -7,8 +7,6 @@ const apicache = require('apicache').middleware
 const browserify = require('browserify')
 const Raven = require('raven')
 
-
-
 const cookieParser = require('cookie-parser')
 
 const hackableJSON = require('./hackable-json')
