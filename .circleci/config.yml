@@ -65,9 +65,10 @@ jobs:
       - run:
           name: Notify Sentry of release
           command: |
-            # SENTRY_RELEASE_WEBHOOK can be retrieved from
+            # SENTRY_RELEASE_WEBHOOK is project-specific and can be retrieved from
             # https://sentry.io/app17644056herokucom/funfunautomator/settings/release-tracking/
-            curl $SENTRY_RELEASE_WEBHOOK -X POST -H 'Content-Type: application/json' -d "{\"version\": \"`git rev-parse --short HEAD`\"}"
+            # Releases concept documented here: https://docs.sentry.io/learn/releases/
+            curl $SENTRY_RELEASE_WEBHOOK -X POST -H 'Content-Type: application/json' -d "{ \"version\": \"`git rev-parse HEAD`\", \"refs\": [{ \"repository\": \"$GITHUB_PATH\", \"commit\": \"`git rev-parse HEAD`\" }] }"
 
 workflows:
   version: 2
