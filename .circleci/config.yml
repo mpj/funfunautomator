@@ -69,7 +69,6 @@ jobs:
             # https://sentry.io/TEAMHERE/PROJECTHERE/settings/release-tracking/
             # Releases concept documented here: https://docs.sentry.io/learn/releases/
             # and here https://docs.sentry.io/api/releases/post-organization-releases/
-            echo "{ \"version\": \"`git rev-parse HEAD`\", \"commits\": [{ \"id\": \"`git rev-parse HEAD`\" }] }"
             curl $SENTRY_RELEASE_WEBHOOK -X POST -H 'Content-Type: application/json' -d "{ \"version\": \"`git rev-parse HEAD`\", \"commits\": [{ \"id\": \"`git rev-parse HEAD`\" }] }"
 
 workflows:
