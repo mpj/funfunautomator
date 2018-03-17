@@ -64,12 +64,8 @@ jobs:
             heroku config:set RELEASED_REVISION=`git rev-parse --short HEAD`
       - run:
           name: Notify Sentry of release
-          command: |
-            # SENTRY_RELEASE_WEBHOOK is project- and reposotory specific and can be configured from
-            # https://sentry.io/TEAMHERE/PROJECTHERE/settings/release-tracking/
-            # Releases concept documented here: https://docs.sentry.io/learn/releases/
-            # and here https://docs.sentry.io/api/releases/post-organization-releases/
-            curl $SENTRY_RELEASE_WEBHOOK -X POST -H 'Content-Type: application/json' -d "{ \"version\": \"`git rev-parse HEAD`\", \"commits\": [{ \"id\": \"`git rev-parse HEAD`\" }] }"
+          command: bash .circleci/sentry-release.sh
+
 
 workflows:
   version: 2
