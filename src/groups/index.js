@@ -1,6 +1,4 @@
-const fetch = require('node-fetch')
-
 module.exports = require('./unbound').bind(null, {
-  fetch,
-  process
+  fetch: require('node-fetch'),
+  discourseUrl: require('../discourse-url')
 })
