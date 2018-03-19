@@ -5,5 +5,4 @@ module.exports = ({ query }, id) =>
     .then(x => x.pledge_cents)
     .then(parseInt)
 
-const firstRowAsObject =
-  ({ columns, rows }) => R.zipObj(columns, rows[0])
+const firstRowAsObject = ({ columns, rows }) => R.zipObj(columns, rows[0])
