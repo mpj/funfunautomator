@@ -5,7 +5,7 @@ describe('pledge', () => {
     patreonPledge({
       query: (id, params) => {
         expect(id).toBe(6)
-        expect(params.uid).toBe(someUserId)
+        expect(params.patreonid).toBe(someUserId)
         return Promise.resolve({
             success: true,
             errors: [],
