@@ -6,12 +6,19 @@ const cors = require('cors')
 const apicache = require('apicache').middleware
 const browserify = require('browserify')
 const Raven = require('raven')
+const sniff = require('supersniff')
+const R = require('ramda')
+
+const querystring = require('querystring')
+const fetch = require('node-fetch')
 
 const cookieParser = require('cookie-parser')
 
 const hackableJSON = require('./hackable-json')
 const getQuery = require('./query')
 const isWebhookRequestValid = require('./is-webhook-request-valid')
+const currentPatreonUser = require('./current-patreon-user')
+const pledge = require('./pledge')
 
 const app = express()
 
@@ -61,6 +68,8 @@ app.get('/hackablejson', (req, res) => {
   ensureWarmup()
   res.json(hackableJSONCache)
 })
+
+app.post('/')
 
 const isDateString = str => str && str.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)
 app.get('/dau', apicache('1 hour'), (req, res)  => {
@@ -139,6 +148,52 @@ app.get('/bundle', (req, res) => {
     .transform('babelify', {presets: [ 'es2017' ]})
     .bundle()
     .pipe(res)
+})
+
+
+
+app.get('/login', function(req, res) {
+  res.redirect('https://www.patreon.com/oauth2/authorize?' +
+    querystring.stringify({
+      response_type: 'code',
+      client_id: process.env.PATREON_CLIENT_ID,
+      redirect_uri: process.env.PATREON_REDIRECT_URI,
+    }))
+})
+
+app.get('/badge-app', function(req, res) {
+  res.sendFile(__dirname + '/gui.html')
+})
+
+app.post('/award-badge',  async function(req, res) {
+  const { token, badge } = req.body
+  const patreonUser = await currentPatreonUser(token)
+  const patronid = 7357096 || parseInt(patreonUser.id)
+  const currentPledge = await pledge(patronid)
+  if (currentPledge < 500) {
+    return res.status(403).send(
+      'Need to pledge at least 500 cents to award badge')
+  }
+
+    console.log('currentPledge', currentPledge)
+})
+
+app.post('/patreon_token', function(req, res) {
+  const code = url.parse(req.url, true).query.code
+  //@ts-ignore
+  fetch(
+    'https://www.patreon.com/api/oauth2/token?' +
+    querystring.stringify({
+      code,
+      grant_type: 'authorization_code',
+      client_id: process.env.PATREON_CLIENT_ID,
+      client_secret: process.env.PATREON_CLIENT_SECRET,
+      redirect_uri: process.env.PATREON_REDIRECT_URI
+    }), { method: 'post' })
+  .then(response => response.json())
+  .then(sniff)
+  .then(R.pick([ 'access_token', 'expires_in' ]))
+  .then(cleanedResult => res.json(cleanedResult))
 })
 
 const server = require('http').createServer(app)
