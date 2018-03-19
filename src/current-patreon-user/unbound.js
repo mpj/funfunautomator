@@ -5,5 +5,5 @@ module.exports = ({ fetch }, token) =>
       Authorization: 'Bearer ' + token
     }
   })
-  .then(x => x.json())
-  .then(result => result.data)
+    .then(x => x.json())
+    .then(result => result.data)
