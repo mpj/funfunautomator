@@ -1,3 +1,5 @@
 const assignBadge = require('./')
 
-assignBadge('mpj', 106)
+assignBadge(108, 'mpj')
+
+
