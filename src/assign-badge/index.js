@@ -1,4 +1,1 @@
-module.exports = require('./unbound').bind(null, {
-  fetch: require('../fetch-politely'),
-  discourseUrl: require('../discourse-url')
-})
+module.exports = require('./unbound').bind(null, require('./deps'))
