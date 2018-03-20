@@ -58,3 +58,4 @@ typings/
 .env
 
 /junit.xml
+/.DS_Store
