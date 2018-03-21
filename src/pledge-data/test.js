@@ -1,9 +1,9 @@
-const patreonPledge = require('./unbound')
+const pledgeData = require('./unbound')
 const memo = require('../junction').none
 
-describe('patreonUser', () => {
+describe('pledgeData', () => {
   it('happy path', () =>
-    patreonPledge(
+    pledgeData(
       {
         memo,
         query: (id, params) => {
@@ -25,6 +25,19 @@ describe('patreonUser', () => {
       pledge_cents: '500',
       email: 'vallis1@gmail.com'
     })))
+
+    it('is not patron of us', () =>
+      pledgeData(
+        {
+          memo,
+          query: (id, params) => {
+            return Promise.resolve({
+              rows: []
+            })
+          }
+        },
+        someUserId
+      ).then(result => expect(result).toBe(null)))
 })
 
 const someUserId = 123
