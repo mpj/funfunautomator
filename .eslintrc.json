@@ -21,7 +21,8 @@
     "no-unused-expressions": 0,
     "space-infix-ops": 0,
     "no-labels": [ "error", { "allowSwitch": true } ],
-    "curly": 0
+    "curly": 0,
+    "one-var": 0
   },
   "env": {
     "jest/globals": true
