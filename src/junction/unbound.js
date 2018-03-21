@@ -16,7 +16,7 @@ async function file(directoryTemplate, module, ...rest) {
     junction = rest[1]
     fn = rest[2]
   } else {
-    version = 0
+    version = NO_VERSION
     junction = rest[0]
     fn = rest[1]
   }
@@ -30,8 +30,16 @@ async function file(directoryTemplate, module, ...rest) {
   const existingStore = fileExists && JSON.parse(await loadString(file))
 
   const storedVersion = existingStore && existingStore['v' + version]
-  if (storedVersion) return storedVersion
+  if (storedVersion) {
+    if (version === NO_VERSION) {
+      // Delete all other versions from store
+      writeString(file, asPrettyJSON({
+        ['v' + version]: storedVersion
+      }))
+    }
 
+    return storedVersion
+  }
   const result = await fn()
   if (!isPlainObject(result)) {
     throw new Error('Only plain objects are supported, clean your output first')
@@ -64,6 +72,8 @@ function ensureDirectory(directory) {
     fs.mkdirSync(directory)
   }
 }
+
+const NO_VERSION = 'none'
 
 module.exports = {
   file,
