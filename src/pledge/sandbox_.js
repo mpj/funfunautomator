@@ -3,8 +3,4 @@ const pledge = require('./unbound').bind(null, {
   memo: require('../junction').file.bind(null, 'pledge')
 })
 
-it('pledge sandbox', () =>
-  pledge(7357096)/*?*/
-)
-
-
+it('pledge sandbox', () => pledge(7357096) /*?*/)

@@ -6,7 +6,7 @@ describe('pledge', () => {
     patreonPledge(
       {
         memo,
-        patreonUser: async (id) => {
+        patreonUser: async id => {
           expect(id).toBe(someUserId)
           return {
             pledge_cents: 666

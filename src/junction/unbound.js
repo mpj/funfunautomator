@@ -9,7 +9,6 @@ async function none(...args) {
 }
 
 async function file(directoryTemplate, module, ...rest) {
-
   let version, junction, fn
   if (rest.length === 3) {
     version = rest[0]
@@ -33,9 +32,12 @@ async function file(directoryTemplate, module, ...rest) {
   if (storedVersion) {
     if (version === NO_VERSION) {
       // Delete all other versions from store
-      writeString(file, asPrettyJSON({
-        ['v' + version]: storedVersion
-      }))
+      writeString(
+        file,
+        asPrettyJSON({
+          ['v' + version]: storedVersion
+        })
+      )
     }
 
     return storedVersion
@@ -45,19 +47,20 @@ async function file(directoryTemplate, module, ...rest) {
     throw new Error('Only plain objects are supported, clean your output first')
   }
 
-  writeString(file, asPrettyJSON({
-    ...(existingStore || {}),
-    ['v' + version]: result
-  }))
+  writeString(
+    file,
+    asPrettyJSON({
+      ...(existingStore || {}),
+      ['v' + version]: result
+    })
+  )
 
   return result
 }
 
-
 const writeFile = util.promisify(require('fs').writeFile)
 const readFile = util.promisify(require('fs').readFile)
 const asPrettyJSON = obj => JSON.stringify(obj, null, 2)
-
 
 function writeString(filename, string) {
   return writeFile(filename, string, 'utf8')

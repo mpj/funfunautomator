@@ -4,6 +4,5 @@ describe('pledgeData', () => {
   it('sandbox', () =>
     factory({
       memo: require('../memo')('pledge-data')
-    })(10200657)/*?*/
-  )
+    })(10200657) /*?*/)
 })
