@@ -1,6 +1,6 @@
 const assignBadge = require('./unbound').bind(null, {
   ...require('./deps'),
-  crossroad: require('../crossroad').crossroad
+  memo: require('../junction').file.bind(null, 'assign-badge')
 })
 
 it('assignBadge sandbox', () =>

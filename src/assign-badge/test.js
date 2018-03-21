@@ -5,7 +5,7 @@ describe('assignBadge', () => {
   it('calls api correctly', () =>
     assignBadge(
       {
-        crossroad: require('../crossroad').passthrough,
+        memo: require('../junction').none,
         fetch: (url, opts) => {
           expect(url).toBe(someUrl)
           expect(opts.headers['Content-Type']).toBe('application/json')
@@ -30,7 +30,7 @@ describe('assignBadge', () => {
   it('throws if status is not 200', () =>
     expect(
       assignBadge({
-        crossroad: require('../crossroad').passthrough,
+        memo: require('../junction').none,
         discourseUrl: () => {},
         fetch: () =>
           Promise.resolve({
