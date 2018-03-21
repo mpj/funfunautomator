@@ -1,11 +1,9 @@
-const pledgeData = require('./unbound')
-const memo = require('../junction').none
+const factory = require('./factory')
 
 describe('pledgeData', () => {
+
   it('happy path', () =>
-    pledgeData(
-      {
-        memo,
+    factory({
         query: (id, params) => {
           expect(id).toBe(6)
           expect(params.patreonid).toBe(someUserId)
@@ -17,9 +15,7 @@ describe('pledgeData', () => {
             rows: [[271, '7357096', '500', 'vallis1@gmail.com']]
           })
         }
-      },
-      someUserId
-    ).then(result => expect(result).toEqual({
+    })(someUserId).then(result => expect(result).toEqual({
       discourseid: 271,
       patreonid: '7357096',
       pledge_cents: '500',
@@ -27,17 +23,13 @@ describe('pledgeData', () => {
     })))
 
     it('is not patron of us', () =>
-      pledgeData(
-        {
-          memo,
+      factory({
           query: (id, params) => {
             return Promise.resolve({
               rows: []
             })
           }
-        },
-        someUserId
-      ).then(result => expect(result).toBe(null)))
+      })(someUserId).then(result => expect(result).toBe(null)))
 })
 
 const someUserId = 123

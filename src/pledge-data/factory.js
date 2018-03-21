@@ -1,5 +1,8 @@
 const R = require('ramda')
-module.exports = ({ query, memo }, id) =>
+module.exports = ({
+  query = require('../query'),
+  memo = require('../memo')()
+}) => id =>
   memo('query', () => query(6, { patreonid: id }))
     .then(firstRowAsObject)
 
