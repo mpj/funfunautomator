@@ -1,8 +1,9 @@
-const pledgeData = require('./unbound').bind(null, {
-  ...require('./effectors'),
-  memo: require('../junction').file.bind(null, 'pledge-data')
-})
+const factory = require('./factory')
 
-it('pledgeData sandbox', () =>
-  pledgeData(10200657)/*?*/
-)
+describe('pledgeData', () => {
+  it('sandbox', () =>
+    factory({
+      memo: require('../memo')('pledge-data')
+    })(10200657)/*?*/
+  )
+})
