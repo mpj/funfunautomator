@@ -1,22 +1,20 @@
 const patreonPledge = require('./unbound')
+const memo = require('../junction').none
 
 describe('pledge', () => {
   it('happy path', () =>
     patreonPledge(
       {
-        query: (id, params) => {
-          expect(id).toBe(6)
-          expect(params.patreonid).toBe(someUserId)
-          return Promise.resolve({
-            success: true,
-            errors: [],
-            columns: ['discourseid', 'patreonid', 'pledge_cents', 'email'],
-            rows: [[271, '7357096', '500', 'vallis1@gmail.com']]
-          })
+        memo,
+        patreonUser: async (id) => {
+          expect(id).toBe(someUserId)
+          return {
+            pledge_cents: 666
+          }
         }
       },
       someUserId
-    ).then(result => expect(result).toBe(500)))
+    ).then(result => expect(result).toBe(666)))
 })
 
 const someUserId = 123
