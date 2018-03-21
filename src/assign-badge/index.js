@@ -1,1 +1,1 @@
-module.exports = require('./unbound').bind(null, require('./deps'))
+module.exports = require('./unbound').bind(null, require('./effectors'))
