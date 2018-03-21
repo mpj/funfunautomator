@@ -26,9 +26,7 @@ async function file(directoryTemplate, module, ...rest) {
   ensureDirectory(directory)
 
   const file = path.join(directory, `${junction}.json`)
-
   const fileExists = fs.existsSync(file)
-
   const existingStore = fileExists && JSON.parse(await loadString(file))
 
   const storedVersion = existingStore && existingStore['v' + version]
@@ -39,7 +37,7 @@ async function file(directoryTemplate, module, ...rest) {
     throw new Error('Only plain objects are supported, clean your output first')
   }
 
-  writeString(asPrettyJSON({
+  writeString(file, asPrettyJSON({
     ...(existingStore || {}),
     ['v' + version]: result
   }))
@@ -62,7 +60,7 @@ function loadString(filename) {
 }
 
 function ensureDirectory(directory) {
-  if (fs.existsSync(directory)) {
+  if (!fs.existsSync(directory)) {
     fs.mkdirSync(directory)
   }
 }
