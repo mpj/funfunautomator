@@ -18,7 +18,9 @@ const hackableJSON = require('./hackable-json')
 const getQuery = require('./query')
 const isWebhookRequestValid = require('./is-webhook-request-valid')
 const currentPatreonUser = require('./current-patreon-user')
-const pledge = require('./pledge')
+
+const assignBadge = require('./assign-badge')
+const pledgeData = require('./pledge-data')
 
 const app = express()
 
@@ -167,15 +169,29 @@ app.get('/badge-app', function(req, res) {
 
 app.post('/award-badge',  async function(req, res) {
   const { token, badge } = req.body
-  const patreonUser = await currentPatreonUser(token)
-  const patronid = 7357096 || parseInt(patreonUser.id)
-  const currentPledge = await pledge(patronid)
-  if (currentPledge < 500) {
+  const patreonUserData = await currentPatreonUser(token)
+  const patronid = parseInt(patreonUserData.id)
+  const pledge = await pledgeData(patronid)
+  if(!pledge) {
+    return res.status(403).send('Is not a patron of fff')
+  }
+
+  if (pledge.pledge_cents < 500) {
     return res.status(403).send(
       'Need to pledge at least 500 cents to award badge')
   }
+  const whiteList = [ 106 ]
+  if (whiteList.indexOf(badge) !== -1) {
+    return res.status(403).send(
+      'That badge is not whitelisted')
+  }
 
-    console.log('currentPledge', currentPledge)
+  const username = pledge.discourseusername
+
+  await assignBadge(badge, username)
+  console.log('badge awarded!')
+  res.send('Badge awarded!')
+
 })
 
 app.post('/patreon_token', function(req, res) {
