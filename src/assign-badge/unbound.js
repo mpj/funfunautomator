@@ -1,11 +1,11 @@
 const R = require('ramda')
 
 module.exports = function assignBadge(
-  { discourseUrl, fetch, crossroad },
+  { discourseUrl, fetch, memo },
   badgeId,
   username
 ) {
-  return crossroad('user-badges-post-response', () =>
+  return memo('user-badges-post-response', () =>
     fetch(discourseUrl('/user_badges.json'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
