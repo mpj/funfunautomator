@@ -1,5 +1,5 @@
 const assignBadge = require('./unbound').bind(null, {
-  ...require('./deps'),
+  ...require('./effectors'),
   memo: require('../junction').file.bind(null, 'assign-badge')
 })
 
