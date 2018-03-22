@@ -1,11 +1,11 @@
 const R = require('ramda')
 
-module.exports = function assignBadge(
-  { discourseUrl, fetch, memo },
-  badgeId,
-  username
-) {
-  return memo('user-badges-post-response', () =>
+module.exports = ({
+  fetch = require('../fetch-politely'),
+  discourseUrl = require('../discourse-url'),
+  snapshot = require('../junction')({ bypass: true })
+}) => (badgeId, username) =>
+  snapshot('user-badges-post-response', () =>
     fetch(discourseUrl('/user_badges.json'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -18,4 +18,3 @@ module.exports = function assignBadge(
     if (response.status !== 200)
       throw new Error('assignBadge endpoint did not respond with 200')
   })
-}

@@ -1,6 +1,5 @@
-const assignBadge = require('./unbound').bind(null, {
-  ...require('./effectors'),
-  memo: require('../junction').file.bind(null, 'assign-badge')
+const assignBadge = require('./factory')({
+  snapshot: require('../junction')({ dir: 'assign-badge' })
 })
 
-it('assignBadge sandbox', () => assignBadge(106, 'mpj'))
+it('assignBadge sandbox', () => assignBadge(106, 'mpj') /*?*/)

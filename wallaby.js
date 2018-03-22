@@ -19,7 +19,7 @@ module.exports = function () {
       runner: 'node',
       params: {
         env: [
-          'JUNCTION_MEMO_DIRECTORY=' + path.join(__dirname, 'src', '{{module}}', 'memo'),
+          'JUNCTION_DIRECTORY_TEMPLATE=' + path.join(__dirname, 'src', '{{module}}', 'snapshots'),
 
           // Forward bash environment variables
           ...Object.keys(process.env).map(key =>

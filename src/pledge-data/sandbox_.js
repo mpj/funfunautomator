@@ -1,8 +1,12 @@
 const factory = require('./factory')
+const makeSnapshot = require('../junction')
+const snapshot = makeSnapshot({ dir: 'pledge-data' })
 
-describe('pledgeData', () => {
-  it('sandbox', () =>
-    factory({
-      memo: require('../memo')('pledge-data')
-    })(10200657) /*?*/)
-})
+it('pledgeData sandbox', () =>
+  snapshot(
+    'output',
+    () =>
+      factory({
+        snapshot
+      })(10200657) /*?*/
+  ))

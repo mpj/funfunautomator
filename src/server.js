@@ -20,7 +20,7 @@ const isWebhookRequestValid = require('./is-webhook-request-valid')
 const currentPatreonUser = require('./current-patreon-user')
 
 const assignBadge = require('./assign-badge')
-const pledgeData = require('./pledge-data')
+const pledgeData = require('./pledge-data')()
 
 const app = express()
 
