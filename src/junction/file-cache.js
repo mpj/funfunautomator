@@ -3,18 +3,16 @@ const fs = require('fs')
 const path = require('path')
 
 function makeFileCacheJunction(dir) {
-
   return async function fileCacheJunction(...args) {
-
-    const [ cacheKey, junction, fn ] =
-      args.length === 3
-        ? [ args[0], args[1], args[2] ]
-        : [ 0,  args[0], args[1] ]
+    const [cacheKey, junction, fn] =
+      args.length === 3 ? [args[0], args[1], args[2]] : [0, args[0], args[1]]
 
     const directoryTemplate = process.env.JUNCTION_CACHE_DIRECTORY_TEMPLATE
 
     if (!directoryTemplate) {
-      throw new Error('Environment variable JUNCTION_CACHE_DIRECTORY_TEMPLATE not set')
+      throw new Error(
+        'Environment variable JUNCTION_CACHE_DIRECTORY_TEMPLATE not set'
+      )
     }
 
     const directory = directoryTemplate.replace('{{module}}', dir)

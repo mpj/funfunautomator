@@ -1,3 +1,6 @@
-const sniff = require('supersniff')
-const currentPatreonUser = require('./')
-currentPatreonUser('3-Z4vPfE-BlECBXppvI8lwDZrbYWE4QhUWVjni5fp8o').then(sniff)
+const currentPatreonUser = require('./factory')({
+  junction: require('../junction/file-cache')('current-patreon-user')
+})
+
+it('currentPatreonUser (Sandbox)', () =>
+  currentPatreonUser('3-Z4vPfE-BlECBXppvI8lwDZrbYWE4QhUWVjni5fp8o') /*?*/)
