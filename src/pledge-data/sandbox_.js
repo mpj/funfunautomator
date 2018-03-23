@@ -1,12 +1,12 @@
 const factory = require('./factory')
-const makeSnapshot = require('../junction')
-const snapshot = makeSnapshot({ dir: 'pledge-data' })
+const makeFileCacheJunction = require('../junction/file-cache')
+const junction = makeFileCacheJunction('pledge-data')
 
 it('pledgeData sandbox', () =>
-  snapshot(
+  junction(
     'output',
     () =>
       factory({
-        snapshot
+        junction
       })(10200657) /*?*/
   ))

@@ -19,7 +19,7 @@ module.exports = function () {
       runner: 'node',
       params: {
         env: [
-          'JUNCTION_DIRECTORY_TEMPLATE=' + path.join(__dirname, 'src', '{{module}}', 'snapshots'),
+          'JUNCTION_CACHE_DIRECTORY_TEMPLATE=' + path.join(__dirname, 'src', '{{module}}', 'junction-cache'),
 
           // Forward bash environment variables
           ...Object.keys(process.env).map(key =>

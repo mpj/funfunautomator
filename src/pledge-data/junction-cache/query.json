@@ -1,8 +1,9 @@
 {
-  "cache": {
+  "cacheKey": 0,
+  "result": {
     "success": true,
     "errors": [],
-    "duration": 5,
+    "duration": 14.4,
     "params": {
       "patreonid": "10200657"
     },

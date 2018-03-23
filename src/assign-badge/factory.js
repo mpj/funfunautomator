@@ -3,7 +3,7 @@ const R = require('ramda')
 module.exports = ({
   fetch = require('../fetch-politely'),
   discourseUrl = require('../discourse-url'),
-  snapshot = require('../junction')({ bypass: true })
+  snapshot = require('../junction/bypass')
 }) => (badgeId, username) =>
   snapshot('user-badges-post-response', () =>
     fetch(discourseUrl('/user_badges.json'), {
