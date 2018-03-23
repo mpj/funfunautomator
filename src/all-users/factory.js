@@ -1,4 +1,5 @@
-module.exports = ({ fetch, process }, page) =>
+module.exports = ({ fetch = require('node-fetch'), process = global.process }) => page =>
+  //@ts-ignore
   fetch(
     process.env.DISCOURSE_BASE_URI +
       '/admin/users/list/active.json?api_username=system' +

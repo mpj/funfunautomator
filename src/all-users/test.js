@@ -1,8 +1,10 @@
-const allUsers = require('./unbound')
+const factory = require('./factory')
 
 describe('allUsers', () => {
   it('works', () =>
-    allUsers(
+
+    factory(
+      //@ts-ignore
       {
         fetch: url => {
           expect(url).toBe(
@@ -21,7 +23,7 @@ describe('allUsers', () => {
             DISCOURSE_API_KEY: 'secrit'
           }
         }
-      },
+      })(
       1
     ).then(result => {
       expect(result[0]).toBe('david')
