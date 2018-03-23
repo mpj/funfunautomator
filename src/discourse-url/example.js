@@ -1,3 +1,2 @@
 const discourseURL = require('./')
-console.log(
-  discourseURL('/somepath', { params: 123 }))
+console.log(discourseURL('/somepath', { params: 123 }))
