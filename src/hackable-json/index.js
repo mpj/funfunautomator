@@ -1,3 +1,1 @@
-module.exports = require('./unbound').bind(null, {
-  query: require('../query')
-})
+module.exports = require('./factory')({})
