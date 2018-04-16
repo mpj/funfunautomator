@@ -4,7 +4,6 @@ const bodyParser = require('body-parser')
 const WebSocket = require('ws')
 const cors = require('cors')
 const apicache = require('apicache').middleware
-const browserify = require('browserify')
 const Raven = require('raven')
 const sniff = require('supersniff')
 const R = require('ramda')
@@ -20,7 +19,7 @@ const isWebhookRequestValid = require('./is-webhook-request-valid')
 const currentPatreonUser = require('./current-patreon-user')
 
 const assignBadge = require('./assign-badge')
-const pledgeData = require('./pledge-data')()
+const pledgeData = require('./pledge-data')
 
 const app = express()
 
@@ -143,16 +142,6 @@ app.post('/webhook', (req, res) => {
 app.get('/fail', (req, res) => {
   throw new Error('blam')
 })
-
-app.get('/bundle', (req, res) => {
-
-  browserify('./bundle.js', {standalone: 'date-info'})
-    .transform('babelify', {presets: [ 'es2017' ]})
-    .bundle()
-    .pipe(res)
-})
-
-
 
 app.get('/login', function(req, res) {
   res.redirect('https://www.patreon.com/oauth2/authorize?' +
