@@ -3,4 +3,4 @@ const currentPatreonUser = require('./factory')({
 })
 
 it('currentPatreonUser (Sandbox)', () =>
-  currentPatreonUser('3-Z4vPfE-BlECBXppvI8lwDZrbYWE4QhUWVjni5fp8o') /*?*/)
+  currentPatreonUser('eipkPBbTyWt4OYD9mgNky9RqMLuSs8Z5aRzrfKwAN9Q') /*?*/)
