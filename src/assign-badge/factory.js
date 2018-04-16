@@ -13,6 +13,6 @@ module.exports = ({
       })
     }).then(response => response.status)
   ).then(status => {
-    if (status !== 200)
+    if (status/*?*/ !== 200)
       throw new Error('assignBadge endpoint did not respond with 200')
   })

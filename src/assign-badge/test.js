@@ -26,6 +26,7 @@ describe('assignBadge', () => {
 
   it('throws if status is not 200', () =>
     expect(
+      //@ts-ignore
       factory({
         discourseUrl: () => {},
         fetch: () =>
