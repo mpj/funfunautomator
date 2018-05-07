@@ -2,7 +2,7 @@ const R = require('ramda')
 module.exports = ({
   query = require('../query'),
   memo = require('../memo')()
-}) => id =>
+} = {}) => id =>
   memo('query', () => query(6, { patreonid: id })).then(firstRowAsObject)
 
 const firstRowAsObject = ({ columns, rows }) =>
