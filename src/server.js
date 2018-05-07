@@ -98,6 +98,17 @@ app.get('/mau', apicache('1 hour'), (req, res)  => {
   }).then(result => res.json(result.rows))
 })
 
+app.get('/visitors_by_week', apicache('1 hour'), (req, res)  => {
+  if (!isDateString(req.query.start))
+    return res.status(400).send('start must be in YYYY-MM-DD format')
+  if (!isDateString(req.query.end))
+    return res.status(400).send('end must be in YYYY-MM-DD format')
+  getQuery(11,{
+    startdate: req.query.start,
+    enddate: req.query.end
+  }).then(result => res.json(result.rows))
+})
+
 app.get('/cookietest', (req, res) => {
   console.log('req.cookies', req.cookies)
   res.cookie('cookieName', parseInt(req.cookies.cookieName || 0) + 1)
