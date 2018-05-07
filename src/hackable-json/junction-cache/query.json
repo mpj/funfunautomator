@@ -1,0 +1,2273 @@
+{
+  "cacheKey": 0,
+  "result": {
+    "success": true,
+    "errors": [],
+    "duration": 3.5,
+    "params": {},
+    "columns": [
+      "username",
+      "hackablejson"
+    ],
+    "colrender": {},
+    "relations": {},
+    "rows": [
+      [
+        "Marcio_Oliveira",
+        "{ \"usermap_location\": { \"lat\": -23.5606437, \"lng\": -46.623535, \"caption\": \"Mãe, to no print.\" } }"
+      ],
+      [
+        "hugo_ocampo",
+        "Lol"
+      ],
+      [
+        "Joel_Mandell",
+        "{ allmybase: function() {return window. localStorage.getItem(\"token\") } "
+      ],
+      [
+        "WildBug",
+        "{   whoAmI: {     name: \"Alberto\",     country: \"Italy\",     whatIdo: \"Something something as the Computer Guy\",     whatIlike: \"Videogames, Tv Series, Coding\",     whatIdLoveToBe: \"Game Developer at Blizzard Entertainment\"   },   data: [     1,     1,     2,     3,     5,     8,     13,     21,     34,     55,     89,     144   ] }"
+      ],
+      [
+        "mikkpr",
+        "{\"usermap_location\": {\"lat\": 58.376088, \"lng\": 26.747439, \"caption\": \"I'm Batman\"}}"
+      ],
+      [
+        "pedrouid",
+        "{ \"usermap_location\": { \"lat\": 51.5197, \"lng\": 0.0754, \"caption\": \"it's cold\" } }"
+      ],
+      [
+        "Teodor",
+        "{ \"usermap_location\": { \"lat\": 59.351762, \"lng\": 17.885060, \"caption\": \"On parental leave eating meatballs at my IKEA table\" } }"
+      ],
+      [
+        "Belegor",
+        "{ \"usermap_location\": { \"lat\": 55.867, \"lng\": 37.498, \"caption\": \"In Soviet Russia a function calls you\" } }"
+      ],
+      [
+        "Grimko",
+        "{ \"usermap_location\": { \"lat\": 51.507087, \"lng\": -0.128109, \"caption\": \"Hello from London!\" } }"
+      ],
+      [
+        "itsvetkoff",
+        "{ \"usermap_location\": { \"lat\": 50.45, \"lng\": 30.52, \"caption\": \"Здоровенькі були!\" } }"
+      ],
+      [
+        "andersevenrud",
+        "{ \"usermap_location\": { \"lat\": 60.7945, \"lng\": 11.06798, \"caption\": \"Developer living near Hamar.\" }}"
+      ],
+      [
+        "Romesh",
+        "{ \"usermap_location\": { \"lat\": -37.8, \"lng\": 145.0, \"caption\": \"G'day! Thanks for scrolling down!\" } }"
+      ],
+      [
+        "LyraXaph",
+        "{ \"usermap_location\": { \"lat\": 45.828297, \"lng\": 16.021093, \"caption\": \"Suave ride\" } }"
+      ],
+      [
+        "metasean",
+        "{ \"usermap_location\": { \"lat\": 41.077628, \"lng\": -112.3896035, \"caption\": \"On the interwebs somewhere in Utah. \\n\\nFind out where and when at https://www.meetup.com/utahjs/ \\n\\n(And first American [North or South] on the Fun Fun Forum map!)\" } } "
+      ],
+      [
+        "dainbrump",
+        "{\"usermap_location\": { \"lat\": 39.0067, \"lng\": -77.4291, \"caption\": \"Howdy!\" } }"
+      ],
+      [
+        "wolfgang",
+        "{ \"usermap_location\": { \"lat\": 32.7144, \"lng\": -117.1596, \"caption\": \"70 miles of beaches and more to enjoy\" } }"
+      ],
+      [
+        "plantBuilder",
+        "{ \"usermap_location\": { \"lat\": 35.5, \"lng\": -77.4, \"caption\": \"Greenville, NC\" } }"
+      ],
+      [
+        "StefanDimov",
+        "{ \"usermap_location\": { \"lat\": 42.694565, \"lng\": 23.325957, \"caption\": \"I just wanted to be on the map\" } }"
+      ],
+      [
+        "gabin",
+        "{ \"usermap_location\": { \"lat\":48.175877, \"lng\":2.253766, \"caption\": \"Gabin, aka gahabeen, freelance data hunter\" } }"
+      ],
+      [
+        "Lambneck",
+        "{ \"usermap_location\": { \"lat\": 44.475883, \"lng\": -73.212074, \"caption\": \"Lmbs are peepol to!\" } }"
+      ],
+      [
+        "sigveh",
+        "{ \"usermap_location\": { \"lat\": 59.284073, \"lng\": 11.109403, \"caption\": \"Here I am!\" } }"
+      ],
+      [
+        "littleball",
+        "{\"usermap_location\": {\"lat\": 51.483910, \"lng\":  -0.604482, \"caption\": \"I like cheese!\"}}"
+      ],
+      [
+        "Sunrising",
+        "{ \"usermap_location\": { \"lat\": 43.62281, \"lng\": 13.410472000000027, \"caption\": \"Booyah\" } }"
+      ],
+      [
+        "Tim_Bailey",
+        "{ \"usermap_location\": { \"lat\": -33.73, \"lng\": 151.17, \"caption\": \"nr Sydney\" } }"
+      ],
+      [
+        "const",
+        "{ \"usermap_location\": { \"lat\": 53.425005, \"lng\": 14.550313, \"caption\": \"Hello FFFunction! Cześć!\" } }"
+      ],
+      [
+        "kalkie",
+        "{ \"usermap_location\": { \"lat\": 51.9120668, \"lng\": 4.3494366, \"caption\": \"Gooooood monday morning :)\" } }"
+      ],
+      [
+        "kareyoke",
+        "{ \"usermap_location\": { \"lat\": 56.9, \"lng\": 40.9, \"caption\": \"Gonna catch 'em all!\" } }"
+      ],
+      [
+        "Seigo",
+        "{ \"usermap_location\": { \"lat\": -23.325061, \"lng\": -51.201435, \"caption\": \"Oi!\" } }"
+      ],
+      [
+        "aaron_u",
+        "{ \"usermap_location\": { \"lat\": 58.0015, \"lng\": 27.3469, \"caption\": \"Cheers functioneers!\" }}"
+      ],
+      [
+        "Delta",
+        "\"hackable_json\": \"{ \\\"usermap_location\\\": { \\\"lat\\\": 51.5, \\\"lng\\\": 0.1,, \\\"caption\\\": \\\"God save the Queen!\\\" } }\""
+      ],
+      [
+        "Oromier",
+        "{ \"usermap_location\": { \"lat\": 43.8563, \"lng\": 18.4131, \"caption\": \"Burek is pita with meat!!\" } } "
+      ],
+      [
+        "Roel",
+        "{ \"usermap_location\": { \"lat\": 51.5789, \"lng\": 5.1924, \"caption\": \"Hi from Oisterwijk\" } }"
+      ],
+      [
+        "cruepprich",
+        "{ \"usermap_location\": { \"lat\": 32.9360485, \"lng\": -97.1427851, \"caption\": \"Hello from Grapevine, TX\" } }"
+      ],
+      [
+        "hajlajferica",
+        "{ \"usermap_location\": { \"lat\": 45.899288, \"lng\": 15.947755, \"caption\": \"UPRI!!!!\" } }"
+      ],
+      [
+        "templain",
+        "{ \"usermap_location\": { \"lat\": 48.7, \"lng\": 9.1, \"caption\": \"THIS IS LIT\" } }"
+      ],
+      [
+        "Czysty",
+        "{ \"usermap_location\": { \"lat\": 51.09, \"lng\":16.99, \"caption\": \"Hello/Cześć All/Wszystkim!\" } }"
+      ],
+      [
+        "TheJoshDerocher",
+        "Fdisk"
+      ],
+      [
+        "Ocie_Mitchell",
+        "{ \"usermap_location\": { \"lat\":33.8900638, \"lng\":-117.7779109, \"caption\": \"Hello from Orange County!\" } }"
+      ],
+      [
+        "splatzgud",
+        "{ \"usermap_location\": { \"lat\":  33.8, \"lng\": -112.0, \"caption\": \"It all spatz sooo gud\" } }"
+      ],
+      [
+        "Salman_Ul_Khair",
+        "{ \"usermap_location\": { \"lat\": 34.0150, \"lng\": 71.5805, \"caption\": \"Pakistan\" } }"
+      ],
+      [
+        "mathiasw",
+        "<script>setInterval(function(){console.error('Error')}, 1000)"
+      ],
+      [
+        "DaveCranwell",
+        "{ \"usermap_location\": { \"lat\": 51.7447, \"lng\": -1.2175, \"caption\": \"Woot!\" } }"
+      ],
+      [
+        "Kramt0ske",
+        "{ \"usermap_location\": { \"lat\": 54.910618, \"lng\": 23.943781, \"caption\": \"Aš einu miegot!\" } }"
+      ],
+      [
+        "limoragni",
+        "{ \"usermap_location\": { \"lat\": 52.3531288, \"lng\": 4.9427182, \"caption\": \"Saludos desde Amsterdam!\" } }"
+      ],
+      [
+        "Phlip45",
+        "{ \"usermap_location\": { \"lat\": 34.133322, \"lng\": -117.907865, \"caption\": \"Greetings Hoonams\" } }"
+      ],
+      [
+        "Diego_Dulval",
+        "{\"usermap_location: {\"lat\":-22.26963884, \"lng\":-46.16448296, \"caption\": \"Yeahh! Hello FFFunction! Brazil!\" }\"}"
+      ],
+      [
+        "rwesty202",
+        "{ \"usermap_location\": { \"lat\": 11.5, \"lng\": 104.9, \"caption\": \"Sousdei! Suk Sabi?\" } }"
+      ],
+      [
+        "Raging",
+        "{ \"usermap_location\": { \"lat\": 42.6977, \"lng\": 23.3219, \"caption\": \"Aloha!\" } }"
+      ],
+      [
+        "Antonio_Gatti",
+        "{ \"usermap_location\": { \"lat\": 1.3352574940767576, \"lng\": 103.84924752259394, \"caption\": \"Singapore, but I'm from Italy\" }}"
+      ],
+      [
+        "nemanjan00",
+        "for(;;;) {} {\"usermap_location\": {\"lat\": 0, \"lng\": 0, \"caption\": \"Hi! \\h0000 <img src=\\\"http://via.placeholder.com/350x150\\\" onload='alert(\\\"Hohoho\\\")'>\"}}"
+      ],
+      [
+        "felixfong227",
+        "{ \"usermap_location\": { \"lat\": 22.458450, \"lng\": 113.994508, \"caption\": \"Ponies\" }, \"other_prop\": 1}"
+      ],
+      [
+        "Swen_Chan",
+        "SwenChan"
+      ],
+      [
+        "jue",
+        "{ \"usermap_location\": { \"lat\": 52.378, \"lng\": 9.727, \"caption\": \"Moin!\" } }"
+      ],
+      [
+        "jonesy",
+        "{ \"usermap_location\": { \"lat\":43.6006946, \"lng\": 1.3978218 \"caption\": \"Que trépasse si je faiblis\" } }"
+      ],
+      [
+        "gareth",
+        "{ \"usermap_location\": { \"lat\": 49.2473062, \"lng\": -123.1087988, \"caption\": \"Come say hi to me on Twitter: @gareth__\" } }"
+      ],
+      [
+        "JeremyIglehart",
+        "{ \"usermap_location\": { \"lat\": 39.967337, \"lng\": -75.715788, \"caption\": \"Pennsylvania FOREVER!!!\" } }"
+      ],
+      [
+        "Lukas",
+        "{ \"usermap_location\": { \"lat\": 52.2, \"lng\": 21.0122, \"caption\": \"Hello from Warsaw!\" } }"
+      ],
+      [
+        "thalesmello",
+        "{ \"usermap_location\": { \"lat\": -23.55, \"lng\": -46.63, \"caption\": \"Summer is comming.\" } }"
+      ],
+      [
+        "twandy",
+        "{ \"usermap_location\": { \"lat\": 43.1775, \"lng\": 85.2528, \"caption\": \"Hello from the middle of nowhere!\" } }"
+      ],
+      [
+        "Ron_Lunde",
+        "{ \"usermap_location\": { \"lat\": 40.4, \"lng\": -79.9, \"caption\": \"Hello from Pittsburgh!\" } }"
+      ],
+      [
+        "Algus_Dark",
+        "{ \"usermap_location\": { \"lat\": 32.7144, \"lng\": -117.1596, \"caption\": \"http://algus.ninja\" } }"
+      ],
+      [
+        "jvanbruegge",
+        "{ \"usermap_location\": { \"lat\": 48.1, \"lng\": 11.5, \"caption\": \"Greetings!\" } }"
+      ],
+      [
+        "itf",
+        "{ \"usermap_location\": { \"lat\": 39.7685, \"lng\": -86.1579, \"caption\": \"I like programming, tea, and naps\" } }"
+      ],
+      [
+        "jmf",
+        "{ \"usermap_location\": { \"lat\":47.5513750, \"lng\": 7.5861210, \"caption\": \"I like cheese too\" }, \"other_prop\": 1}"
+      ],
+      [
+        "g33kchris",
+        "{   \"username\": \"g33kchris\",   \"pokemons\": [     {       \"species\": \"charizard\",       \"nickname\": \"charmy\",       \"level\": 100     }   ],   \"quotes\": [     \"It was the best of times, it was the BLURST of times?! You stupid monkey!\",     \"I was saying BOO-URNs....\"   ] }"
+      ],
+      [
+        "espen",
+        "{ \"usermap_location\": { \"lat\": 60.3832109, \"lng\": 5.2967711, \"caption\": \"Currently watching FunFunFunction!\" } }"
+      ],
+      [
+        "Helmut_Pastor",
+        "{ \"usermap_location\": { \"lat\": 8.3515684, \"lng\": -87.0531975, \"caption\": \"Pura Vida!\" } }"
+      ],
+      [
+        "ssipos90",
+        "{ \"usermap_location\": { \"lat\": 45.667631, \"lng\": 25.598839, \"caption\": \"Yay! Im on the map.\" } }"
+      ],
+      [
+        "jonathanGB",
+        "{ \"usermap_location\": { \"lat\": 45.45, \"lng\": -75.75, \"caption\": \"Allô, I'm a CS Student in Québec\" } }"
+      ],
+      [
+        "otreasons",
+        "{ \"usermap_location\": { \"lat\": 55.782, \"lng\": 37.478, \"caption\": \"I couldn't come up with some witty or funny phrase, so let's pretend that you read one :D\" } "
+      ],
+      [
+        "jgolieb",
+        "{ \"usermap_location\": { \"lat\": 40.24, \"lng\": -74.54, \"caption\": \"I don't always test my code, but when I do, I do it in production.\" } }"
+      ],
+      [
+        "Paul",
+        "{ \"usermap_location\": { \"lat\": 52.366783, \"lng\": 9.752474, \"caption\": \"Full-Stack developer on the outside, game developer on the inside. Twitter: @xtender\" } }"
+      ],
+      [
+        "thisdotvoid",
+        "{ \"usermap_location\": { \"lat\": 41.716667, \"lng\": 44.783333, \"caption\": \"ხაჭაპური\" } }"
+      ],
+      [
+        "raul_escamilla",
+        "{ \"usermap_location\": { \"lat\": 13.682305, \"lng\": -89.279161, \"caption\": \"Ideas are only ideas without the execution of them\" } }"
+      ],
+      [
+        "SynxS",
+        "{ \"usermap_location\": { \"lat\": 34.425393, \"lng\": -119.877188, \"caption\": \"French coder here\" } }"
+      ],
+      [
+        "luanlmd",
+        "{ \"usermap_location\": { \"lat\": -10.183741, \"lng\": -48.330878, \"caption\": \"Boooooooa segunda feiraaaaa! :)\" } }"
+      ],
+      [
+        "martinCliffordMedia",
+        "{ \"usermap_location\": { \"lat\": 45.5826, \"lng\": 122.3534, \"caption\": \"WuTang 4eva\" } }"
+      ],
+      [
+        "iamandrewluca",
+        "{ \"usermap_location\": { \"lat\": 46.86, \"lng\": 28.77, \"caption\": \"How good is your Google Fu?\" } }"
+      ],
+      [
+        "Brenton_Cozby",
+        "{ \"usermap_location\": { \"lat\": 26.2712, \"lng\": -80.2706 }, \"caption\": \"Hello from Florida!\"}"
+      ],
+      [
+        "GJM",
+        "{ \"usermap_location\": { \"lat\": 53.8382, \"lng\": -1.7896, \"caption\": \"Trouble at t'Mill\" } }"
+      ],
+      [
+        "martin",
+        "{ \"usermap_location\": { \"lat\": 46.8, \"lng\": 7.15, \"caption\": \"<3\" } }"
+      ],
+      [
+        "max_devjs",
+        "{ \"usermap_location\": { \"lat\": -15.7942, \"lng\": -47.8825, \"caption\": \"Have FunFunFunctions!\" } }"
+      ],
+      [
+        "Dmitry_Kovbasa",
+        "dmitry"
+      ],
+      [
+        "gweterings",
+        "{ main_language: 'javascript' } "
+      ],
+      [
+        "RicardoMomm",
+        "{ \"usermap_location\": { \"lat\": -28.241717, \"lng\": -48.6661541 }, \"caption\": \"Bom dia from Brazil\" }"
+      ],
+      [
+        "Jaco",
+        "{ \"usermap_location\": { \"lat\": 52.076304, \"lng\": 4.542655, \"caption\": \"Hallo daar...\" } }"
+      ],
+      [
+        "Tijesunimi_Peters",
+        "{ \"usermap_location\": { \"lat\": 6.506874, \"lng\": 3.383981, \"caption\": \"Enle Fa!!!\" } }"
+      ],
+      [
+        "kiyota",
+        "{\"username\": \"kiyota\",\"hackable_json\": {\"usermap_location\": {\"lat\": 48.125539,\"lng\": -122.800283,\"caption\": \"Digesting\"} } }"
+      ],
+      [
+        "cizer",
+        "{ \"usermap_location\": { \"lat\": 56.4314725, \"lng\": -2.9468224, \"caption\": \"Och aye the noo!\" } }"
+      ],
+      [
+        "Orballo",
+        "{ \"usermap_location\": { \"lat\": 40.4114336, \"lng\": -3.7079005, \"caption\": \"¡Licor café!\" } }"
+      ],
+      [
+        "eNVee",
+        "{ \"usermap_location\": { \"lat\": 51.717149, \"lng\": 5.36081), \"caption\": \"No I don't wear wooden shoes\" } }"
+      ],
+      [
+        "icuckovic",
+        "{ \"usermap_location\": { \"lat\": 45.554962, \"lng\": 18.695514, \"caption\": \"Dobar dan!\" }}"
+      ],
+      [
+        "fleroux",
+        "{ \"usermap_location\": { \"lat\": 48.134600,  \"lng\": -1.625855, \"caption\": \"Breton coder here\" } }"
+      ],
+      [
+        "Jorge_Bastias",
+        "{ \"usermap_location\": { \"lat\": 9.94, \"lng\": -84.11, \"caption\": \"Pura Vida\" } }"
+      ],
+      [
+        "dawn",
+        "{ \"usermap_location\": { \"lat\": 53.55, \"lng\": 9.94, \"caption\": \"Hello\" } }"
+      ],
+      [
+        "rferro",
+        "{ \"usermap_location\": { \"lat\": -23.531, \"lng\": -46.732, \"caption\": \"Opaaa\" } }"
+      ],
+      [
+        "injectJon",
+        "{ \"usermap_location\": { \"lat\": 46.0, \"lng\": 93.3, \"caption\": \"Completely average programatic solution implementer\" } }"
+      ],
+      [
+        "Robert_G_Wetherall",
+        "{ \\\"usermap_location\\\": { \\\"lat\\\": 39.6285, \\\"lng\\\": 75.4985, \\\"caption\\\": \\\"Pennsville, NJ!\\\" } }"
+      ],
+      [
+        "crssn",
+        "{ \"usermap_location\": { \"lat\": 51.898332, \"lng\": -8.462841, \"caption\": \"This is Drexciyan Cruiser Control, Bubble 1, to Lardossen cruiser 8-203X\" } }"
+      ],
+      [
+        "Akkerman",
+        "{    \"name\": \"Marcel Akkerman\",    \"code\": \"https://github.com/akkerman\",     \"usermap_location\": {         \"caption\": \"<span style='color:#839496'>&lt;<span style='color:#268bd2'>hello</span>-<span style='color:#859900'>world</span> /&gt;</span>\",         \"lat\": 52.0774,         \"lng\": 5.01838     } }"
+      ],
+      [
+        "moroark",
+        "{ \"usermap_location\": { \"lat\": 39.7, \"lng\": -104.9, \"caption\": \"Now, that's what I call captions 17!\" } }"
+      ],
+      [
+        "Daniel_Wade",
+        "{   \"name\": \"Dan\",   \"city\": \"Petaluma\",   \"state\": \"CA\" }"
+      ],
+      [
+        "Mathias",
+        "{ \"usermap_location\": { \"lat\": 55.676098, \"lng\": 12.568337, \"caption\": \"<script src=\"alert('powned :)')\"></script>\" } }"
+      ],
+      [
+        "Dennis_Skoko",
+        "{ \"usermap_location\": {  \"lat\": 56.182322,     \"lng\": 15.590873, \"caption\": \"För fanken!\" } }"
+      ],
+      [
+        "vayu",
+        "{ \"usermap_location\": { \"lat\": 55.7051504, \"lng\": 12.5098682,17, \"caption\": \"Yesss to learning new stuff!\" } }"
+      ],
+      [
+        "Mnebuerquo",
+        "{ \"usermap_location\": { \"lng\": -84.3867394, \"lat\": 39.0929044, \"caption\": \"Hello from Cincinnati!\" } }"
+      ],
+      [
+        "Mert_Dogar",
+        "{ \"usermap_location\": { \"lat\": 41.044966, \"lng\": 29.005599, \"caption\": \"Yo\" }, \"other_prop\": 1}"
+      ],
+      [
+        "tek",
+        "{ \"usermap_location\": { \"lat\": 39.90, \"lng\": 32.88, \"caption\": \"Hello from Turkiye!\" } }"
+      ],
+      [
+        "d4m1n",
+        "{ \"usermap_location\": { \"lat\": \"55.676097\", \"lng\": \"12.568337\", \"caption\": \"Making meatballs!\" } }"
+      ],
+      [
+        "skip405",
+        "{ \"usermap_location\": { \"lat\": 53.9, \"lng\": 27.5, \"caption\": \"Прывітанне :)\" } }"
+      ],
+      [
+        "wking",
+        "{ \"usermap_location\": { \"lat\": 32.355111, \"lng\":-86.256576, \"caption\": \"Please someone move closer. I need dev friends.\" } }"
+      ],
+      [
+        "cgraff",
+        "{ \"usermap_location\": { \"lat\": 52.694, \"lng\": 13.5221, \"caption\": \"Looking for mushrooms!\", hideProfilePicture: true } }"
+      ],
+      [
+        "Hakim_MacLuvin",
+        "{ \"usermap_location\": { \"lat\": \"50.0595854\", \"lng\": \"14.3255411\", \"caption\": \"Sorry for what I said, while I was debugging\" }, \"other_prop\": 1}"
+      ],
+      [
+        "Ben_Hofferber",
+        "{ \"usermap_location\": { \"lat\": 43.618881, \"lng\": ‎-116.215019, \"caption\": \"Hello!\" } }"
+      ],
+      [
+        "nombienombie",
+        "{ \"usermap_location\": { \"lat\": 50.909700, \"lng\": -1.404351, \"caption\": \"Will write HTML for Whiskey\" } }"
+      ],
+      [
+        "Mohamed_Zezo",
+        "{ \"usermap_location\": { \"lat\": 30.577, \"lng\": 31.502, \"caption\": \"مرحبا من مصر :) ,,, Hello From Egypt\" } }"
+      ],
+      [
+        "Chris_ivens",
+        "{ \"usermap_location\": { \"lat\": 52.40062, \"lng\": -1.80508, \"caption\": \"Hello from Birmingham!\" } }"
+      ],
+      [
+        "Elias_Lawson-Fox",
+        "{ \"usermap_location\": { \"lat\": 37.774929, \"lng\": -122.419416, \"caption\": \"M E H\" } }"
+      ],
+      [
+        "Joshi",
+        "{ \"usermap_location\": { \"lat\": 49.006, \"lng\": 8.403, \"caption\": \"Need more beer! :D\" } }"
+      ],
+      [
+        "antho1404",
+        "{ \"usermap_location\": { \"lat\": 18.793543, \"lng\": 98.972375, \"caption\": \"Hello from Chiang Maï Thailand from a French remote worker\" } }"
+      ],
+      [
+        "JensV",
+        "{ \"usermap_location\": { \"lat\": 47.487099, \"lng\": 8.766124, \"caption\": \"Greetings from Switzerland!\" } }"
+      ],
+      [
+        "javascriptjohn",
+        "{ \"usermap_location\": {\"lat\": 40.7, \"lng\": -73.9, \"caption\": \"There are only two types of people in the world, those who can extrapolate from incomplete data...\"} }"
+      ],
+      [
+        "vaviloff",
+        "{ \"usermap_location\": { \"lat\": 56.0152, \"lng\": 92.8932, \"caption\": \"Who comes down? What people?\" } }"
+      ],
+      [
+        "Sun",
+        "{ \"usermap_location\": { \"lat\": -20.155593, \"lng\": 57.514114, \"caption\": \"Ki p dir!\" } }"
+      ],
+      [
+        "riston",
+        "while(true) {{}}"
+      ],
+      [
+        "xkill-9",
+        "{ \"usermap_location\": { \"lat\": 6.2077573, \"lng\": -75.5629903, \"caption\": \"Oeeee!\" } }"
+      ],
+      [
+        "Konrad_Klinkosch",
+        "{ \"usermap_location\": { \"lat\": 51.5487, \"lng\": 7.5899, \"caption\": \"A wild Konrad appears!\" } }"
+      ],
+      [
+        "SiriusScaper",
+        "{ \"usermap_location\": { \"lat\": 119.4, \"lng\": 36.7, \"caption\": \"the capitol of california, yes really it is...\" } }"
+      ],
+      [
+        "Bogdan_Levantovych",
+        "{ \"usermap_location\": { \"lat\": 50.22773, \"lng\": 23.634368, \"caption\": \"Привіт\" } }"
+      ],
+      [
+        "dams",
+        "{ \"usermap_location\": { \"lat\": 38.7365433, \"lng\": -9.3422306, \"caption\": \"Hello fellow FunFunPatreons\" } }"
+      ],
+      [
+        "hagbarth",
+        "{ \"usermap_location\": { \"lat\": 56.1, \"lng\": 10.2, \"caption\": \"Hej!\" } }"
+      ],
+      [
+        "mgmcnally",
+        "{ \"usermap_location\": { \"lat\": 41.881832, \"lng\": -87.623177, \"caption\": \"Chicago, IL\" } }"
+      ],
+      [
+        "Supamic",
+        " { \"usermap_location\": { \"lat\": 48.428039, \"lng\": -123.372062, \"caption\": \"Hello, world!\" } }"
+      ],
+      [
+        "George",
+        "{     \"usermap_location\": {         \"lat\": 45.393745,         \"lng\": -75.701510,         \"caption\": \"Word to the World\"     } }"
+      ],
+      [
+        "batista",
+        "{ \"usermap_location\": { \"lat\": 57.7072, \"lng\": 11.9668, \"caption\": \"https://se.rg.io\" } }"
+      ],
+      [
+        "Obversity",
+        "{ why: \"Would\", i: \"Do\" this: \"?\" } "
+      ],
+      [
+        "Raymond",
+        "{ \"usermap_location\": { \"lat\": 41.894894, \"lng\": -87.635122, \"caption\": \"Deep dish API's\" } }"
+      ],
+      [
+        "lepsalex",
+        "{ \"usermap_location\": { \"lat\": 43.65, \"lng\": -79.38, \"caption\": \"Toronto - now serving Poutine!\" } }"
+      ],
+      [
+        "SuriyaN",
+        "{ \"usermap_location\": { \"lat\": 12.9716, \"lng\": 77.5946, \"caption\": \"Hi\" } }"
+      ],
+      [
+        "theblang",
+        "{ \"usermap_location\": { \"lat\": 30.6280, \"lng\": -96.3344, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "krabhishek",
+        "{message: \"did \"i\" break your code?\"}"
+      ],
+      [
+        "Ben_Whitfield",
+        "{\"usermap_location\": { \"lat\": 53.4, \"lng\": -2.3, \"caption\": \"All right laaas!\" } }"
+      ],
+      [
+        "Hakim_katende",
+        "{ \"usermap_location\": { \"lat\":0.301164, \"lng\": 32.528369, \"caption\": \"yes yes to fun fun functions! \" } }"
+      ],
+      [
+        "vka",
+        "{\"usermap_location\": { \"lat\": 17.46275, \"lng\": 78.559962, \"caption\": \"Hello!! Fellow Functioneers.\" } }"
+      ],
+      [
+        "nikitaindik",
+        "{ \"usermap_location\": { \"lat\": 54.711263, \"lng\": 20.5061263, \"caption\": \"Я жую банан\" } }"
+      ],
+      [
+        "a-sep",
+        "{ \"usermap_location\": { \"lat\": 55.943690, \"lng\": 8.782810, \"caption\": \"Greetings! Cześć\" } }"
+      ],
+      [
+        "foecum",
+        "{\"alias\": \"foe\", \"race\":\"Alien\", \"age\":\"not old yet\"}"
+      ],
+      [
+        "nLamprok",
+        "{ \"usermap_location\": { \"lat\": 37.97, \"lng\": 23.71, \"caption\": \"Hello from Greece!\" } }"
+      ],
+      [
+        "Kyler",
+        "{ \"usermap_location\": { \"lat\": -37.820650, \"lng\": 144.998830, \"caption\": \"A Scottish guy far far away from home\" } }"
+      ],
+      [
+        "pmrcunha",
+        "{ \\\"usermap_location\\\": { \\\"lat\\\": 55.6644635, \\\"lng\\\": 12.599437, \\\"caption\\\": \\\"Hello! DROP TABL... nah, just kidding!/\" } }"
+      ],
+      [
+        "Pim",
+        "{ \"usermap_location\": { \"lat\": 51.516435, \"lng\": -0.125802, \"caption\": \"✌️\" } }"
+      ],
+      [
+        "ivan",
+        "{ \"usermap_location\": { \"lat\": 45.8254004, \"lng\": 15.9932162, \"caption\": \"Needs more FPS\" } }"
+      ],
+      [
+        "mariusz",
+        "{\"hello\":\"world\",\"www\":\"https://mlws.pl/\",\"have_a\":\"nice day\"}"
+      ],
+      [
+        "Oudmane",
+        "{ \"usermap_location\": { \"lat\": 33.8984212, \"lng\": -5.52274,16, \"caption\": \"Hello world!\" } }"
+      ],
+      [
+        "Adam",
+        "{ \"usermap_location\": { \"lat\": 51.5259236, \"lng\": -0.0874245, \"caption\": \"Pugs are the best\" } }"
+      ],
+      [
+        "Burgi",
+        "{ \"usermap_location\": { \"lat\": 48.210033, \"lng\": 16.363449, \"caption\": \"Wassuuuuuuuup\" } }"
+      ],
+      [
+        "stojdev",
+        "{ \"usermap_location\": { \"lat\": 59.3, \"lng\": 18.0, \"caption\": \"Hello world!\" } }"
+      ],
+      [
+        "Jeroen_Rombouts",
+        "{ \"usermap_location\": { \"lat\": 51.032225, \"lng\": 4.491152, \"caption\": \"In the tower's shadow\" } }"
+      ],
+      [
+        "raphx",
+        "{ \"usermap_location\": { \"lat\": 3.13, \"lng\": 101.68, \"caption\": \"You poked me!\" } }"
+      ],
+      [
+        "dorianfm",
+        "{ \"usermap_location\": { \"lat\": 55.695187, \"lng\":  -4.856206, \"caption\": \"Going Coastal\" } }"
+      ],
+      [
+        "Paul_Wilkins",
+        "{\"usermap_location: {\"lat\": -43.53, \"lng\": 172.65, \"caption\": \"Enjoying Euro-style board games all day and night long.\"}"
+      ],
+      [
+        "reece",
+        "{ \"usermap_location\": { \"lat\": 34.128862, \"lng\": -118.266907, \"caption\": \"At the beach...\" } }"
+      ],
+      [
+        "jumboMumbo",
+        "{ \"usermap_location\": { \"lat\": -35.312850, \"lng\": 149.188924, \"caption\": \"BLoOdy FantASSTIC!\" }}"
+      ],
+      [
+        "AleksCee",
+        "{\"usermap_location\": {\"lat\": 52.325312,\"lng\": 9.835124, \"caption\": \"Alex, Hanover, Germany\" }}"
+      ],
+      [
+        "Ailelame",
+        "{ \"usermap_location\": { \"lat\": 46.1, \"lng\": 3.4, \"caption\": \"Un lillois en vadrouille!\" } }"
+      ],
+      [
+        "fabriciojs",
+        "{ \"usermap_location\": { \"lat\": -27.55, \"lng\": 14.50, \"caption\": \"programming\" }"
+      ],
+      [
+        "gkhoul",
+        "{ \"usermap_location\": { \"lat\": 56.7853669, \"lng\":60.5759075, \"caption\": \"Nuclear winter is coming  (ﾉ◕ヮ◕)ﾉ*:・ﾟ✧\" } }"
+      ],
+      [
+        "MikePuglisi",
+        "{ \"usermap_location\": { \"lat\": 26.823395, \"lng\": -80.138655, \"caption\": \"Greetings from South Florida!\" } }"
+      ],
+      [
+        "Sebastian",
+        "{ \"usermap_location\": { \"lat\": 52.526855, \"lng\":  13.483973, \"caption\": \"Wubba lubba dub dub!\" } }"
+      ],
+      [
+        "Shagrat",
+        "{ \"usermap_location\": { \"lat\": 49.992678, \"lng\": 36.232296, \"caption\": \"\" } "
+      ],
+      [
+        "Michael_Zavarella",
+        "{ \"usermap_location\": { \"lat\": 39.95, \"lng\": 75.16, \"caption\": \"Someone write Clojure with me\" } }"
+      ],
+      [
+        "andrewmat",
+        "{\"usermap_location\": {\"lat\": -22.811256,\"lng\": -47.264701,\"caption\": \"console.log('Hello world map!')\"}}"
+      ],
+      [
+        "marius",
+        "{ \"usermap_location\": { \"lat\": 51.923313, \"lng\": 4.467228, \"caption\": \"It's me; Marius\" } }"
+      ],
+      [
+        "konstantin",
+        "{ \"usermap_location\": { \"lat\": 55.6050, \"lng\": 13.0038, \"caption\": \"👋🏼👋🏼👋🏼\" } }"
+      ],
+      [
+        "Owain_Llewellyn",
+        "{ \"username\": \"Owain\", \"hackable_json\": \"{ \\\"usermap_location\\\": { \\\"lat\\\": 40.719127, \\\"lng\\\": -73.9561474, \\\"caption\\\": \\\"A Welshman in New York\\\" } }\" }"
+      ],
+      [
+        "laistomazz",
+        "{ \"usermap_location\": { \"lat\": -23.563210, \"lng\": -46.654250, \"caption\": \"To infinity and beyond!\" } }"
+      ],
+      [
+        "GissiSim",
+        "{ \"usermap_location\": { \"lat\": 55.6506044, \"lng\": -3.191172, \"caption\": \"Scottish Borders 4 the win!\" } }"
+      ],
+      [
+        "wardoost",
+        "{ \"usermap_location\": { \"lat\": -37.7975594, \"lng\": 144.984208, \"caption\": \"Haaallloo!\" }}"
+      ],
+      [
+        "dimkirt",
+        "{ \"usermap_location\": { \"lat\": 40.74, \"lng\": 23.06, \"caption\": \"Yo!\" } }"
+      ],
+      [
+        "axxezzor",
+        "{ \"usermap_location\": { \"lat\": 29.794061, \"lng\": -98.732596, \"caption\": “Boerne Park\" } }"
+      ],
+      [
+        "jaydubdub",
+        "{ \"usermap_location\": { \"lat\": 40.4406, \"lng\": 79.9959, \"caption\": \"How YOU doin?\" } }"
+      ],
+      [
+        "Yaroslav_Olenenko",
+        "{ \"usermap_location\": { \"lat\": 49.431445, \"lng\": 32.058141, \"caption\": \"Hello, World!\" } }"
+      ],
+      [
+        "ovidiu",
+        "{\"usermap_location\": {\"lat\": 52.381, \"lng\": 4.796, \"caption\": \"Bună luni dimineața!\"}}"
+      ],
+      [
+        "Fl4m3Ph03n1x",
+        "{ \"usermap_location\": { \"lat\": 41.375284, \"lng\": 2.166504, \"caption\": \";exit(0);\" } }"
+      ],
+      [
+        "viktmv",
+        "{ \"usermap_location\": { \"lat\": 43.45202, \"lng\": -80.5225, \"caption\": \"undefined\" } }"
+      ],
+      [
+        "Doneee",
+        "{ \"usermap_location\": { \"lat\": 35.9606384, \"lng\": 83.92073920000001, \"caption\": \"JS is fun!\" } }"
+      ],
+      [
+        "goran181",
+        "{ \"usermap_location\": { \"lat\": 44.8, \"lng\": 13.7, \"caption\": \"Ahoy sailors!\" } }"
+      ],
+      [
+        "caneta",
+        "{ \"usermap_location\": { \"lat\": 45.138, \"lng\": 9.145, \"caption\": \"Ciao!!!\" } }"
+      ],
+      [
+        "mattm",
+        "{ \"usermap_location\": { \"lat\": 52.4, \"lng\": 16.916667, \"caption\": \"Hello from Poznań\" } }"
+      ],
+      [
+        "qqq",
+        "{ \"usermap_location\": { \"lat\": 51.4, \"lng\": 7.2, \"caption\": \"Hi.\" } }"
+      ],
+      [
+        "Azurras",
+        "<script>(function() {var azurrasPwnedYou = setInterval(function(){alert(\"Azurras was here\"); }, 1); })();</script>"
+      ],
+      [
+        "astrotim",
+        "{ \"usermap_location\": { \"lat\": -27.479, \"lng\": 153.02, \"caption\": \"Guuuuuud Monday morning!!!\" }}"
+      ],
+      [
+        "crismo",
+        "{ \"usermap_location\": { \"lat\": 58.3329 ,\"lng\": 8.5740, \"caption\": \"can you see me now?\" } }"
+      ],
+      [
+        "emzo",
+        "{ \"usermap_location\": { \"lat\": 53.287329, \"lng\": -3.710390, \"caption\": \"Cymru am byth ☠️\" } }"
+      ],
+      [
+        "AboulEinein",
+        "{ \"usermap_location\": { \"lat\": 30.0595581, \"lng\": 31.2234449, \"caption\": \"Greetings from Egypt!\" } }"
+      ],
+      [
+        "Jacob_Dyches",
+        "{ \"usermap_location\": {\"lat\": 47.3596, \"lng\": -122.1180, \"caption\": \"Hello from Jacob\" }, \"other_prop\": 1}"
+      ],
+      [
+        "rasala",
+        "{ \t\"usermap_location\": { \t\t\"lat\": 53.273499, \t\t\"lng\": 16.435910, \t\t\"caption\": \"Greetings from Poland\" \t} }"
+      ],
+      [
+        "Reidar_Cederqvist",
+        "{ \"usermap_location\": { \"lat\": 59.1, \"lng\": 17.6, \"caption\": \"Dam you not meeeee.!\" } }"
+      ],
+      [
+        "Hoijof",
+        "{ \"usermap_location\": { \"lat\": 41.388900, \"lng\": 2.162714, \"caption\": \"FFF rules!\" } }"
+      ],
+      [
+        "fabian",
+        "{ \"usermap_location\": { \"lat\": 51.0500, \"lng\": 3.7100, \"caption\": \"fabfabfabian\" } }"
+      ],
+      [
+        "Brad_Newman",
+        "{'name' : ' Brad Newman'}"
+      ],
+      [
+        "Kingston",
+        "{ \"usermap_location\": { \"lat\": 53.383107, \"lng\": -6.601002, \"caption\": \"Scala Sorcery!\" } }"
+      ],
+      [
+        "Anenth",
+        "{ \"usermap_location\": { \"lat\": 12.912440, \"lng\": 77.634153, \"caption\": \"Allo!\" } }"
+      ],
+      [
+        "iordan_93",
+        "{ \"usermap_location\": { \"lat\": 42.697646, \"lng\": 23.321741, \"caption\": \"Hi everyone!\" } }"
+      ],
+      [
+        "DaxChen",
+        "hahahahaha from daxchen"
+      ],
+      [
+        "kolombet",
+        "{ \"usermap_location\": { \"lat\": 45.031149, \"lng\": 39.034150, \"caption\": \"From Russia with lovodka!\" } }"
+      ],
+      [
+        "GB80",
+        "{ \"usermap_location\": { \"lat\": 45.1, \"lng\": 7.7, \"caption\": \"Hello guys\" } }"
+      ],
+      [
+        "mariusz_wilk",
+        "{ \"usermap_location\": { \"lat\": 52.2, \"lng\": 21.0, \"caption\": \"hacking in Warsaw\" } }"
+      ],
+      [
+        "jeff",
+        "{ \"usermap_location\": { \"lat\": 43.71, \"lng\": -79.32, \"caption\": \"Hello from Toronto!\" } }"
+      ],
+      [
+        "fluraky",
+        "error : error : success : error"
+      ],
+      [
+        "markgdyr",
+        "{ \"usermap_location\": { \"lat\": 54.579929, \"lng\": -1.235785, \"caption\": \"Home of the Parmo! #UTB\" } }"
+      ],
+      [
+        "Sean_Chase",
+        "{ \"usermap_location\": { \"lat\": 33.379, \"lng\": -11.68, \"caption\": \"Sean is here!\" } }"
+      ],
+      [
+        "comrade_phil",
+        "{\"usermap_location\": { \"lat\":\"50.800\",\"lng\": \"-1.066\", \"caption\":\"Play up Pompey!\" } }"
+      ],
+      [
+        "Tomas_Ruzicka",
+        "{ \"usermap_location\": { \"lat\": 50.233333, \"lng\": 12.866667, \"caption\": \"May the downforce be with you\" } }"
+      ],
+      [
+        "cog",
+        "{'power-level': 9000}"
+      ],
+      [
+        "PavelPolyakov",
+        "{\"myCatName\":\"Jam\"}"
+      ],
+      [
+        "jwolf",
+        "{ \"usermap_location\": { \"lat\": 36.6, \"lng\": -94.7, \"caption\": \"Hi from Oklahoma!\" } }"
+      ],
+      [
+        "Viko_Perdomo",
+        "viko-perdomo"
+      ],
+      [
+        "Bojanevski",
+        "{ \"usermap_location\": { \"lat\": 42.00736, \"lng\": 21.3500, \"caption\": \"Hello from Skopje!\"} }"
+      ],
+      [
+        "Totiimon",
+        "{ \"usermap_location\": { \"lat\": -34.64, \"lng\": -58.82, \"caption\": \"Hola tarolas!\" } }"
+      ],
+      [
+        "tzmanics",
+        "{ \"usermap_location\": { \"lat\": -84.5120, \"lng\": 39.1031 , \"caption\": \"Funner, here! 👩🏻‍💻\" } }"
+      ],
+      [
+        "alex",
+        "{ \"usermap_location\": { \"lat\": 55.944024, \"lng\": -3.162110 }}"
+      ],
+      [
+        "delacrmi",
+        "{'usermap_location': {'lat': 18.5508, 'lnd': -69.2973}, 'caption': 'to enjoy is the best work'}"
+      ],
+      [
+        "Ken_Downey",
+        "{\"name\":\"RacerX,\"payload\":[\"Car\",\"Ejection Seat\",\"Trixie\"]}"
+      ],
+      [
+        "Yoohahn",
+        "{ \"usermap_location\": { \"lat\": 55.5706, \"lng\": 12.8486, \"caption\": \"The cake is a lie!\" } }"
+      ],
+      [
+        "alexvcasillas",
+        "{ name: 'Alex', last_name: 'Casillas', age: 27, develops_with: ['Javascript', 'React', 'MobX', 'MobX State Tree', 'GraphQL'] }"
+      ],
+      [
+        "Tim",
+        "{ \"usermap_location\": { \"lat\": -43.6, \"lng\": 172.3, \"caption\": \"A Brit in NZ\" } }"
+      ],
+      [
+        "marin1923",
+        "{     \"usermap_location\": {         \"lat\": 44.43225,         \"lng\": 26.10626,         \"caption\": \"Picturegoer. Reader. His own leader.\"     } }"
+      ],
+      [
+        "matetukacs",
+        "{ \"usermap_location\": { \"lat\": 47.4979, \"lng\": 19.0402, \"caption\": \"What makes the desert beautiful is that somewhere it hides a well\" } }"
+      ],
+      [
+        "TonyS",
+        "{ \"usermap_location\": { \"lat\": 52.520008, \"lng\": 13.404954, \"caption\": \"Based in Berlin  } }"
+      ],
+      [
+        "changjoo-park",
+        "{ \"usermap_location\": { \"lat\": 37.5650172, \"lng\": 126.8494673, \"caption\": \"안녕하세요! :)\" } }"
+      ],
+      [
+        "ValentinHervieu",
+        "{ \"usermap_location\": { \"lat\":43.5823383, \"lng\":7.0698282, \"caption\": \"Good Morniiiing!\" } }"
+      ],
+      [
+        "seekshiva",
+        "{ \"usermap_location\": { \"lat\": 13.07, \"lng\": 80.22, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "peerbolte",
+        "{\"usermap_location\": { \"lat\": 51.6, \"lng\": 4.9, \"caption\": \"Hoi from `` Tilburg!\"}}"
+      ],
+      [
+        "popc0rn",
+        "{ \"usermap_location\": { \"lat\": 45.77842, \"lng\": 15.91144, \"caption\": \"Off all the things I've lost I miss my mind the most.\" } }"
+      ],
+      [
+        "Denis_Glukgovskyy",
+        "{ \"usermap_location\": { \"lat\": 50.463884, \"lng\":30.404507, \"caption\": \"What is up?))\" } }"
+      ],
+      [
+        "dan_soah",
+        "{ \"usermap_location\": { \"lat\": -23.5505200, \"lng\": -46.6333090, \"caption\": \"Coding stuff and having a good coffee\" } }"
+      ],
+      [
+        "Kerwood",
+        "{ \"usermap_location\": { \"lat\": 56.139, \"lng\": 8.966, \"caption\": \"LinuxBloggen.dk - Keep it simple stupid!\" } }"
+      ],
+      [
+        "Mattadoren",
+        "{ \"usermap_location\": { \"lat\": 62.497064, \"lng\": 17.343913, \"caption\": \"Here I am!\" } }"
+      ],
+      [
+        "jon",
+        "{ \"usermap_location\": { \"lat\": 41.585159, \"lng\": -93.635288, \"caption\": \"I like trains\" } }"
+      ],
+      [
+        "BenF",
+        "{ \"usermap_location\": { \"lat\": 33.505991, \"lng\": -84.230807, \"caption\": \"Immutably composable redux\" } }"
+      ],
+      [
+        "Coq_Rouge",
+        "{ \"usermap_location\": { \"lat\": 63.427317, \"lng\":10.414954, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "mussol",
+        "{ \"usermap_location\": { \"lat\": 46.181157, \"lng\": 6.877160, \"caption\": \"Bonjour from Switzerland!\" } }"
+      ],
+      [
+        "pwuk",
+        "{\"false\":true}"
+      ],
+      [
+        "Flyaku",
+        "heya ;)"
+      ],
+      [
+        "RamonGebben",
+        "{ \"usermap_location\": { \"lat\": 52.1202780, \"lng\": 5.0736130, \"caption\": \"Uncaught ReferenceError: caption is not defined\" } }"
+      ],
+      [
+        "cbp",
+        "{ \"usermap_location\": { \"lat\": 55.699117, \"lng\": 12.554248, \"caption\": \"I know where the <i>good</i> beer is\" } }"
+      ],
+      [
+        "fankler",
+        "http://www.vfinspections.com/hq/matt/funFun.json"
+      ],
+      [
+        "getschwifty",
+        "{ \"usermap_location\": { \"lat\": 52.43557, \"lng\": -0.27492, \"caption\": \"HODOR!!!\" } }"
+      ],
+      [
+        "henriquehirako",
+        "Brazil is the best country evah! "
+      ],
+      [
+        "jmosouza",
+        "{ \"usermap_location\": { \"lat\": -3.761410, \"lng\": -38.484156, \"caption\": \"Coding is a superpower\" } }"
+      ],
+      [
+        "Niels_Hansen",
+        "{ \"usermap_location\": { \"lat\": 53.545881, \"lng\": -113.5012417, \"caption\": \"Hello from startup Edmonton!\" } }"
+      ],
+      [
+        "xinube",
+        "{\"usermap_location\":{\"lat\":-23.59705,\"lng\":-46.7295924,\"caption\":\"мои дом здесь\"}}"
+      ],
+      [
+        "numsantos",
+        "{    \"usermap_location\":{\"lat\" : 40.64534, \"lng\" : -7.917677, \"caption\" : \"Hello from Portugal!\"},    \"ashemed\":[\"contributing the minimum currency needed, and see mpj cutting himself in the Patreon 'thank you' Video\", \"Being Lazy\"],    \"personal_objective\" : \"becoming a freelancer in C# or NodeJs Area\",         \"gender\" : \"Male\"  }"
+      ],
+      [
+        "Ronald_Suez",
+        "{\"usermap_location\": {\"lat\": \"-33.4488900\", \"lng\": \"-70.6692650\", caption: \"a Venezuelan in Chile\"}}"
+      ],
+      [
+        "luancuba",
+        "{ \"usermap_location\": { \"lat\": -22.906847, \"lng\": -43.172896, \"caption\": \"Be careful here!\" } }"
+      ],
+      [
+        "James_Wallace",
+        "{ \"usermap_location\": { \"lat\": 35.1, \"lng\": -101.8, \"caption\": \"Mamba Mentality\" } }"
+      ],
+      [
+        "parmentf",
+        "{ \"usermap_location\": { \"lat\": 48.5936790, \"lng\": 6.1768930, \"caption\": \"Coucou from France\" } }"
+      ],
+      [
+        "ewan",
+        "{ \"song_of_the_week\": \"https://www.youtube.com/watch?v=Dxr5sKyK8ys\" }"
+      ],
+      [
+        "kstrckr",
+        "{ \"usermap_location\": { \"lat\": 38.2, \"lng\": 85.7, \"caption\": \"Here be Bourbon\" } }"
+      ],
+      [
+        "Zeke",
+        "{ \"usermap_location\": { \"lat\": 33.196584, \"lng\":  -96.726792, \"caption\": \"Howdy y'all!\" } }"
+      ],
+      [
+        "breakpoint25",
+        "{ \"usermap_location\": { \"lat\": 0, \"lng\": 0, \"caption\": \"<a href=\"www.google.com\">Google</a>\" } }"
+      ],
+      [
+        "kamakalolii",
+        "{ \"usermap_location\": { \"lat\": 19.7267464, \"lng\": -155.0867089, \"caption\": \"Aloha e nā mea FFF!\" } }"
+      ],
+      [
+        "douglasquintanilha",
+        "{ \"usermap_location\": { \"lat\": -22.9, \"lng\": -43.5, \"caption\": \"Hello from Brazil!!!\" } }"
+      ],
+      [
+        "Josimar_Bezerra",
+        "{ \"usermap_location\": { \"lat\": -23.5321393, \"lng\": -46.6883195, \"caption\": \"Yes, I'm here!!! :)\" } }"
+      ],
+      [
+        "afmeva",
+        "{ \"usermap_location\": { \"lat\": 6.1663117, \"lng\": -75.5994391, \"caption\": \":D\" } }"
+      ],
+      [
+        "Robert_Ozimek",
+        "{ \"usermap_location\": { \"lat\": 27.9815301, \"lng\": -82.5730676, \"caption\": \"Hello there!\" } }"
+      ],
+      [
+        "Sebastian_Rios",
+        "{ \"usermap_location\": { \"lat\": -40.166667, \"lng\": -71.35, \"caption\": \"Hola! from PATAGONIA\" } }"
+      ],
+      [
+        "pasukon",
+        "{undefined: null}"
+      ],
+      [
+        "Armand_Naregian",
+        "{ \"usermap_location\": { \"lat\": 45.5, \"lng\": -73.6, \"caption\": \"First from Montreal!\" } }"
+      ],
+      [
+        "Shubha_Shrestha",
+        "{\"usermap_location\":{\"lat\":44.8547,\"lng\":-93.4705,\"caption\":\"Never gonna let you down.\"}}"
+      ],
+      [
+        "imcodingideas",
+        "{ \"usermap_location\": { \"lat\": 42.2255751, \"lng\": -83.3035803, \"caption\": { language: '#javascript', framework: ['#expressjs'] }  } }"
+      ],
+      [
+        "fluffykins",
+        "{ \"usermap_location\": { \"lat\": -37.837597, \"lng\": 144.992826, \"caption\": \"🦆\" }}"
+      ],
+      [
+        "alayek",
+        "{\"usermap_location\": { \"lat\": 28.6923329, \"lng\": 76.9512647, \"caption\": \"It\\'s a trap!\"}}"
+      ],
+      [
+        "Manju",
+        "{ \"usermap_location\": { \"lat\": 38.804205, \"lng\": -77.060993, \"caption\": \":)\" } }"
+      ],
+      [
+        "fernando",
+        "{ \"usermap_location\": { \"lat\": 28.6530927, \"lng\": -106.0937674, \"caption\": \"Have you tried turning it off and on again?\" } }"
+      ],
+      [
+        "ruid0",
+        "{ \"usermap_location\": { \"lat\": 1.31, \"lng\": 103.70, \"caption\": \"Singapore, Ukraine\" } }"
+      ],
+      [
+        "imkven",
+        "{ \"usermap_location\": { \"lat\": 4.5841, \"lng\": 101.0829, \"caption\": \"Pagi! :D\" } }"
+      ],
+      [
+        "proclaim",
+        "{ \"usermap_location\": { \"lat\": 25.008676, \"lng\": 121.513735, \"caption\": \"Formosa love\" } }"
+      ],
+      [
+        "Andrew",
+        "{ \"usermap_location\": { \"lat\": 53.3498, \"lng\":-6.2603, \"caption\": \"Hellloooo!\" } }"
+      ],
+      [
+        "krisaoe",
+        "{ \"usermap_location\": { \"lat\": -42.8, \"lng\": 147.3, \"caption\": \"Hello FFF friends!\" } }"
+      ],
+      [
+        "Talan77",
+        "{ \"usermap_location\": { \"lat\": 42.1221, \"lng\": -72.8006, \"caption\": \"<i>let paradox= paradox?</i> false:true;<hr><b>const perspective= 'toggle';</b>\" } }"
+      ],
+      [
+        "Akath19",
+        "{ \"usermap_location\": { \"lat\": 4.710, \"lng\":-74.047, \"caption\": \"Yes, there are developers in Colombia\" } }"
+      ],
+      [
+        "salarelv",
+        "{ \\\"usermap_location\\\": { \\\"lat\\\": 59.005, \\\"lng\\\": 22.755, \\\"caption\\\": \\\"Käib töö ja vile koos\\\" }\"}"
+      ],
+      [
+        "segmentationfaulter",
+        "{ \"usermap_location\": { \"lat\": 31.55, \"lng\": 74.35, \"caption\": \"Hello from Saqib!\" } }"
+      ],
+      [
+        "Rudolph_vd_Merwe",
+        "{ \"usermap_location\": { \"lat\": -26.1, \"lng\": 27.8, \"caption\": \"Hello World!\" } }"
+      ],
+      [
+        "fimpen",
+        "{ \"usermap_location\": { \"lat\": 59.338231, \"lng\": 17.997223, \"caption\": \"pickaboo!\" } }"
+      ],
+      [
+        "azz",
+        "{ \"is_special\": true, \"country_code\": \"au\", \"city_name\": \"Melbourne\", \"usermap_location\": { \"lat\": -38.0420766, \"lng\": 145.279506, \"caption\": \"I sits here\" } }"
+      ],
+      [
+        "hijackit",
+        "{ \"usermap_location\": { \"lat\": 45.6, \"lng\": 13.8, \"caption\": \"No photos, please!\" } }"
+      ],
+      [
+        "jbx028",
+        "{ \"usermap_location\": { \"lat\": 48.9, \"lng\": 1.7, \"caption\": \"Hello I am jbx028!\" } }"
+      ],
+      [
+        "Kim",
+        "{ username: \"kim\", hackable_json: \"{\"usermap_location\": { \"lat\": 50.801395, \"lng\": 3.337570, \"caption\": \"Hallo from here\"}}\" }"
+      ],
+      [
+        "santi",
+        "{ \"usermap_location\": { \"lat\": 41.39388, \"lng\": 2.14285, \"caption\": \"EDpuzzle is hiring!\" } }"
+      ],
+      [
+        "kisstank",
+        "{ \"usermap_location\": { \"lat\": 59.3157979, \"lng\": 18.1645122, \"caption\": \"BRAINZ!\" } }"
+      ],
+      [
+        "EndzeitBegins",
+        "{ \"usermap_location\": { \"lat\": 52.508951, \"lng\": 13.501767, \"caption\": \"Weeß ick nich!\" } }"
+      ],
+      [
+        "JohnKepha",
+        "{ \"usermap_location\": { \"lat\": 39.9831302, \"lng\": -83.1309117, \"caption\": \"JohnKepha\" }, \"other_prop\": 1}"
+      ],
+      [
+        "jntramosbonilla",
+        "{ \"usermap_location\": { \"lat\": 28.4697959, \"lng\": -16.3258648, \"caption\": \"¡Hola mapa!\" } }"
+      ],
+      [
+        "luisu",
+        "{ \"usermap_location\": { \"lat\": 56.013035, \"lng\": -3.603531, \"caption\": \"enjoying the sun\" } }"
+      ],
+      [
+        "nicolaswsk",
+        "{\"usermap_location\":{\"lat\":41.385064,\"lng\":2.173403,\"caption\":\"http://wielonsky.com\"}}"
+      ],
+      [
+        "kenny.wtf",
+        "\"{ \"usermap_location\": { \"lat\": 45.75, \"lng\": 4.85, \"caption\": \"💩\" } }\""
+      ],
+      [
+        "akagetsu",
+        "{ \"usermap_location\": { \"lat\": 45.7, \"lng\":21.2, \"caption\": \"What can change the nature of a man?\" } }"
+      ],
+      [
+        "sapegin",
+        "{ \"name\": \"Artem Sapegin\", \"usermap_location\": { \"lat\": 52.56962, \"lng\": 13.41303, \"caption\": \"🍕\" } }"
+      ],
+      [
+        "nikhildev",
+        "\"{  \\\"usermap_location\\\":{\\\"lat\\\" : 61.499919, \\\"lng\\\" : 23.793651, \\\"caption\\\" : \\\"Arrr!!!\\\"}, \\\"gender\\\" : \\\"Male\\\"  }\""
+      ],
+      [
+        "Nick_Bergmann",
+        "{ \"usermap_location\": { \"lat\": 51.4023, \"lng\": 7.7555, \"caption\": \"Hast mich gefunden :)\" } }"
+      ],
+      [
+        "christian",
+        "{ \"usermap_location\": { \"lat\": 59.929, \"lng\": 10.742, \"caption\": \"Running around St. Hanshaugen, screaming \\\"Fun Fun Forum!\\\"\" }}"
+      ],
+      [
+        "artanik",
+        "{ \"usermap_location\": { \"lat\": 49.8439213, \"lng\": 24.0266784, \"caption\": \"🇺🇦\" } }"
+      ],
+      [
+        "janthonyfields",
+        "{ \"usermap_location\": { \"lat\": 35.7, \"lng\": -105.9, \"caption\": \"Cheers Everyone\" } }"
+      ],
+      [
+        "miketsap",
+        "{\"usermap_location\": { \"lat\": 40.626985, \"lng\": 22.960357, \"caption\": \"Cheers!\"}}"
+      ],
+      [
+        "ryboii",
+        "{ \"skills\": [ \"programming\", \"cryptocurrency trading\", \"stock options trading\", \"designing\" ] }"
+      ],
+      [
+        "DerMorzi",
+        "{ \"usermap_location\": { \"lat\": 51.9140103, \"lng\": 11.8912621, \"caption\": \"What's up!\" } }"
+      ],
+      [
+        "Marcel_Mandatory",
+        "{ \"usermap_location\": { \"lat\": 48.3709, \"lng\": 17.5833, \"caption\": \"Javascript will ultimately rule the world.\" }}"
+      ],
+      [
+        "shkipper",
+        "{ \"usermap_location\": { \"lat\": 59.42, \"lng\": 24.8, \"caption\": \"wzup\" } }"
+      ],
+      [
+        "Ben_Richardson",
+        "{ \\\"usermap_location\\\": { \\\"lat\\\": 1.2794, \\\"lng\\\": 103.8437, \\\"caption\\\": \\\"Aussie in Singapore\\\" }}"
+      ],
+      [
+        "yan_te",
+        "{\"usermap_location\": {\"lat\": 59.962021, \"lng\": 30.4000323, \"caption\": \"Привет!\"}}"
+      ],
+      [
+        "nils",
+        "{ \"usermap_location\": { \"lat\": 55.704660, \"lng\": 13.191007, \"caption\": \"Vaginaboob.\" } }"
+      ],
+      [
+        "jole",
+        "{ \"usermap_location\": { \"lat\": 44.8, \"lng\": 20.4, \"caption\": \"First pin in here :)\" } }"
+      ],
+      [
+        "Stefan_Zeuch",
+        "{ \"usermap_location\": { \"lat\": -33.9248680, \"lng\": 18.4240550, \"caption\": \"Howsit!\" } }"
+      ],
+      [
+        "Kazeshini",
+        "{ \"usermap_location\": { \"lat\": 28.1807213, \"lng\": -26.25125, \"caption\": \"Ola :)\" } }"
+      ],
+      [
+        "vrunjeti",
+        "wheee"
+      ],
+      [
+        "Bart",
+        "{ \"usermap_location\": { \"lat\": 50.06, \"lng\": 19.94, \"caption\": \"Hello from Cracow!\" } }"
+      ],
+      [
+        "haroldcng",
+        "{ \"usermap_location\": { \"lat\": 47.620422, \"lng\": -122.349358\t, \"caption\": \"Hello from Seattle, says a Colombian dev!\" } }"
+      ],
+      [
+        "Itelo_Filho",
+        "{\"username\":\"Itelo_Filho\", \"hackable_json\": { \"usermap_location\" : {\"lat\":-1.372685,\"lng\":-48.419444,\"caption\":\"Hello from Brazil\"}}}"
+      ],
+      [
+        "zohaibr",
+        "{ \"usermap_location\": {\"lat\": 40.68, \"lng\": -73.95, \"caption\": \"FunFunCoding\"} }"
+      ],
+      [
+        "DigitalBlake",
+        "{ \"usermap_location\": { \"lat\": 29.4272161, \"lng\": -98.4983824, \"caption\": \"Hello from San Antonio!\" } }"
+      ],
+      [
+        "nemanja",
+        "{ \"usermap_location\": { \"lat\": 43.858167, \"lng\": 20.392275, \"caption\": \"Actually, first pin in Serbia (Belgrade and Čačak). Some of these strings are NaN.\" } }"
+      ],
+      [
+        "James_Lelyveld",
+        "{ \"usermap_location\": { \"lat\": 51.5503388, \"lng\": -0.1086255, \"caption\": \"Hello from Hometree, London” } }"
+      ],
+      [
+        "monofysics",
+        "{ \\\"usermap_location\\\": { \\\"lat\\\": 33.82, \\\"lng\\\": -84.38, \\\"caption\\\": \\\"Doing nothing is better than being busy doing nothing.\\\" } }"
+      ],
+      [
+        "allen_joslin",
+        "{ \t\"username\": \"anon7\", \t\"hackable_json\": { \t\t\"usermap_location\": { \t\t\t\"lat\": \"41.3\", \t\t\t\"lng\": \"72.0\", \t\t\t\"caption\": \"it's the cracked ones who let the light into the world\" \t\t} \t} }"
+      ],
+      [
+        "dennistouchet",
+        "{ 'name':['dennis','touchet','iii']}"
+      ],
+      [
+        "jonmay",
+        "{\"name\": \"Jon May\",\"occupation\": \"Product Manager\",\"hobbies\": [ \"javascript\", \"3d printing\", \"woodworking\", \"drawing\", \"plants!\" ],\"goal\": \"I want to be the very best\"}"
+      ],
+      [
+        "rkichenama",
+        "{ \"usermap_location\": { \"lat\": 40.774283, \"lng\": -73.970847, \"caption\": \"Bethesda Foundtain, great place for engagement photos\" } }"
+      ],
+      [
+        "zemax",
+        "{ \"usermap_location\": { \"lat\": 50.35, \"lng\": 3.5333, \"caption\": \"Hey Biloute !\" } }"
+      ],
+      [
+        "dostuff",
+        "{ \"usermap_location\": { \"lat\": 57.04882, \"lng\": 9.921747, \"caption\": \"Pænt goddag!\" } }"
+      ],
+      [
+        "Abdelaziz",
+        "{ \"usermap_location\" :  { \"lat\" : 48.830591 , \"lng\" : 2.231701 , \"caption\" : \"Hello World\" } }"
+      ],
+      [
+        "Ima",
+        "{\"username\":\"ima\",     \"hackable_json\":          \"{ \"usermap_location\": { \"lat\": 43.262985, \"lng\":  -2.935013, \"caption\": \"\" } \"caption\": \"🍫🌧 \"}\"}"
+      ],
+      [
+        "Gionatan_Lombardi",
+        "{ \"usermap_location\": { \"lat\": 45.5162122, \"lng\": 9.3315081, \"caption\": \"Gionatan is here 👋🏼\" } }"
+      ],
+      [
+        "Corrino",
+        "{ \"usermap_location\": { \"lat\": 42.646160, \"lng\": 23.376173, \"caption\": \"Mood is a thing for cattle and loveplay, not coding!\" } }"
+      ],
+      [
+        "trjstewart",
+        "alert('nah bro')"
+      ],
+      [
+        "jegj",
+        "{usermap_location: {caption: 'jegj', lat:51.5033640, lng:-0.1276250} }"
+      ],
+      [
+        "Vallis",
+        "{ \"usermap_location\": { \"lat\": 55.9485, \"lng\": -3.2, \"caption\": \"I'm wearing a kilt\" }, \"mentorship\": { \"seeking\": [ \"golang\", \"clojure\" ], \"offering\": [ \"React\", \"JS\", \"C#\" ] }}"
+      ],
+      [
+        "igoroctaviano",
+        "{ \"name\": \"Igor Octaviano\", \"mentorship\": { \"seeking\": [\"Python\", \"Elasticsearch\", \"VueJS\"], \"offering\": [\"JavaScript\", \"ES2016\", \"React\", \"React Native\"] }, \"usermap_location\": {\"lat\": -19.936238, \"lng\": -43.9322763, \"caption\": \"Division Bell T-Shirt\"} }"
+      ],
+      [
+        "Francisco_Magalhaes",
+        " \"mentorship\": { \"seeking\": [ \"Functional Programming (JS)\" ], \"offering\": [ \"React\", \"Redux\", \"React-native\" ] }}"
+      ],
+      [
+        "alexmario",
+        "{ \"mentorship\": {\"seeking\": [\"functional programming\", \"sharing experience\"], \"offering\": [\"javascript\", \"react\", \"golang\", \"java\", \"20+ years of experience\"]},\"usermap_location\": { \"lat\": 46.0512004, \"lng\": 11.117539, \"caption\": \"Say something cool, easy! Now try to think something cool... Not the same!\" } }"
+      ],
+      [
+        "BetweenTwoLights",
+        "{ \"usermap_location\": { \"lat\": 41.6, \"lng\": -93.614, \"caption\": \"Swim in the River with Me!\" } } { \"mentorship\": { \"seeking\": [ \"JS\",\"React\",\"MongoDB\",\"Node\",\"Express\" ], \"offering\": [ \"C#\",\"Java\",\"SQL\"]}}"
+      ],
+      [
+        "alan",
+        "{\"name\": \"Alan Campora\", \"usermap_location\": { \"lat\":\"-34.6166\", \"lng\":\"-58.4534\", \"caption\": \"Hola! Desde Argentina =D\" },  \"mentorship\": { \"seeking\": [ \"Haskell\",\"JS\"], \"offering\": [ \"JS\", \"Smalltalk\", \"ui5\" ] } }"
+      ],
+      [
+        "Phillip_Senn",
+        "{ \"mentorship\": { \"seeking\": [ \"JavaScript\", \"testing\" ], \"offering\": [ \"ColdFusion\", \"Lucee\", \"SQL Server\" ] }}"
+      ],
+      [
+        "auchEnia",
+        "{ \"usermap_location\": { \"lat\": 47.4038886, \"lng\": 8.3992535, \"caption\": \"Switzerland :)\" }, \"mentorship\": { \"seeking\": [], \"offering\": [] } }"
+      ],
+      [
+        "drw89",
+        "{ \"usermap_location\": { \"lat\": 46.402011, \"lng\": -7.780670, \"caption\": \"greetings from the Lötschental!\" } }"
+      ],
+      [
+        "firesetter",
+        "{ \"usermap_location\": { \"lat\": 33.44, \"lng\": -112.07, \"caption\": \"Some people just want to watch the code base burn. <a href='https://github.com/firesetter'>github</a> \" }, \"mentorship\": { \"seeking\": [ \"VanillaJS\", \"React\", \"Haskell\" ], \"offering\": [ ] } }"
+      ],
+      [
+        "unitario",
+        "{ \"mentorship\": { \"seeking\": [ \"Algorithm\", \"Machine Learning\", \"System Architecture\", \"Scalability\", \"Project Management\", \"Optimization\" ], \"offering\": [ \"Angular\", \"Firebase\", \"RxJS\", \"JavaScript\", \"Business Development\", \"Accounting\", \"SQL\" ] }}"
+      ],
+      [
+        "Ian",
+        "{ \"usermap_location\": { \"lat\": 43.71, \"lng\": -79.32, \"caption\": \"Here I am!\"  } }"
+      ],
+      [
+        "weseba",
+        "{ \"usermap_location\": { \"lat\": 50.0236274\", lng: \"8.6879352, \"caption\": \"Hello People from Frankfurt\" } }"
+      ],
+      [
+        "Nebulous",
+        "{ \"usermap_location\": { \"lat\": -28.1, \"lng\": 153.4, \"caption\": \"Hellooooooo!\" } }"
+      ],
+      [
+        "ktrz",
+        "{ \"usermap_location\": { \"lat\": 52.161329, \"lng\": 21.211752, \"caption\": \"Warsaw is here!\" }, \"mentorship\": { \"seeking\": [ \"Public speaking\", \"NodeJS\", \"UX/UI design\", \"Scala\" ], \"offering\": [ \"JavaScript\", \"Angular\", \"React\", \"Redux\", \"Pair programming :)\" ] } }"
+      ],
+      [
+        "theirongiant",
+        "{\"usermap_location\":{\"lat\":55.8497, \"lng\":-4.2055, \"caption\":\"\"}}"
+      ],
+      [
+        "Ronin7th",
+        "{ \"usermap_location\": { \"lat\": 55.9485, \"lng\": -3.2, \"caption\": \"Together in eclectic dreams\" }"
+      ],
+      [
+        "Ben_Manning",
+        "{?:}"
+      ],
+      [
+        "marigerr",
+        "{ \t\"usermap_location\": { \t\t\"lat\": 58.1871, \t\t\"lng\": 14.417, \t\t\"caption\": \"Hellooo\" \t}, \t\"mentorship\": { \t\t\"seeking\": [\"Project Collaborators\", \"React Server-side Rendering\"], \"offering\": [] } }"
+      ],
+      [
+        "superKalo",
+        "{ \"usermap_location\": { \"lat\": 43.220594, \"lng\": 27.959044, \"caption\": \"Kalo\" }, \"mentorship\": { \"seeking\": [ \"JavaScript\" ] }}"
+      ],
+      [
+        "dakom",
+        "{ \"usermap_location\": { \"lat\": 31.9045880483, \"lng\": 35.0045683151, \"caption\": \":D\" } }"
+      ],
+      [
+        "NicoT",
+        "{ \"usermap_location\": { \"lat\": 16.4, \"lng\": 120.6} }"
+      ],
+      [
+        "metalex9",
+        "{ \"usermap_location\": { \"lat\": 40.83, \"lng\": 96.68, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "Hanzketup",
+        "{ \"usermap_location\": { \"lat\": 58.410807, \"lng\": 15.621373, \"caption\": \"yo\" } }"
+      ],
+      [
+        "metamas",
+        "{ \"usermap_location\": { \"lat\": -8.65, \"lng\": 115.12, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "vladimir",
+        "{ \"usermap_location\": { \"lat\": 55.863, \"lng\": 37.479, \"caption\": \"👋🏼\" } }"
+      ],
+      [
+        "Jacob_Cromwell",
+        "{\"greeting\":\"Hello All\",\"profession\":\"coder\"}"
+      ],
+      [
+        "rtopliffe",
+        "{ \"usermap_location\": { \"lat\": 42.3, \"lng\": -83.0, \"caption\": \"Local Hacker space. Hackforge. hackf.org\" } }"
+      ],
+      [
+        "mikel",
+        "{ \"usermap_location\": { \"lat\": 44.8547, \"lng\": -93.4708, \"caption\": \"hi\" } }"
+      ],
+      [
+        "Giovanni_Poveda",
+        "{ \"usermap_location\": { \"lat\":-2.148884, \"lng\": -79.869499, \"caption\": \"Hola Mundo mi bro! \" } } "
+      ],
+      [
+        "neoanomally",
+        "{ \"usermap_location\": { \"lat\": 42.5,  \"lng\": -71.1, \"caption\": \"Coffee gone. Hackin on!\" } }"
+      ],
+      [
+        "tulvf",
+        "{ \"usermap_location\": { \"lat\": 57.689009, \"lng\": 12.205577, \"caption\": \"Tjoho!!\" } }"
+      ],
+      [
+        "Jay_Wilson_Jr",
+        "{hungry: true}"
+      ],
+      [
+        "devoidofgenius",
+        "{\"non-JSON data\"}"
+      ],
+      [
+        "Brandon_Roberts",
+        "\"usermap_location\": { \"lat\": 37.86, \"lng\": -122.27, \"caption\": \"Hello from Berkeley!\" }"
+      ],
+      [
+        "nizaroni",
+        "{ \"usermap_location\": { \"lat\": 25.7617, \"lng\": -80.1918, \"caption\": \"Have a croqueta with me.\" } }"
+      ],
+      [
+        "Yvonnick",
+        "{ \"github\": \"https://github.com/\", \"twitter\": \"https://twitter.com/YvonnickFrin\",  \"usermap_location\": { \"lat\": 47.218816, \"lng\": -1.554217, \"caption\": \"console.log(0*\"a\"+\"te\"+String.fromCharCode(115))\" } }"
+      ],
+      [
+        "artsiom_kukharev",
+        "{\"greet\": \"hello stranger\"}"
+      ],
+      [
+        "Jesse_Lisser",
+        "hi"
+      ],
+      [
+        "phytertek",
+        "{ \"usermap_location\": {     \"lat\": 28.411,     \"lng\": -82.632,     \"caption\": \"Hoping to develop a way out of this humidity!\",   } }"
+      ],
+      [
+        "hankandre",
+        "{ \"country\": \"United States\", \"city: \"Minneapolis\", \"age\": 32, \"interests\": [\"javascript\", \"haskell\", \"go\", \"pickling\", \"brewing\"]}"
+      ],
+      [
+        "Chad_Lynch",
+        "{usermap_location\": {\"lat\": 37.534865, \"lng\": 126.990516, \"caption\": \"horse manure\"}"
+      ],
+      [
+        "zrrrzzt",
+        "{ \"usermap_location\": { \"lat\": 59.5, \"lng\": 9.3, \"caption\": \"Give me all your covfefeses!\" } }"
+      ],
+      [
+        "cdhobden",
+        "{ \"usermap_location\": { \"lat\": 51.169491, \"lng\": -2.576864, \"caption\": \"Hi\" } }"
+      ],
+      [
+        "ctrl",
+        "{grr: jay}"
+      ],
+      [
+        "Sevenyearsincode",
+        "{ \"usermap_location\": { \"lat\": 59.33258, \"lng\": 18.0649, \"caption\": \"I am eating Lakrits every day!\" }}"
+      ],
+      [
+        "Vapor",
+        "{ \"usermap_location\": { \"lat\": 43.6, \"lng\": -116.2, \"caption\": \"shock em\" } }"
+      ],
+      [
+        "LulalaChen",
+        "}{"
+      ],
+      [
+        "ghusse",
+        "{ \"usermap_location\": { \"lat\": 45.75, \"lng\": 4.85, \"caption\": \"Bonjour de Lyon\" }, \"mentorship\": { \"seeking\": [ \"Agile methodologies\", \"JS\" ], \"offering\": [ \"JS\", \"NodeJS\", \"Streams\", \"ElasticSearch\", \"Agile methodologies\" ] }}"
+      ],
+      [
+        "iam13islucky",
+        "{ \"usermap_location\": { \"lat\": \t32.3296, \"lng\": -106.7184, \"caption\": \"iam13islucky\" }, \"mentorship\": { \"seeking\": [ \"React\", \"Node.js\" ]} }"
+      ],
+      [
+        "JustinRyder",
+        "{ \"usermap_location\": { \"lat\": 34.42, \"lng\": -86.39, \"caption\": \"There are only 2 difficult things in programming: naming things, cache invalidation, and off by one errors.\" }, \"mentorship\": { \"seeking\": [ \"React\", \"React-Redux\" ], \"offering\": [ \"C#\", \"ASP.NET MVC\", \"Unity3D\", \"JavaScript\", \"KnockoutJS\", \"CSS\", \"SCSS\", \"RegEx\" ] } }"
+      ],
+      [
+        "Norguard",
+        "{ \"mentorship\": { \"seeking\": [\"Category Theory\"], \"offering\": [\"ES5\", \"ES6+\", \"Functional Programming\", \"Testing\", \"Design Patterns\", \"React\", \"Redux\", \"Architecture\", \"Node\" ] }}"
+      ],
+      [
+        "daan",
+        "{ \"usermap_location\": { \"lat\": 52.513171, \"lng\":6.097884, \"caption\":\"Hello from Zwolle:)!\" } , \"mentorship\": { \"seeking\": [ \"React\" ], \"offering\": [ \"JavaScript\", \"PHP\", \"NodeJS\" ] }}"
+      ],
+      [
+        "Jason_Carpenter",
+        "{ \"usermap_location\": { \"lat\": 35.6, \"lng\": -97.5, \"caption\": \"Hello from Oklahoma City!\" }, \"mentorship\": { \"seeking\": [ \"C#\", \"React\" ], \"offering\": [ \"VanillaJS\", \"Angular\" ] }}"
+      ],
+      [
+        "jwalzak",
+        "{ \"usermap_location\": { \"lat\": 42.88, \"lng\": -81.1111, \"caption\": \"Hello map!\" } } "
+      ],
+      [
+        "Masayoshi_Sugimoto",
+        "{ \"mentorship\": { \"seeking\": [ \"Javascript\", \"nodeJS\", \"Lock free multithreading\" ], \"offering\": [ \"C++\", \"Scala\", \"Java\", \"Game AI\", \"Gaming\", \"Algorithm\", \"Optimisation\", \"Basic ML\" ] }}"
+      ],
+      [
+        "Pawel_Bujna",
+        "{ \"usermap_location\": { \"lat\": 50.2, \"lng\": 19.0, \"caption\": \"Wanna drink a beer?\" } }"
+      ],
+      [
+        "JTHunt3r",
+        "{\"Message\":\"Beer is Yummy\"}"
+      ],
+      [
+        "eduardosanzb",
+        "{ \"usermap_location\": { \"lat\": 52.5100971, \"lng\": 13.4568118, \"caption\": \"http://eduardosanzb.github.io/\" }, \"mentorship\": { \"seeking\": [ \"Elixir\", \"Elm\", \"React native\" ], \"offering\": [ \"VanillaJS\", \"React/Redux\", \"Redux-Saga\" ] } }"
+      ],
+      [
+        "Theophile_Pace",
+        "{ \"usermap_location\": { \"lat\": -37.826000, \"lng\": 145.03, \"caption\": \"Unbelievable I found a bug in the Linux kernel ... *have another look* ... Oh a typo :o \" }}"
+      ],
+      [
+        "MNZT",
+        "\\{\\\"\\h\\a\\h\\a\\\"\\}"
+      ],
+      [
+        "yciabaud",
+        "{ \"usermap_location\": { \"lat\": 43.5446102, \"lng\": 5.2693739, \"caption\": \"JS for life\" }}"
+      ],
+      [
+        "Ignacio",
+        "{ \"usermap_location\": { \"lat\": 40.416775, \"lng\": -3.703790, \"caption\": \"Hello!\" } }"
+      ],
+      [
+        "joni3k",
+        "{ \"usermap_location\": { \"lat\": 61.498150, \"lng\": 23.766141, \"caption\": \"Tampere!\" } }"
+      ],
+      [
+        "ShohanRedwan",
+        "{\"name\":\"shohanredwan\",\"city\":\"Dhaka\",\"country\":\"Bangladesh\"}"
+      ],
+      [
+        "Cody_Patnaude",
+        "{ \"usermap_location\": { \"lat\": 42.2221, \"lng\": -71.5006, \"caption\": \"Hello from Mass!\" } }"
+      ],
+      [
+        "alcalbg",
+        "{ \"usermap_location\": { \"lat\": 44.796242, \"lng\": 20.374099, \"caption\": \"Funfunblock\" } }"
+      ],
+      [
+        "Igor_Konovalov",
+        "{ \"usermap_location\": { \"lat\": 59.927698, \"lng\": 30.3395203, \"caption\": \"Hello from Sankt - Petersburg!\" }}"
+      ],
+      [
+        "alavas",
+        "{ \"usermap_location\": { \"lat\": 28.672, \"lng\": -81.508, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "luizpaulo",
+        "{ \"usermap_location\": { \"lat\": -23.553751, \"lng\":-46.642114, \"caption\": \":)\" } }"
+      ],
+      [
+        "eriknoorland",
+        "{ \"usermap_location\": { \"lat\": 52.147866, \"lng\": 5.356700, \"caption\": \"Greetings from Amersfoort\" } }"
+      ],
+      [
+        "zorg128",
+        "{ \"usermap_location\": { \"lat\": 45.4430661, \"lng\": -122.6379125, \"caption\": \"Coffee!\" } }"
+      ],
+      [
+        "attilam",
+        "{ \"usermap_location\": { \"lat\": 47.5125, \"lng\": 18.9257, \"caption\": \"Ohai!\" } }"
+      ],
+      [
+        "Dzmitry_A_Dubarau",
+        "{ username: \"Ddzmitryr\", hackable_json: \"{ \"usermap_location\": { \"lat\":35.2271, \"lng\": 80.8431, \"caption\": \"Don't be sorry,be better! \" } }\" },"
+      ],
+      [
+        "christiansany",
+        "{ \"usermap_location\": { \"lat\": 47.390434, \"lng\": 8.045701, \"caption\": \"Frontend Developer and performance freak\" } }"
+      ],
+      [
+        "eduplessis",
+        "{ \"usermap_location\": { \"lat\": 45.549821, \"lng\": -73.224174, \"caption\": \"It's me Eddy!\" } }"
+      ],
+      [
+        "gpl",
+        "{ \"usermap_location\": { \"lat\":  48.866, \"lng\": 2.333, \"caption\": \"Hello from Paris!\" } }"
+      ],
+      [
+        "ysyd",
+        "{ \"nick\":\"ysyd\"}"
+      ],
+      [
+        "Jenselme",
+        "toto"
+      ],
+      [
+        "wayfarer",
+        "{ \"usermap_location\": { \"lat\": -34.93, \"lng\": 138.60, \"caption\": \"wooooooo\" }}"
+      ],
+      [
+        "Miguel_Perez",
+        "{ \"usermap_location\": { \"lat\": 43.3, \"lng\": -1.8, \"caption\": \"Sup Guys!\" } }"
+      ],
+      [
+        "skylize",
+        "{ \"usermap_location\": { \"lat\": 33.81, \"lng\": -84.423, \"caption\": \"Smile 😁\" } }"
+      ],
+      [
+        "vintharas",
+        "{ \"usermap_location\": { \"lat\": 59.3, \"lng\": 18.0, \"caption\": \"Shiny!\" } }"
+      ],
+      [
+        "gorjanMishevski",
+        "{ \"usermap_location\": { \"lat\": 41.12309, \"lng\": 20.801648, \"caption\": \"Here, eat a bracket!\" } }"
+      ],
+      [
+        "breve-xx",
+        "{ \"usermap_location\": { \"lat\": 45.5361039, \"lng\": 8.9907426, \"caption\": \"Ciao!\" } }"
+      ],
+      [
+        "Jake",
+        " { \"usermap_location\": { \"lat\": 40.75, \"lng\": -111.883333, \"caption\": \"NaN\"} }"
+      ],
+      [
+        "yuniors87",
+        "{ \"usermap_location\": { \"lat\": -17.78328, \"lng\": -63.18204, \"caption\": \"This plase is so nice!\" } }"
+      ],
+      [
+        "Krasnik",
+        "Hi JavaScripto!"
+      ],
+      [
+        "Gabriel_Balsa",
+        "{myProfile: '`\"some name`That mustn't\"}"
+      ],
+      [
+        "TheMadness",
+        "\"hackable_json\": { \"usermap_location\": { \"lat\": 42.2821, \"lng\": -83.74847, \"caption\": \"Hey Yo!\" } }"
+      ],
+      [
+        "aleksi",
+        "{ \"usermap_location\": { \"lat\": 65.2038, \"lng\": 24.8810, \"caption\": \"Från Finland med kärlek\" } }"
+      ],
+      [
+        "adrian",
+        "{ \"usermap_location\": { \"lat\": -31.931919, \"lng\": 115.918252, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "Alfalfamale",
+        "{ \"usermap_location\": { \"lat\": 51.4491383, \"lng\": 5.4572991, \"caption\": \"<a href=\\\"https://www.studyportals.com/\\\" target=\\\"_blank\\\">@StudyPortals</a>\" } }"
+      ],
+      [
+        "Oxide",
+        "{\"username\":\"Oxide\",\"hackable_json\":\"{\\\"usermap_location\\\": {\\\"lat\\\": 48.875234, \\\"lng\\\":  2.384352, \\\"caption\\\": \\\"Only dead fish go with the flow!\\\"}}\"}"
+      ],
+      [
+        "gurdiga",
+        "{\"yes\": true}"
+      ],
+      [
+        "Vindula",
+        "{ \"usermap_location\": { \"lat\": 6.92708, \"lng\": 79.86124, \"caption\": \"Hello, from Sri Lanka!\" } }"
+      ],
+      [
+        "verlok",
+        "{   \"usermap_location\": {     \"lat\": 44.353959,     \"lng\": 11.706984   },   \"caption\": \"Lazy developer, I like tortellini and javascript.\",   \"website\": \"http://www.andreaverlicchi.eu\",   \"favouriteScript\": \"https://github.com/verlok/lazyload\" }"
+      ],
+      [
+        "geneticz",
+        "{ \"usermap_location\": { \"lat\": 51.455643, \"lng\": 7.011555, \"caption\": \"So sieht es aus im Ruhrpott\" } }"
+      ],
+      [
+        "dziamid",
+        "{ \"usermap_location\": { \"lat\": 53.9245, \"lng\": 27.6425, \"caption\": \"Hello there patreons!\" } }"
+      ],
+      [
+        "r.michael",
+        "{ \"usermap_location\": { \"lat\": 47.01, \"lng\": 28.86, \"caption\": \"╰། ◉ ◯ ◉ །╯ \" } }"
+      ],
+      [
+        "devforey",
+        "{ \"i\": \"dont\", \"want\", \"to\", \"hack\" }"
+      ],
+      [
+        "ThiagoWithT",
+        "{ what: isThis? }"
+      ],
+      [
+        "leecheneler",
+        "{ \"usermap_location\": { \"lat\": 52.6336, \"lng\": 1.6910, \"caption\": \"Hi from Tamworth!\" } }"
+      ],
+      [
+        "urbansurgeon",
+        "{ \\\"usermap_location\\\": { \\\"lat\\\":51.511059, \\\"lng\\\": -0.117148, \\\"caption\\\": \\Roses are \\u001b[0;31mred\\u001b[0m, violets are \\u001b[0;34mblue. Hope you enjoy terminal hue\\\" }"
+      ],
+      [
+        "Andrius_Laurinenas",
+        "{ \"usermap_location\": {\"lat\": 54.893260, \"lng\": 23.833392, \"caption\": \"Come to Lithuania. You will like it\"}, other_prop: null}"
+      ],
+      [
+        "internell",
+        "{\"usermap_location\":{\"lat\":49.887,\"lng\":-97.130,\"caption\":\"goodendach von Winnipeg\"}}"
+      ],
+      [
+        "jbhaktul",
+        "{ \"usermap_location\": { \"lat\": 39.0472078, \"lng\": -77.4526269, \"caption\": \"Winter is coming!\" }}"
+      ],
+      [
+        "jaydubs",
+        "{\"usermap_location\":{\"lat\":22.2495878,\"lng\":114.1663821\"}}"
+      ],
+      [
+        "Jonathan_Hemnes",
+        "{\"username\":\"jhemnes\",\"hackable_json\":\"{\"usermap_location\": { \"lat\": 39.73, \"lng\":104.99, \"caption\": \"Greetings from Amersfoort\" } }\"}"
+      ],
+      [
+        "diogorighi",
+        "{ \"usermap_location\": { \"lat\": -5.781352, \"lng\": -35.197151, \"caption\": \"Hello map! ;)\" } }"
+      ],
+      [
+        "SophiaOfAbra",
+        "{ \"usermap_location\": { \"lat\": -45.86, \"lng\": 170.514, \"caption\": \"I am the lone kiwi\" } }"
+      ],
+      [
+        "Ivar_Bergman",
+        "{ \"usermap_location\": { \"lat\": 59.769964, \"lng\": 13.462544, \"caption\": \"happy!\" }}"
+      ],
+      [
+        "Robert_Smith",
+        "[\"1234\"]"
+      ],
+      [
+        "panthony",
+        "{ \"0\": null, \"usermap_location\": { \"lat\": 44.8402, \"lng\": -0.5856, \"caption\": \"Hello from Bordeaux!\" } }"
+      ],
+      [
+        "samurai",
+        "{id: null}"
+      ],
+      [
+        "Philipp_Rost",
+        "{\"username\":\"Philipp_Rost\",\"hackable_json\":\"{ \\\"usermap_location\\\": { \\\"lat\\\": 50.937531, \\\"lng\\\": 6.9602786, \\\"caption\\\": \\\"Hellowwwwski from Cologne!!\\\" } }\"}"
+      ],
+      [
+        "ecancinozarate",
+        "{ \\\"usermap_location\\\": { \\\"lat\\\": 42.455723, \\\"lng\\\": -71.059019, \\\"caption\\\": \\\"λ\\\" } }"
+      ],
+      [
+        "robdonn",
+        "{ \"usermap_location\": { \"lat\": 53.3496926, \"lng\": -6.2392345, \"caption\": \"Help! I'm trapped in a map! HELP!!!\" } }"
+      ],
+      [
+        "Chrinkus",
+        "{ \"usermap_location\": { \"lat\": 49.9, \"lng\": -97.1, \"caption\": \"dbNub\" } }"
+      ],
+      [
+        "Matias_Trujillo",
+        "{\"username\":\"uppercod\"}"
+      ],
+      [
+        "ptrfrncsmrph",
+        "{ \"usermap_location\": { \"lat\": 41.6716, \"lng\": -70.0622, \"caption\": \"👌🏻\" } }"
+      ],
+      [
+        "marlou",
+        "{ \"usermap_location\": { \"lat\": 48.853, \"lng\": 2.349, \"caption\": \"Bonjour :-) !\" } }"
+      ],
+      [
+        "Faenor",
+        "{ \"usermap_location\": { \"lat\":  47.7232433, \"lng\":10.3135255, \"caption\": \"Servus!\" } }"
+      ],
+      [
+        "costellofax",
+        "{ \"usermap_location\": { \"lat\": 43.649318, \"lng\": -70.261400, \"caption\": \"Maine!\" } }"
+      ],
+      [
+        "austinwood",
+        "{ \"usermap_location\": { \"lat\": 37.9, \"lng\": -122.3, \"caption\": \"( ͡° ͜ʖ ͡°)\" } }"
+      ],
+      [
+        "vyk",
+        "{hi: 'there:)}"
+      ],
+      [
+        "k_go",
+        "{ \"mentorship\": { \"seeking\": [\"react\", \"vue\", \"redux\", \"advanced javascript\"], \"offering\": [\"basic javascript\", \"css\", \"sass\", \"html\"]}, \"usermap_location\": {\"lat\": 40.76, \"lng\": -73.99, \"caption\": \"Hellooooo World!\"} }"
+      ],
+      [
+        "KirillRogovoy",
+        "{\"usermap_location\":{\"lat\": 47.8453158, \"lng\": 35.1291383, \"caption\": \"Zdorovenki buly!\"}, \"mentorship\": { \"seeking\": [\"SOA\", \"ELK\", \"DevOps\"], \"offering\": [\"JS\", \"Golang\", \"WebDev\"] }}"
+      ],
+      [
+        "Santi_Barquito",
+        "dudesl"
+      ],
+      [
+        "nveenjain",
+        "{ \"mentorship\": { \"seeking\": [ \"Javascript\", \"NodeJS\", \"WebD\",\"Competitive Programming\" ] }}"
+      ],
+      [
+        "zrbecker",
+        "}{"
+      ],
+      [
+        "unzunz",
+        "{\"usermap_location\": {\"lat\": 37.7749, \"lng\": 122.4194, \"caption\": \"bloop bloop\"}}"
+      ],
+      [
+        "dev",
+        "{ \t\"usermap_location\": { \t\t\"lat\": 43.6538, \t\t\"lng\": 79.3797, \t\t\"caption\": \"Copy/pasting Stack Overflow answers since 2006.\" \t},  }"
+      ],
+      [
+        "Roberto_Nieto",
+        "{ \"usermap_location\": { \"lat\": 19.282092, \"lng\": -99.653952, \"caption\": \"Hello from Toluca!\" } }"
+      ],
+      [
+        "David_Fawcett",
+        "{ \"usermap_location\": { \"lat\": -37.785937, \"lng\": 145.297437, \"caption\": \"Raaawr!\" } }"
+      ],
+      [
+        "asciimo",
+        "{ \"fudge\" : \"vanilla\" }"
+      ],
+      [
+        "mpetrus001",
+        "{ \"usermap_location\": { \"lat\": 33.138449, \"lng\": -96.110807, \"caption\": \"Hey there!\" } }"
+      ],
+      [
+        "kpvf",
+        "{ \"usermap_location\": { \"lat\": 51.5074, \"lng\": 0.1278, \"caption\" : \"!?\" }, \"mentorship \" :  {  \"seeking \" :  [ \"VanillaJS \", \"nodeJS \", \"React \" ] } } "
+      ],
+      [
+        "hellerbarde",
+        "{\"mentorship\": { \"seeking\": [ \"javascript\", \"rust\" ], \"offering\": [ \"python\" ] }}"
+      ],
+      [
+        "Jann3",
+        "{ \"usermap_location\": { \"lat\": 52.2, \"lng\": 0.12, \"caption\": \"I kind of fancy a beer\" }, \"mentorship\": { \"seeking\": [ \"🍺\" ]} }"
+      ],
+      [
+        "rafaelcamaram",
+        "{ \"name\": \"Rafael Câmara\", \"mentorship\": { \"seeking\": [\"VueJS\", \"NodeJS\"], \"offering\": [\"JavaScript\", \"React JS\", \"React Native\", \"HTML/CSS\", \"Photoshop - UI\"] }, \"usermap_location\": {\"lat\": -19.936238, \"lng\": -43.9322763, \"caption\": \"\"} }"
+      ],
+      [
+        "Sai_Gundlapalli",
+        "{ \"usermap_location\": { \"lat\": 33.7, \"lng\": -84.4, \"caption\": \"Greetings\" } }"
+      ],
+      [
+        "carolc",
+        " { \"usermap_location\": { \"lat\": 45.523058, \"lng\": -122.667614, \"caption\": \"Put a bird on it\" } }"
+      ],
+      [
+        "Tamara_Cherevko",
+        "{ \"usermap_location\": { \"lat\": 50.4691087, \"lng\": 30.60323960000005, \"caption\": \"Hello world!\" } }"
+      ],
+      [
+        "andres",
+        "{ \"usermap_location\": { \"lat\": -27.4996, \"lng\": 153.0162, \"caption\": \"A Colombian living in Oz\" } }"
+      ],
+      [
+        "Craigie",
+        "{ \"usermap_location\": { \"lat\": 50.723421, \"lng\": -1.875663, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "JnfSmile",
+        "{ \"usermap_location\": { \"lat\": 32.160732, \"lng\": 34.903055, \"caption\": \"<span style='color:navy;font-weight:bold;'>Up, further<br />🇮🇱</span>\" }, \"mentorship\": { \"seeking\": [ \"React\", \"Redux\" ], \"offering\": [] } }"
+      ],
+      [
+        "blatayue",
+        "{ \"usermap_location\": { \"lat\": -48.876667, \"lng\": , -123.393333, \"caption\": \"The ISS is closer to me than you will ever be\" }, \"mentorship\" : {\"seeking\" : [\"JavaScript\", \"Java\"] }  }"
+      ],
+      [
+        "Thom_Morais",
+        "{ \"usermap_location\": { \"lat\": -30.034647, \"lng\": -51.217658, \"caption\": \"Hi! Bring Potatoes\" } }"
+      ],
+      [
+        "mfaine",
+        "{     \"username\": \"mfaine\",     \"hackable_json\": {       \"usermap_location\":          { \"lat\": 34.73,            \"lng\": -86.58,            \"caption\": \"Hello from Alabama\" }, \"mentorship\":             {              \"seeking\": [               \"Functional Programming\", \"JS\" ], \"offering\":              [ \"Java\",              \"Linux\",              \"Shell Scripting\"]             }     }   }"
+      ],
+      [
+        "oeusse",
+        "{\"usermap_location\": { \"lat\": 5.0671, \"lng\": -75.5183, \"caption\": \"¡Colombia!\"}}"
+      ],
+      [
+        "shakyink",
+        "{ \"usermap_location\": { \"lat\": 55.1, \"lng\": -3.2, \"caption\": \"Hello map!\" }, \"gotcha\": \"[Gotcha](javascript&#58this;alert(1&41;)\" }"
+      ],
+      [
+        "virzen",
+        "{ \"mentorship\": { \"offering\": [\"VanillaJS\", \"React\", \"Redux\", \"SCSS\", \"Styled components\", \"Vim\"], \"seeking\": [\"GraphQL\", \"express\", \"JWT auth\"] }, \"usermap_location\": { \"lat\": 52.406116, \"lng\": 16.924879, \"caption\": \"Greetings from Poznań, Poland!\" } }"
+      ],
+      [
+        "Cliff122",
+        "{ \"usermap_location\": { \"lat\": 59.329321, \"lng\": 18.068579, \"caption\": \"Stockholm, Sweden <script>alert('XSS')</script>\" } }"
+      ],
+      [
+        "reima",
+        "{ \"usermap_location\": { \"lat\": 60.20, \"lng\": 24.95, \"caption\": \"Hello from Helsinki!\" } }"
+      ],
+      [
+        "jeffaustin81",
+        "{ \"usermap_location\": {\"lat\": 45.337, \"lng\": -122.677, \"caption\": \"Hire me! I'm a Junior Junior Junior Front-End Developer!\" } }"
+      ],
+      [
+        "neild",
+        "Hackable JSON field: { \"usermap_location\": { \"lat\": 35.2, \"lng\": -81.1, \"caption\": \"Neil\" } }"
+      ],
+      [
+        "Dan_Watling",
+        "{ \"usermap_location\": { \"lat\": 42.33, \"lng\": -88.36, \"caption\": \"McHenry, IL\" } }"
+      ],
+      [
+        "Microsmsm",
+        "{ \"usermap_location\": { \"lat\": 30.560463, \"lng\": 31.008963, \"caption\": \"Greetings from Egypt!\" } }"
+      ],
+      [
+        "rubyrubenstahl",
+        "{ \"usermap_location\": { \"lat\": 41.1564, \"lng\": -80.5692, \"caption\": \"Hello from Ohio!\" } }"
+      ],
+      [
+        "fiddur",
+        "true"
+      ],
+      [
+        "Daniel_Jadczak",
+        "{ \"usermap_location\": { \"lat\": 41.417804, \"lng\": 2.151829, \"caption\": \"Sunny!\" } }"
+      ],
+      [
+        "eisenivan",
+        "{ \"mentorship\": {\"seeking\": [\"functional programming\", \"pair programming\"], \"offering\": [\"javascript\", \"react\", \"regent.js\"]}, \"usermap_location\": { \"lat\": 43.038902, \"lng\": -87.906471, \"caption\": \"Cream City\" }}"
+      ],
+      [
+        "soeik",
+        "{ \"usermap_location\": { \"lat\": 60.271755, \"lng\": 28.924561, \"caption\": \"On a beach... \" }}"
+      ],
+      [
+        "DesignerAndGeek",
+        "{ \"usermap_location\": { \"lat\": 59.926156, \"lng\": 10.7738215, \"caption\": \"DesignerAndGeek\" } }"
+      ],
+      [
+        "tehpsalmist",
+        "{ \"usermap_location\": { \"lat\": 40.38848982835925, \"lng\": -75.30897662043571, \"caption\": \"I love to learn! --JM\" }, \"mentorship\": { \"seeking\": [ \"Functional Programming\", \"Node.js\" ] }}"
+      ],
+      [
+        "RocketScience",
+        "{ \"mentorship\": { \"seeking\": [ \"VanillaJS\"], \"offering\": [\"Web Design\"] }}"
+      ],
+      [
+        "pip_pipkin",
+        "{ \"usermap_location\": { “lat\":  38.75, \"lng\": -90.81 } }"
+      ],
+      [
+        "vjwilson",
+        "{ \"usermap_location\": { \"lat\": 35.2, \"lng\": -80.8, \"caption\": \"My other computer is a TRS-80\" } }"
+      ],
+      [
+        "edele",
+        "{ \"usermap_location\": { \"lat\": 55.177975, \"lng\": 61.298453, \"caption\": \"Edele is here!\" } }"
+      ],
+      [
+        "afbk",
+        "{ \"usermap_location\": { \"lat\": 55.32993, \"lng\": 11.13857, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "igeto",
+        "{ \"usermap_location\": { \"lat\": 42, \"lng\": 21.5, \"caption\": \"Igor Igeto was here!\" } }"
+      ],
+      [
+        "pwho",
+        "{ \"usermap_location\": { \"lat\": 45.25, \"lng\": 75.4, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "al-lopes",
+        "{ \"usermap_location\": { \"lat\": -23.560, \"lng\": -46.574, \"caption\": \"A\" } }"
+      ],
+      [
+        "starfish",
+        "{ name: \"Starfish\", city: \"Seattle\", peanuts: true }"
+      ],
+      [
+        "Garrick",
+        "{ \"usermap_location\": { \"lat\": -41.281009, \"lng\": 174.752103, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "yuriploc",
+        "{ \"mentorship\": { \"seeking\": [ \"VanillaJS\", \"JavaScript\", \"Vue\", \"React\", \"Webpack\", \"RxJS\", \"Redux\", \"Saga\" ] }, \"usermap_location\": { \"lat\": -3.7728361, \"lng\": -38.4796638, \"caption\": \"undefined\" } }"
+      ],
+      [
+        "agates",
+        "{ \"usermap_location\": { \"lat\": 44.9591400, \"lng\": -89.6301200, \"caption\": \"Hello Wisconsin!\" } }"
+      ],
+      [
+        "ajb",
+        "{ \"usermap_location\": { \"lat\": 44.9, \"lng\": -93.2, \"caption\": \"Minneapolis\" }, \"mentorship\": { \"seeking\": [ \"Functional Programming\", \"Elm\" ], \"offering\": [ \"JavaScript\", \"ES6\", \"React\", \"Redux\", \"Jest\", \"Webpack\", \"Babel\" ] } }"
+      ],
+      [
+        "Dynisious",
+        "{ \"mentorship\": { \"seeking\": [ \"JavaScript\", \"ReactJS\" ], \"offering\": [ \"Rust\", \"C++\", \"Haskell\" ] }}"
+      ],
+      [
+        "dzhavat",
+        "{ \"usermap_location\": { \"lat\": 56.150498, \"lng\": 10.204586, \"caption\": \"Aarhus\" } }"
+      ],
+      [
+        "SirFry",
+        "{ \"mentorship\": { \"seeking\": [ \"React\", \"Redux\", \"MERN\", \"UI Design\" ], \"offering\": [ \"Friendship\", \":beer:\" ] }, \"usermap_location\": { \"lat\": 39.838991, \"lng\": -86.169806, \"caption\": \"Development and Beer\" } }"
+      ],
+      [
+        "Joe_Horn1",
+        "{ \"name\": Joe Horn\",  \"mentorship\":  {  \"seeking\": [ \"VanillaJS\", \"Node\", \"React”, “mongoDB”], \"offering\": [ \"Product Management\", \"Business Experience\"] },  \"usermap_location\": {  \"lat\": 39.5296330,  \"lng\": -119.8138030 , \"caption\": \"Hello From Nevada\" }  }"
+      ],
+      [
+        "Bhavdeep_Dhanjal",
+        "{ \"mentorship\": { \"seeking\": [ \"React\", \"Design Patterns\", \"Architecture Design\" ], \"offering\": [ \"VanillaJS\", \"Java\" ] }}"
+      ],
+      [
+        "Stephan",
+        "{\"name\":\"Stephan\",\"usermap_location\":{\"lat\":51.6020433,\"lng\":7.1448901,\"caption\":\"Working space\"},\"mentorship\":{\"seeking\":[\"React\"],\"offering\":[\"JavaScript\",\"Java\",\"Ionic\"]}}"
+      ],
+      [
+        "abdalla",
+        "{ \"usermap_location\": { \"lat\": 40.572603, \"lng\": -74.492654, \"caption\": \"Wassuuuup\" } }"
+      ],
+      [
+        "LaCodon",
+        "{\"hello\":\"bye\\u0008\"}"
+      ],
+      [
+        "mpj",
+        "{ \"usermap_location\": { \"lat\": 57.7089, \"lng\": 11.9858, \"caption\": \"Gôtt\" }, \"mentorship\": { \"seeking\": [ \"Machine Learning\", \"Data Science\", \"R\" ] } }"
+      ],
+      [
+        "satan",
+        "{ \"usermap_location\": { \"lat\": 59.864, \"lng\": 17.633, \"caption\": \"Uppsala, Sweden\" } }"
+      ],
+      [
+        "gcrispino",
+        "{ \"usermap_location\": { \"lat\": -1.452100, \"lng\": -48.480612, \"caption\": \"Hi from the Amazon\" } } "
+      ],
+      [
+        "OriginalEXE",
+        "{\"usermap_location\":{\"lat\":45.327063,\"lng\":14.442176,\"caption\":\"Hello! <img src=\\\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\\\" onload=\\\"alert('Do you even XSS?'); var iframe = document.createElement('iframe'); iframe.src = 'https://xkcd.com/327/'; iframe.style.height = '100vh'; iframe.style.width = '900px'; iframe.style.maxWidth = '90vh'; iframe.style.position = 'fixed'; iframe.style.top = '0'; iframe.style.left = '50%'; iframe.style.transform = 'translateX(-50%)'; iframe.style.zIndex = 9999; document.body.appendChild(iframe);\\\">\"},\"mentorship\":{\"offering\":[\"JavaScript\",\"Vue.js\",\"Sass\"]}}"
+      ],
+      [
+        "claratersi",
+        "{ \"usermap_location\": { \"lat\": -22.359489, \"lng\": -49.052235, \"caption\": \"Hi!\" } }"
+      ],
+      [
+        "Benjamin_Hart",
+        "{ \"mentorship\": { \"seeking\": [ \"D3\", \"React\" ], \"offering\": [ \"VanillaJS\" ] }, \"usermap_location\": { \"lat\": 43.65, \"lng\": -79.38, \"caption\": \"Toronto!\" }}"
+      ],
+      [
+        "APinJP",
+        "{ \"usermap_location\": { \"lat\": \"34.6937\", \"lng\": \"135.5022\", \"caption\": \"Hello from Japan!\" } }"
+      ],
+      [
+        "bedakb",
+        "{ \"usermap_location\": { \"lat\": 44.6548699, \"lng\": 17.96387690000006, \"caption\": \"undefined\" } }"
+      ],
+      [
+        "gabskoro",
+        "{ \"usermap_location\": { \"lat\": 47.3773697, \"lng\": 8.3966319, \"caption\": \"Wuhuuuu!\" } }"
+      ],
+      [
+        "wilddeer",
+        "{\"usermap_location\": {\"lat\":55.779939, \"lng\":37.639296, \"caption\": \"Woot\"}}"
+      ],
+      [
+        "Daniel_Uhl",
+        "{pants: \"party pants, pants party\"}"
+      ],
+      [
+        "tadek",
+        "{ \"usermap_location\": { \"lat\":  54.5137253, \"lng\": 18.5232531, \"caption\": \"Czesc!\" } }"
+      ],
+      [
+        "BostonJeff",
+        "{ \"usermap_location\": { \"lat\": 42.3416943, \"lng\": -71.0794901, \"caption\": \"Hello from BeanTown!\" } }"
+      ],
+      [
+        "datsteves",
+        "{ \"usermap_location\": { \"lat\": 48.78232, \"lng\": 9.17702, \"caption\": \"Working at a Startup is fun :)\" } }"
+      ],
+      [
+        "DavDavDavid",
+        "{ \"name\": \"David Suddjian\", \"mentorship\": { \"seeking\": [\"Elixir\", \"Rust\", \"Jai\"], \"offering\": [\"javascript\", \"es2016\", \"mongoDB\"] }, \"usermap_location\": {\"lat\": 36.9927, \"lng\": -122.1697, \"caption\": \"Programstinating\"} }"
+      ],
+      [
+        "andrew_lam",
+        "{ \"usermap_location\": { \"lat\": 2.18, \"lng\": 102.26, \"caption\": \"Looking for a junior web development job\" } }"
+      ],
+      [
+        "trevDev",
+        "{ \"usermap_location\": { \"lat\": 48.651179, \"lng\": -123.644996, \"caption\": \"I don't know what I'm doing\" } }"
+      ],
+      [
+        "gena",
+        "{'name': 'lalala', a1: 234, 'name': 'ddd!'}"
+      ],
+      [
+        "csm",
+        "{\"usermap_location\": {\"lat\": 42.362608, \"lng\": -71.052941, \"caption\": \"come hire me\"}}"
+      ],
+      [
+        "Kirill_Bytin",
+        " { \"usermap_location\": { \"lat\": 46.975033, \"lng\": 31.994583 }, \"mentorship\": { \"seeking\": [ \"Algorithms\", \"Node JS\" ] } }"
+      ],
+      [
+        "Petrus_Prinsloo",
+        "{ \"usermap_location\": { \"lat\": -29.8483, \"lng\": 30.9224, \"caption\": \"Durban\" }}"
+      ],
+      [
+        "deividfortuna",
+        "{ \"usermap_location\": { \"lat\": -28.6474857, \"lng\": -49.3654512, \"caption\": \"hello darkness\" } }"
+      ],
+      [
+        "mrlasers",
+        "{ \"usermap_location\": { \"lat\": 47.524854, \"lng\": -122.578839 }, \"caption\": \"Hey, guys!\", \"sucks\": [\"angular\", \"java\"] }"
+      ],
+      [
+        "Richard_Wheatley",
+        "{ \"usermap_location\": { \"lat\": 52.933, \"lng\": -1.5, \"caption\": \"Tiny coders are mighty!\" } }"
+      ],
+      [
+        "OliverJ",
+        "{ \"mentorship\": { \"seeking\": [ \"CSS\", \"React\" ], \"offering\": [ \"C\", \"C++\", \"embedded\", \"Arduino\"] }}"
+      ],
+      [
+        "dok",
+        "{ \"usermap_location\": { \"lat\": 10.4806, \"lng\": -66.9036, \"caption\": \"I'm alone here, send help \" } }"
+      ],
+      [
+        "mschaeffner",
+        "{ \"usermap_location\": { \"lat\": 52.5200, \"lng\": 13.4050, \"caption\": \"Hello!\" } } "
+      ],
+      [
+        "xhudec",
+        "{ \"usermap_location\": { \"lat\": 49.195694, \"lng\": 16.612590, \"caption\": \"Yaaay! Brno!\" } }"
+      ],
+      [
+        "pedrovsr",
+        " { \"usermap_location\": { \"lat\": -8.0464441, \"lng\": -35.000083, \"caption\": \"There are only 10 types of people in the world, those who knows binary and those who don't\" }}"
+      ],
+      [
+        "Maximiliano_Arias",
+        " { \"usermap_location\": { \"lat\":-57.783668, \"lng\": -26.453315, \"caption\": \"Hey guys there's an island like.. right here..\" } }"
+      ],
+      [
+        "Illunis",
+        "{ \"usermap_location\": { \"lat\": 49.5417301, \"lng\": 11.578180, \"caption\": \"Hello FunFunForum!\" } }"
+      ],
+      [
+        "bobbyg603",
+        "{ \"usermap_location\": { \"lat\": 42.36, \"lng\": 71.05, \"caption\": \"beer me!\" } }"
+      ],
+      [
+        "herlufb",
+        "{ \"usermap_location\": { \"lat\": 55.717109, \"lng\": 12.483294, \"caption\": \"CPH partai!\" } }"
+      ],
+      [
+        "Maxim_Poleley",
+        "{ \"usermap_location\": { \"lat\": 53.8, \"lng\": 54.6, \"caption\": \"Hello there!\" } }"
+      ],
+      [
+        "Steve_Duke",
+        "Hackable JSON field: { \"usermap_location\": { \"lat\": 40.6932518, \"lng\": 73.9870875, \"caption\": \"Hello map!\" } }"
+      ],
+      [
+        "AndrewNatoli",
+        "{ \"usermap_location\": { \"lat\": 35.2, \"lng\": -80.8, \"caption\": \"!418\" } }"
+      ],
+      [
+        "twinch",
+        "{ \"usermap_location\": { \"lat\": 49.26, \"lng\": -123.11, \"caption\": \"Boop.\\t.\\t.\\t\" } }"
+      ],
+      [
+        "simon-jaeger",
+        "{   \"usermap_location\": {     \"lat\": 47.681727,     \"lng\": 8.629767,     \"caption\": \"★\"   } }"
+      ],
+      [
+        "codenamejames",
+        "{ \"usermap_location\": { \"lat\": 28.303287, \"lng\": -81.6005873, \"caption\": \"James Harrington, Coder by day super dad by night\" } }"
+      ]
+    ]
+  }
+}

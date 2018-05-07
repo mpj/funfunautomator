@@ -1,4 +1,4 @@
-const fetchPolitely = require('./unbound')
+const factory = require('./factory')
 const delay = require('delay')
 
 describe('fetchPolitely', () => {
@@ -8,33 +8,30 @@ describe('fetchPolitely', () => {
       throw new Error('i should not be called')
     }
     let isResolved = false
-    const responsePromise = fetchPolitely(
-      {
-        fetch: (url, opts) => {
-          fetchCalledTimes++
-          expect(url).toBe(someUrl)
-          expect(opts).toBe(someOpts)
-          if (fetchCalledTimes === 1)
-            return Promise.resolve({
-              status: 429,
-              json: () =>
-                Promise.resolve({
-                  extras: { wait_seconds: 14 }
-                })
-            })
-          else return Promise.resolve(someResponse)
-        },
-        delay: ms => {
-          expect(ms).toBe((14 + 1) * 1000)
-          return new Promise(resolve => {
-            // @ts-ignore
-            resolveDelay = resolve
+    //@ts-ignore
+    const responsePromise = factory({
+      fetch: (url, opts) => {
+        fetchCalledTimes++
+        expect(url).toBe(someUrl)
+        expect(opts).toBe(someOpts)
+        if (fetchCalledTimes === 1)
+          return Promise.resolve({
+            status: 429,
+            json: () =>
+              Promise.resolve({
+                extras: { wait_seconds: 14 }
+              })
           })
-        }
+        else return Promise.resolve(someResponse)
       },
-      someUrl,
-      someOpts
-    ).then(response => {
+      delay: ms => {
+        expect(ms).toBe((14 + 1) * 1000)
+        return new Promise(resolve => {
+          // @ts-ignore
+          resolveDelay = resolve
+        })
+      }
+    })(someUrl, someOpts).then(response => {
       isResolved = true
       expect(response).toBe(someResponse)
     })

@@ -1,3 +1,5 @@
-const assignBadge = require('./')
+const assignBadge = require('./factory')({
+  junction: require('../junction/file-cache')('assign-badge')
+})
 
-assignBadge('mpj', 106)
+it('assignBadge sandbox', () => assignBadge(106, 'mpj') /*?*/)

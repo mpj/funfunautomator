@@ -4,14 +4,22 @@ const bodyParser = require('body-parser')
 const WebSocket = require('ws')
 const cors = require('cors')
 const apicache = require('apicache').middleware
-const browserify = require('browserify')
 const Raven = require('raven')
+const sniff = require('supersniff')
+const R = require('ramda')
+
+const querystring = require('querystring')
+const fetch = require('node-fetch')
 
 const cookieParser = require('cookie-parser')
 
 const hackableJSON = require('./hackable-json')
 const getQuery = require('./query')
 const isWebhookRequestValid = require('./is-webhook-request-valid')
+const currentPatreonUser = require('./current-patreon-user')
+
+const assignBadge = require('./assign-badge')
+const pledgeData = require('./pledge-data')
 
 const app = express()
 
@@ -62,6 +70,8 @@ app.get('/hackablejson', (req, res) => {
   res.json(hackableJSONCache)
 })
 
+app.post('/')
+
 const isDateString = str => str && str.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/)
 app.get('/dau', apicache('1 hour'), (req, res)  => {
   if (!isDateString(req.query.start))
@@ -91,6 +101,17 @@ app.get('/mau', apicache('1 hour'), (req, res)  => {
   if (!isDateString(req.query.end))
     return res.status(400).send('end must be in YYYY-MM-DD format')
   getQuery(5,{
+    startdate: req.query.start,
+    enddate: req.query.end
+  }).then(result => res.json(result.rows))
+})
+
+app.get('/visitors_by_week', apicache('1 hour'), (req, res)  => {
+  if (!isDateString(req.query.start))
+    return res.status(400).send('start must be in YYYY-MM-DD format')
+  if (!isDateString(req.query.end))
+    return res.status(400).send('end must be in YYYY-MM-DD format')
+  getQuery(11,{
     startdate: req.query.start,
     enddate: req.query.end
   }).then(result => res.json(result.rows))
@@ -133,12 +154,62 @@ app.get('/fail', (req, res) => {
   throw new Error('blam')
 })
 
-app.get('/bundle', (req, res) => {
+app.get('/login', function(req, res) {
+  res.redirect('https://www.patreon.com/oauth2/authorize?' +
+    querystring.stringify({
+      response_type: 'code',
+      client_id: process.env.PATREON_CLIENT_ID,
+      redirect_uri: process.env.PATREON_REDIRECT_URI,
+    }))
+})
 
-  browserify('./bundle.js', {standalone: 'date-info'})
-    .transform('babelify', {presets: [ 'es2017' ]})
-    .bundle()
-    .pipe(res)
+app.get('/badge-app', function(req, res) {
+  res.sendFile(__dirname + '/gui.html')
+})
+
+app.post('/award-badge',  async function(req, res) {
+  const { token, badge } = req.body
+  const patreonUserData = await currentPatreonUser(token)
+  const patronid = parseInt(patreonUserData.id)
+  const pledge = await pledgeData(patronid)
+  if(!pledge) {
+    return res.status(403).send('Is not a patron of fff')
+  }
+
+  if (pledge.pledge_cents < 500) {
+    return res.status(403).send(
+      'Need to pledge at least 500 cents to award badge')
+  }
+  const whiteList = [ 106 ]
+  if (whiteList.indexOf(badge) !== -1) {
+    return res.status(403).send(
+      'That badge is not whitelisted')
+  }
+
+  const username = pledge.discourseusername
+
+  await assignBadge(badge, username)
+  console.log('badge awarded!')
+  res.send('Badge awarded!')
+
+})
+
+app.post('/patreon_token', function(req, res) {
+  const code = url.parse(req.url, true).query.code
+  //@ts-ignore
+  fetch(
+    'https://www.patreon.com/api/oauth2/token?' +
+    querystring.stringify({
+      code,
+      grant_type: 'authorization_code',
+      client_id: process.env.PATREON_CLIENT_ID,
+      client_secret: process.env.PATREON_CLIENT_SECRET,
+      redirect_uri: process.env.PATREON_REDIRECT_URI
+    }), { method: 'post' })
+  .then(response => response.json())
+  .then(sniff)
+  .then(R.pick([ 'access_token', 'expires_in' ]))
+  .then(cleanedResult => res.json(cleanedResult))
 })
 
 const server = require('http').createServer(app)
