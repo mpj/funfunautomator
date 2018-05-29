@@ -1,19 +1,32 @@
-module.exports = function () {
+const path = require('path')
 
+module.exports = function () {
   return {
     files: [
       'src/**/*.js',
       'package.json',
-      '!src/**/test.js'
+      '!src/**/test.js',
+      '!src/**/sandbox_.js'
       ],
 
     tests: [
-      'src/**/test.js'
+      'src/**/test.js',
+      'src/**/sandbox_.js'
     ],
 
     env: {
       type: 'node',
-      runner: 'node'
+      runner: 'node',
+      params: {
+        env: [
+          'JUNCTION_MEMO_DIRECTORY=' + path.join(__dirname, 'src', '{{module}}', 'memo'),
+
+          // Forward bash environment variables
+          ...Object.keys(process.env).map(key =>
+            key+'='+process.env[key]
+          )
+        ].join(';')
+      }
     },
 
     testFramework: 'jest',
@@ -24,5 +37,5 @@ module.exports = function () {
       // jestConfig.globals = { "__DEV__": true };
       wallaby.testFramework.configure(jestConfig)
     }
-  };
-};
+  }
+}

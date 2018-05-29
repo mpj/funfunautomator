@@ -1,7 +1,4 @@
-module.exports = ({ fetch, process }, username) =>
-  fetch(
-    `${process.env.DISCOURSE_BASE_URI}/users/${username}.json` +
-      `?api_username=system&api_key=${process.env.DISCOURSE_API_KEY}`
-  )
+module.exports = ({ fetch, discourseUrl }, username) =>
+  fetch(discourseUrl(`/users/${username}.json`))
     .then(response => response.json())
-    .then(body => body.user.groups.map(group => group.name))
+    .then(body => body.user.groups.map(group => group))

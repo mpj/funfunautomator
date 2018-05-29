@@ -1,8 +1,11 @@
 const assignBadge = require('./unbound')
+
+process.env.foo //?
 describe('assignBadge', () => {
   it('calls api correctly', () =>
     assignBadge(
       {
+        memo: require('../junction').none,
         fetch: (url, opts) => {
           expect(url).toBe(someUrl)
           expect(opts.headers['Content-Type']).toBe('application/json')
@@ -27,6 +30,7 @@ describe('assignBadge', () => {
   it('throws if status is not 200', () =>
     expect(
       assignBadge({
+        memo: require('../junction').none,
         discourseUrl: () => {},
         fetch: () =>
           Promise.resolve({

@@ -1,0 +1,2 @@
+const badges = require('./')
+badges() //?

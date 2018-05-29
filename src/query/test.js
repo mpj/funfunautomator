@@ -43,6 +43,29 @@ describe('query', () => {
       8,
       someParams
     ).then(result => expect(result).toBe(someResult)))
+
+  it('coerces ints to string', () => {
+    query(
+      {
+        fetch: (url, opts) => {
+          return Promise.resolve({
+            json: () => Promise.resolve(someResult)
+          })
+        },
+        discourseUrl: (path, params) => {
+          expect(params).toEqual({
+            limit: 1000000,
+            params: JSON.stringify({ numparam: '8' })
+          })
+          return 'someOtherUrl'
+        }
+      },
+      1,
+      {
+        numparam: 8
+      }
+    )
+  })
 })
 
 const someParams = {
