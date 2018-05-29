@@ -15,9 +15,10 @@
     "check-lint": "eslint src/**/*.js",
     "check-lint-fix": "eslint --fix src/**/*.js",
     "pre-commit": "npm test",
-    "pre-push": "npm run build",
+    "pre-push": "npm-run-all ensure-git-clean build",
     "ci-test": "jest `circleci tests glob src/**/test.js | circleci tests split` --ci --runInBand --testResultsProcessor=\"jest-junit\"",
-    "ci-check": "npm run check"
+    "ci-check": "npm run check",
+    "ensure-git-clean": "[[ -z $(git status -s) ]] || echo 'Git working directory must be clean' ; exit 1"
   },
   "engines": {
     "node": "^10",
