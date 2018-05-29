@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node src/server.js",
-    "build": "npm-run-all test check",
+    "build": "npm-run-all test check audit",
     "test": "jest",
+    "audit": "npm audit",
     "check": "npm-run-all check-prettier check-lint",
     "check-fix": "npm-run-all check-prettier-fix check-lint-fix",
     "check-prettier": "prettier-check src/**/*.js",
@@ -14,13 +15,13 @@
     "check-lint": "eslint src/**/*.js",
     "check-lint-fix": "eslint --fix src/**/*.js",
     "pre-commit": "npm test",
-    "pre-push": "npm-run-all test check",
+    "pre-push": "npm run build",
     "ci-test": "jest `circleci tests glob src/**/test.js | circleci tests split` --ci --runInBand --testResultsProcessor=\"jest-junit\"",
     "ci-check": "npm run check"
   },
   "engines": {
-    "node": "^9.3",
-    "npm": "^5.7"
+    "node": "^10",
+    "npm": "^6"
   },
   "prettier": {
     "semi": false,
