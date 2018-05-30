@@ -164,7 +164,10 @@ app.get('/bundle', (req, res) => {
     .pipe(res)
 })
 
-
+app.get('/team-badges', async (req, res) => {
+  const data = await teamBadges()
+  res.json(data)
+})
 
 app.get('/login', function(req, res) {
   res.redirect('https://www.patreon.com/oauth2/authorize?' +
