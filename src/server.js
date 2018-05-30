@@ -197,8 +197,7 @@ app.post('/award-badge',  async function(req, res) {
   }
 
   const whiteList = (await teamBadges()).map(x => x.id)
-
-  if (whiteList.indexOf(badge) !== -1) {
+  if (!whiteList.includes(badge)) {
     return res.status(403).send(
       'That badge is not team badge')
   }
