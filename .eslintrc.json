@@ -1,6 +1,11 @@
 {
-  "extends": "standard",
-  "plugins": ["jest"],
+  "extends": ["standard", "plugin:react/recommended"],
+  "plugins": ["jest", "react"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "no-multi-spaces": 0,
     "comma-spacing": 0,

@@ -21,6 +21,7 @@ const currentPatreonUser = require('./current-patreon-user')
 
 const assignBadge = require('./assign-badge')
 const pledgeData = require('./pledge-data')
+const teamBadges = require('./team-badges')
 
 const app = express()
 
@@ -155,15 +156,11 @@ app.get('/fail', (req, res) => {
   throw new Error('blam')
 })
 
-app.get('/bundle', (req, res) => {
 
-  browserify('./bundle.js', {standalone: 'date-info'})
-    .transform('babelify', {presets: [ 'es2017' ]})
-    .bundle()
-    .pipe(res)
+app.get('/team-badges', async (req, res) => {
+  const data = await teamBadges()
+  res.json(data)
 })
-
-
 
 app.get('/login', function(req, res) {
   res.redirect('https://www.patreon.com/oauth2/authorize?' +
@@ -175,7 +172,26 @@ app.get('/login', function(req, res) {
 })
 
 app.get('/badge-app', function(req, res) {
-  res.sendFile(__dirname + '/gui.html')
+  res.sendFile(__dirname + '/badge-app/gui.html')
+})
+
+app.get('/badge-app.js', function(req, res) {
+  browserify('./src/badge-app/bundle.jsx')
+    .transform('babelify', {
+      presets: [
+        [
+          '@babel/preset-env', {
+            'targets': {
+              'browsers': ['chrome >= 67']
+            }
+          }
+        ], [
+          '@babel/preset-react'
+        ]
+      ]
+    })
+    .bundle()
+    .pipe(res)
 })
 
 app.post('/award-badge',  async function(req, res) {
@@ -191,10 +207,11 @@ app.post('/award-badge',  async function(req, res) {
     return res.status(403).send(
       'Need to pledge at least 500 cents to award badge')
   }
-  const whiteList = [ 106 ]
-  if (whiteList.indexOf(badge) !== -1) {
+
+  const whiteList = (await teamBadges()).map(x => x.id)
+  if (!whiteList.includes(badge)) {
     return res.status(403).send(
-      'That badge is not whitelisted')
+      'That badge is not team badge')
   }
 
   const username = pledge.discourseusername

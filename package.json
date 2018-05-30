@@ -38,15 +38,19 @@
     "eslint-plugin-jest": "^21.14.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.2.2",
     "prettier": "1.11.1",
     "prettier-check": "^2.0.0"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
     "apicache": "^1.2.0",
-    "babel-preset-es2017": "^6.24.1",
-    "babelify": "^8.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babelify": "^9.0.0",
     "body-parser": "^1.18.2",
     "browserify": "^16.1.0",
     "cookie-parser": "^1.4.3",
@@ -61,6 +65,8 @@
     "npm-run-all": "^4.1.2",
     "ramda": "^0.25.0",
     "raven": "^2.4.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "supersniff": "^2.1.0",
     "ws": "^4.1.0"
   }
