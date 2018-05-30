@@ -177,7 +177,19 @@ app.get('/badge-app', function(req, res) {
 
 app.get('/badge-app.js', function(req, res) {
   browserify('./src/badge-app/bundle.jsx')
-    .transform('babelify', { presets: ['@babel/preset-env', '@babel/preset-react'] })
+    .transform('babelify', {
+      presets: [
+        [
+          '@babel/preset-env', {
+            'targets': {
+              'browsers': ['chrome >= 67']
+            }
+          }
+        ], [
+          '@babel/preset-react'
+        ]
+      ]
+    })
     .bundle()
     .pipe(res)
 })
