@@ -21,6 +21,7 @@ const currentPatreonUser = require('./current-patreon-user')
 
 const assignBadge = require('./assign-badge')
 const pledgeData = require('./pledge-data')
+const teamBadges = require('./team-badges')
 
 const app = express()
 
@@ -191,10 +192,12 @@ app.post('/award-badge',  async function(req, res) {
     return res.status(403).send(
       'Need to pledge at least 500 cents to award badge')
   }
-  const whiteList = [ 106 ]
+
+  const whiteList = (await teamBadges()).map(x => x.id)
+
   if (whiteList.indexOf(badge) !== -1) {
     return res.status(403).send(
-      'That badge is not whitelisted')
+      'That badge is not team badge')
   }
 
   const username = pledge.discourseusername
