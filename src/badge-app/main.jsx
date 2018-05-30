@@ -15,7 +15,7 @@ export default class Main extends React.Component {
   }
 
   async componentDidMount() {
-    const [ token ] = await getToken()
+    const token = await getToken()
 
     if (!token) {
       window.location = '/login'
