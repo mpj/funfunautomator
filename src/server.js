@@ -156,13 +156,6 @@ app.get('/fail', (req, res) => {
   throw new Error('blam')
 })
 
-app.get('/bundle', (req, res) => {
-
-  browserify('./bundle.js', {standalone: 'date-info'})
-    .transform('babelify', {presets: [ 'es2017' ]})
-    .bundle()
-    .pipe(res)
-})
 
 app.get('/team-badges', async (req, res) => {
   const data = await teamBadges()
@@ -179,7 +172,14 @@ app.get('/login', function(req, res) {
 })
 
 app.get('/badge-app', function(req, res) {
-  res.sendFile(__dirname + '/gui.html')
+  res.sendFile(__dirname + '/badge-app/gui.html')
+})
+
+app.get('/badge-app.js', function(req, res) {
+  browserify('./src/badge-app/bundle.jsx')
+    .transform('babelify', { presets: ['@babel/preset-env', '@babel/preset-react'] })
+    .bundle()
+    .pipe(res)
 })
 
 app.post('/award-badge',  async function(req, res) {
