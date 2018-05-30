@@ -4,6 +4,7 @@
       <select id="badge" name="badge">
       </select>
       <button id="award-button">Award me this badge</button>
+      <div id="notification" style="color:green; font-weight: bold"></div>
     </form>
     <script>
 
@@ -28,12 +29,20 @@
 
       const getTeamBadges = async () => (await fetch('/team-badges')).json()
 
-      function handleAwardButtonClick(event) {
+      async function handleAwardButtonClick(event) {
         event.preventDefault()
         const selectElement = document.getElementById('badge')
         const badgeId = parseInt(selectElement.options[selectElement.selectedIndex].value)
-        awardBadge(badgeId)
-        console.log('Badge was awarded')
+
+        const awardButtonElement = document.getElementById('award-button')
+        awardButtonElement.disabled = true
+        selectElement.disabled = true
+        await awardBadge(badgeId)
+        awardButtonElement.disabled = false
+        selectElement.disabled = false
+        const notificationElement = document.getElementById('notification')
+        notificationElement.innerText = 'Badge was awarded!'
+        setTimeout(() => { notificationElement.innerText = '' }, 2000)
       }
 
       function awardBadge(id) {
