@@ -1,22 +1,76 @@
 <html>
   <body>
+    <form>
+      <select id="badge" name="badge">
+      </select>
+      <button id="award-button">Award me this badge</button>
+    </form>
     <script>
-      async function ready() {
-        const token = await getToken()
-        if (!token) {
-          window.location = '/login'
+
+      let state = {
+        token: null
+      }
+
+      function renderBadgeOptions(options) {
+        const selectElement = document.getElementById('badge')
+        selectElement.innerHTML = ''
+
+        for (const option of options) {
+          const optionElement = document.createElement('option')
+          optionElement.setAttribute('value', option.value)
+          optionElement.innerText = option.text
+          selectElement.appendChild(optionElement)
         }
-        console.log('i has a token', token)
-        fetch('/award-badge', {
+      }
+      renderBadgeOptions([
+        { value: 1, text: 'hej'}
+      ])
+
+      const getTeamBadges = async () => (await fetch('/team-badges')).json()
+
+      function handleAwardButtonClick(event) {
+        event.preventDefault()
+        const selectElement = document.getElementById('badge')
+        const badgeId = parseInt(selectElement.options[selectElement.selectedIndex].value)
+        awardBadge(badgeId)
+        console.log('Badge was awarded')
+      }
+
+      function awardBadge(id) {
+        return fetch('/award-badge', {
           method: 'post',
           headers: {
             'content-type': 'application/json'
           },
           body: JSON.stringify({
-            token: token,
-            badge: 105
+            token: state.token,
+            badge: id
           })})
+      }
+
+      async function ready() {
+
+        const awardButtonElement = document.getElementById('award-button')
+        awardButtonElement.addEventListener('click', handleAwardButtonClick)
+
+        const [ token, teamBadges ] = await Promise.all([
+          getToken(),
+          getTeamBadges()
+        ])
+
+        if (!token) {
+          window.location = '/login'
+          return
         }
+
+        state.token = token
+
+        renderBadgeOptions(teamBadges.map(badge => ({
+          value: badge.id,
+          text: badge.name
+        })))
+
+      }
 
       async function getToken() {
         const codeMatch = location.search.match(/code=(.+)$/)
