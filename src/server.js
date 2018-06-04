@@ -233,8 +233,12 @@ app.post('/award-badge',  async function(req, res) {
   const username = pledge.discourseusername
 
   await assignBadge(badge, username)
-  console.log('badge awarded!')
-  res.send('Badge awarded!')
+
+  res.json({
+    result: {
+      message: 'Badge awarded!'
+    }
+  })
 
 })
 
