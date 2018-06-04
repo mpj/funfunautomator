@@ -203,9 +203,16 @@ app.post('/award-badge',  async function(req, res) {
     return res.status(403).send('Is not a patron of fff')
   }
 
-  if (pledge.pledge_cents < 500) {
-    return res.status(403).send(
-      'Need to pledge at least 500 cents to award badge')
+  const pledgeMinimum = 500
+  if (pledge.pledge_cents < pledgeMinimum) {
+    return res.status(403).json({
+      error: {
+        message: `User is patron, but the pledge of the user is ${pledge.pledge_cents} centr, ` +
+                `and the minimum required is ${pledgeMinimum} cents.`,
+        code: 'pledge-too-low',
+        minimum: pledgeMinimum
+      }
+    })
   }
 
   const whiteList = (await teamBadges()).map(x => x.id)
