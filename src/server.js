@@ -203,7 +203,7 @@ app.post('/award-badge',  async function(req, res) {
     return res.status(403).json({
       error: {
         message: 'User is not a patron of Fun Fun Function.',
-        error: 'not-patron'
+        code: 'not-patron'
       }
     })
   }
