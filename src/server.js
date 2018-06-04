@@ -222,8 +222,12 @@ app.post('/award-badge',  async function(req, res) {
 
   const whiteList = (await teamBadges()).map(x => x.id)
   if (!whiteList.includes(badge)) {
-    return res.status(403).send(
-      'That badge is not team badge')
+    return res.status(403).json({
+      error: {
+        message: `Badge ${badge} is not part of the team badges, user not allowed to self-assign that.`,
+        code: 'not-whitelisted'
+      }
+    })
   }
 
   const username = pledge.discourseusername
