@@ -31,17 +31,61 @@ export default class Main extends React.Component {
 
   async handleAwardButtonClick(e) {
     e.preventDefault()
-    await awardBadge(this.state.token, this.state.badgeIdSelected)
 
+    const response = await fetch('/award-badge', {
+      method: 'post',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        token: this.state.token,
+        badge: this.state.badgeIdSelected
+      })})
+
+    const body = await response.json()
+
+    if (response.status === 200) {
+      this.alert({color: 'green', text: 'Badge awarded!' })
+      return
+    }
+
+    if (response.status === 403) {
+      if (!body.error || !body.error.code) {
+        throw new Error('Expected body to have an error with a code')
+      }
+      if (body.error.code === 'not-patron') {
+        this.alert({
+          color: 'red',
+          text: `The Patreon user you are logged in with is not a Patron of Fun Fun Function.`
+        })
+        return
+      }
+      if (body.error.code === 'pledge-too-low') {
+        this.alert({
+          color: 'red',
+          text: `Error: You must pledge at least ${body.error.minimum} cents
+          to be able to award yourself team badges`
+        })
+        return
+      }
+      throw new Error(`Don't know how to handle error code ${body.error.code}`)
+    }
+
+    throw new Error(
+      `Status code ${response.status} returned from /award-badge endpoint,
+      don't know how to handle.`
+    )
+  }
+
+  alert({color, text}) {
     this.setState({
-      message: { color: 'green', text: 'Badge awarded!' }
+      message: { color, text }
     })
     setTimeout(() => {
       this.setState({
         message: null
       })
     }, 3000)
-
   }
 
   teamBadgeSelectChange(e) {
@@ -79,16 +123,6 @@ export default class Main extends React.Component {
 
 const getTeamBadges = async () => (await fetch('/team-badges')).json()
 
-const awardBadge = (token, id) =>
-  fetch('/award-badge', {
-    method: 'post',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify({
-      token: token,
-      badge: id
-    })})
 
 async function getToken() {
   const codeMatch = location.search.match(/code=(.+)$/)
