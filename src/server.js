@@ -200,7 +200,12 @@ app.post('/award-badge',  async function(req, res) {
   const patronid = parseInt(patreonUserData.id)
   const pledge = await pledgeData(patronid)
   if(!pledge) {
-    return res.status(403).send('Is not a patron of fff')
+    return res.status(403).json({
+      error: {
+        message: 'User is not a patron of Fun Fun Function.',
+        error: 'not-patron'
+      }
+    })
   }
 
   const pledgeMinimum = 500
