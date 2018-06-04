@@ -199,41 +199,41 @@ app.post('/award-badge',  async function(req, res) {
   const patreonUserData = await currentPatreonUser(token)
   const patronid = parseInt(patreonUserData.id)
   const pledge = await pledgeData(patronid)
+
+  const sendPermissionError = (code, message, extra) =>
+    res.status(403).json({ error: { code, message, ...extra } })
+
   if(!pledge) {
-    return res.status(403).json({
-      error: {
-        message: 'User is not a patron of Fun Fun Function.',
-        code: 'not-patron'
-      }
-    })
+    sendPermissionError(
+      'not-patron',
+      'User is not a patron of Fun Fun Function.'
+    )
+    return
   }
 
   const pledgeMinimum = 500
   if (pledge.pledge_cents < pledgeMinimum) {
-    return res.status(403).json({
-      error: {
-        message: `User is patron, but the pledge of the user is ${pledge.pledge_cents} centr, ` +
-                `and the minimum required is ${pledgeMinimum} cents.`,
-        code: 'pledge-too-low',
+    sendPermissionError(
+      'pledge-too-low',
+      `User is patron, but the pledge of the user is ${pledge.pledge_cents} cents, ` +
+      `and the minimum required is ${pledgeMinimum} cents.`, {
         minimum: pledgeMinimum
       }
-    })
+    )
+    return
   }
 
   const whiteList = (await teamBadges()).map(x => x.id)
   if (!whiteList.includes(badge)) {
-    return res.status(403).json({
-      error: {
-        message: `Badge ${badge} is not part of the team badges, user not allowed to self-assign that.`,
-        code: 'not-whitelisted'
-      }
-    })
+    sendPermissionError(
+      'not-whitelisted',
+      `Badge ${badge} is not part of the team badges, user not allowed to self-assign that.`,
+    )
+    return
   }
 
   const username = pledge.discourseusername
-
   await assignBadge(badge, username)
-
   res.json({
     result: {
       message: 'Badge awarded!'
@@ -241,6 +241,7 @@ app.post('/award-badge',  async function(req, res) {
   })
 
 })
+
 
 app.post('/patreon_token', function(req, res) {
   const code = url.parse(req.url, true).query.code
